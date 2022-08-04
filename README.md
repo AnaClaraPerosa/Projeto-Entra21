@@ -16,13 +16,13 @@
 - 
 
 ## **Nicho:**
-- Pessoas com restriões alimentares?
+- Pessoas com restrições alimentares?
 - Pequenos produtores?
 - Produtos naturais diversos?
 - ...
 
 ## **Outros:**
-- Produtor pagar para fazer sua anúncio/arte;
+- Produtor pagar para fazer seu anúncio/arte;
 - Conteúdo (fotos, vídeos, receitas) disponibilizado pelo produtor;
 - Programa para indicar fornecedores;
 - Mostrar produtos a nível nacional e apresentar os pontos mais próximos de venda;
@@ -31,8 +31,8 @@
 - Programa de desconto por indicações;
 - Disponível para PC e smartphones;
 - Futuramente ter um produto próprio;
-- Parceria com nutricionaistas;
+- Parceria com nutricionistas;
 - Cartão fidelidade;
-- Programada de avaliação/feedback dos clientes;
+- Programa de avaliação/feedback dos clientes;
 
 
