@@ -35,4 +35,41 @@
 - Cartão fidelidade;
 - Programa de avaliação/feedback dos clientes;
 
+# Guia do professor:
+
+1.	Scrum - Backlog
+    a.	Product Owner
+    b.	Scrum master 
+    c.	Time e atribuições. (Developers)
+    d.	Definir prioridades 
+    e.	Divisão das sprints 
+
+2.	Kanban - Divisão da primeira e segunda semana (sprint)
+
+3.	Ferramentas - Definir: 
+    a.	repositório git local / github.com 
+    b.	compartilhar repositório com a equipe exclusivamente e com o prof. (adriano@machado.tec.br)
+
+4.	Tudo deve ser definido via README.md NA PAGINA INICIAL COM SEUS ARQUIVOS AUXILIARES. 
+
+Foco em desenvolver apenas o que realmente importa!!!
+
+Deixar a perfumaria para final de setembro quando o projeto/app/dashboard estiver funcional. 
+
+5.	Definir as bibliotecas que serão utilizadas no projeto.  (re-atribuição)
+
+6.	Definir como o projeto será exposto (deploy) (re-atribuição)
+    a.	Isto deve ser feito logo no início do projeto. (não fique só na mão de um membro da equipe)
+
+7.	Treinar APRESENTAÇÃO GRAVADA DE 5-8 MINUTOS DA APLICAÇÃO. O ideal seria uma apresentação pessoal. Lembre-se de trabalhar isso durante todo o período, não deixe para última hora ;)
+
+Dividir as equipes em duplas para cada função (inicialmente):
+-	Back-end
+- Front-end
+- Deploy
+- documentação e testes
+
+Conte sobre o contexto em que esse projeto está sendo executado: coloque a data, fale que é treinamento, etc. Lembre-se que os commits mostram sua participação no trabalho, e há indicadores que o próprio github fornece!
+
+Quem fez não testa!
 
