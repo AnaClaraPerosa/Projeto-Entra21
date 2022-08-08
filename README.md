@@ -1,4 +1,4 @@
-# Projeto-Entra21
+# Projeto-Entra21:
 
 # JAM Board:
 
@@ -72,4 +72,8 @@ Dividir as equipes em duplas para cada função (inicialmente):
 Conte sobre o contexto em que esse projeto está sendo executado: coloque a data, fale que é treinamento, etc. Lembre-se que os commits mostram sua participação no trabalho, e há indicadores que o próprio github fornece!
 
 Quem fez não testa!
+
+## Guia Scrum:
+- https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf
+
 
