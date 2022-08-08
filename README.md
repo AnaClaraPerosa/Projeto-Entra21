@@ -1,4 +1,5 @@
-# Projeto-Entra21:
+# Projeto-Entra21
+## Esse projeto é um treinamento, realizado em 2022, para demonstar nosso aprendizado no curso online de Python; 
 
 # JAM Board:
 
