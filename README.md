@@ -77,6 +77,17 @@ Quem fez não testa!
 ## Guia Scrum:
 - https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf
 
+## Sexta feira 12/08/22:
+- Criação do banco de dados pelo DBeaver;
+- Tabelas criadas:
+  - Clientes;
+  - Fornecedores;
+  - Cidades;
+  - Segmento;
+  - Produtos;
+  - Pedidos;
+  - Itens do pedido;
+
 
 
 
