@@ -1,12 +1,13 @@
 # Projeto-Entra21
 ## Esse projeto é um treinamento, realizado em 2022, para demonstar nosso aprendizado no curso online de Python; 
 
-Participantes:
+Desenvolvedores:
 
-- fulano
-- ciclano
-- beltrano
-- 
+- Ana Clara Perosa;
+- Igore Freire;
+- Jaqueline Peres;
+- Lucas Dimon
+- Renan Oliveira;
 
 # JAM Board:
 
