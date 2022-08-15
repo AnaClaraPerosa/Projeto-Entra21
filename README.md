@@ -4,8 +4,8 @@
 Desenvolvedores:
 
 - Ana Clara Perosa;
-- Igore Freire;
-- Jaqueline Peres;
+- Igor Freire;
+- Jaqueline Peres Altismo;
 - Lucas Dimon
 - Renan Oliveira;
 
@@ -95,6 +95,7 @@ Quem fez não testa!
   - Produtos;
   - Pedidos;
   - Itens do pedido;
+  - 
 
 
 
