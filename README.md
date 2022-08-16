@@ -100,5 +100,10 @@ Quem fez não testa!
 - Colocação de um modelo de formulário de cadastro;
 
 
-
+## Terça feira 16/08/22:
+- Reunião com o professor -> Precisamos pro projeto:
+  - Tela de cadastro/login pra cliente e fornecedor;
+  - Filtro por nichos no site;
+  - Carrinho;
+  - Exemplo fictício pra apresentação; 
 
