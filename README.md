@@ -12,7 +12,15 @@ Desenvolvedores:
 # JAM Board:
 
 ## **Nomes pro projeto:**
-- 
+- Foodfit;
+- eFit;
+- eBeet;
+- Eatwell;
+- iPicles;
+- iCarrot;
+- eAncore;
+- Da Terra;
+- FoodBuddy;
 
 ## **Produtos por assinatura:**
 - Montar uma plataforma pra clube de assinaturas ("marketplace");
