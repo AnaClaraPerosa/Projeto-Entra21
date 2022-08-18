@@ -130,7 +130,7 @@ Quem fez não testa!
   
 
 ## Historia do usuário
-- O nosso projeto vai disponibilizar alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
+- O nosso projeto vai disponibilizar alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
 
-- Nós como pessoas com restrições alimentares, queremos uma alimentação apropriada para termos uma melhor qualidade de vida, saúde... 
+
 
