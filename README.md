@@ -95,8 +95,14 @@ Quem fez não testa!
   - Produtos;
   - Pedidos;
   - Itens do pedido;
+<<<<<<< HEAD
   - 
   - 
+=======
+
+## Segunda Feira 15/08/22:
+- Colocação de um modelo de formulário de cadastro;
+>>>>>>> 967f6cd11e8228ca4122907601dd74f7c650b1b8
 
 
 
