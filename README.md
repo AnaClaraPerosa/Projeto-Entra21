@@ -12,7 +12,15 @@ Desenvolvedores:
 # JAM Board:
 
 ## **Nomes pro projeto:**
-- 
+- Foodfit;
+- eFit;
+- eBeet;
+- Eatwell;
+- iPicles;
+- iCarrot;
+- eAncore;
+- Da Terra;
+- FoodBuddy;
 
 ## **Produtos por assinatura:**
 - Montar uma plataforma pra clube de assinaturas ("marketplace");
@@ -105,5 +113,10 @@ Quem fez não testa!
 >>>>>>> 967f6cd11e8228ca4122907601dd74f7c650b1b8
 
 
-
+## Terça feira 16/08/22:
+- Reunião com o professor -> Precisamos pro projeto:
+  - Tela de cadastro/login pra cliente e fornecedor;
+  - Filtro por nichos no site;
+  - Carrinho;
+  - Exemplo fictício pra apresentação; 
 
