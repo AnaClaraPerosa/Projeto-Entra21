@@ -122,7 +122,7 @@ Quem fez não testa!
 
 
 ## Ferramentas em utilização
-- Jamboard para expor o projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
+- Jamboard para definições do projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
 
 - Trello para definição do Scrum - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
 
