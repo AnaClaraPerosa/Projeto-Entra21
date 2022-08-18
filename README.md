@@ -121,3 +121,5 @@ Quem fez não testa!
   - Exemplo fictício pra apresentação; 
   - 
 
+## Historia do usuário
+- O nosso projeto vai disponibilizar alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
