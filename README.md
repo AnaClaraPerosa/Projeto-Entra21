@@ -127,7 +127,7 @@ Quem fez não testa!
 - Trello para definição do Scrum - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
 
 - Miro para montar o Business Model Canvas para fazer o planejamento estratetico - https://miro.com/welcomeonboard/Z21CWEt4UW9mdG4wbEJHWDFKczB2aVJPRGVIaThxMDBkN2RHZ3Q1dVFON1pyNWowVldGTllTT2xZeDR4M0xaWHwzNDU4NzY0NTE0NjAxOTE3OTI4?share_link_id=787192381582
-  
+- Atualização Business Model Canvas 19/08/2022
 
 ## Historia do usuário
 - O nosso projeto vai disponibilizar alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
