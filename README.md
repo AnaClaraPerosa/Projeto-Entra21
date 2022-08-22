@@ -12,7 +12,15 @@ Desenvolvedores:
 # JAM Board:
 
 ## **Nomes pro projeto:**
-- 
+- Foodfit;
+- eFit;
+- eBeet;
+- Eatwell;
+- iPicles;
+- iCarrot;
+- eAncore;
+- Da Terra;
+- FoodBuddy;
 
 ## **Produtos por assinatura:**
 - Montar uma plataforma pra clube de assinaturas ("marketplace");
@@ -95,10 +103,37 @@ Quem fez não testa!
   - Produtos;
   - Pedidos;
   - Itens do pedido;
+<<<<<<< HEAD
+  - 
+  - 
+=======
 
 ## Segunda Feira 15/08/22:
 - Colocação de um modelo de formulário de cadastro;
+>>>>>>> 967f6cd11e8228ca4122907601dd74f7c650b1b8
 
+
+## Terça feira 16/08/22:
+- Reunião com o professor -> Precisamos pro projeto:
+  - Tela de cadastro/login pra cliente e fornecedor;
+  - Filtro por nichos no site;
+  - Carrinho;
+  - Exemplo fictício pra apresentação; 
+
+
+## Ferramentas em utilização
+- Jamboard para definições do projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
+
+- Trello para definição do Scrum - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
+
+- Miro para montar o Business Model Canvas para fazer o planejamento estratetico - https://miro.com/welcomeonboard/Z21CWEt4UW9mdG4wbEJHWDFKczB2aVJPRGVIaThxMDBkN2RHZ3Q1dVFON1pyNWowVldGTllTT2xZeDR4M0xaWHwzNDU4NzY0NTE0NjAxOTE3OTI4?share_link_id=787192381582
+- Atualização Business Model Canvas 19/08/2022
+
+## Historia do usuário
+- O nosso projeto vai disponibilizar alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
+  
+- O nosso projeto vai tornar facil a localização e comercialização de alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
+- 
 
 
 

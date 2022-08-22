@@ -114,3 +114,8 @@ cur.execute('''
 
 conex.commit()
 cur.close
+
+
+
+
+
