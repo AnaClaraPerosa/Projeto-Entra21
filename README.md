@@ -258,7 +258,10 @@ REFERENCES `FORNECEDORES` (`FORNECEDORES_ID`);
 ALTER TABLE `ITENSPED` ADD CONSTRAINT `fk_ITENSPED_ITENSPED_ID` FOREIGN KEY(`ITENSPED_ID`)
 REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 =======
-- O nosso projeto vai tornar fácil a localização e comercialização de alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
+- O nosso projeto vai tornar fácil a localização e comercialização de alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
+
+
+
 - 
 >>>>>>> 8b509f1f517649f2aa898a9ca50bf34821fba28c
 
