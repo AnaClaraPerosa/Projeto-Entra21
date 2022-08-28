@@ -141,7 +141,10 @@ Quem fez não testa!
 - Atualização Business Model Canvas;
 
 ## Historia do usuário
-- O nosso projeto vai disponibilizar alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
+- Desenvolver uma aplicação utilizando Django, com a finalidade de facilitar o acesso a alimentos saudáveis. 
+
+O projeto facilitará  a comercialização de alimentos saudáveis(incluindo orgânicos), como também, para pessoas com restrição alimentar de forma regionalizada, possibilitando as vendas de formas mais assertivas através de encomendas.
+
   
 <<<<<<< HEAD
 - O nosso projeto vai tornar facil a localização e comercialização de alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
