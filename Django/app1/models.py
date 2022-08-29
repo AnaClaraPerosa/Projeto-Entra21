@@ -2,6 +2,19 @@ from django.db import models
 
 # Create your models here.
 
+class Cidades(models.Model):
+    Cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
+    Cidade_cep = models.IntegerField(default=0,verbose_name='CEP')
+    Cidade_ativo = models.CharField(max_length=1)
+
+    def __str__(self):
+        return '%s %s' % (self.Cidade_nome, self.Cidade_cep)
+
+    class Meta:
+        ordering = (['Cidade_nome', 'Cidade_cep'])
+        verbose_name = 'Cidade'
+        verbose_name_plural = 'Cidades'
+
 class Fornecedores(models.Model):
     Fornecedor_razao_social = models.CharField(max_length=100, verbose_name='Razão social')
     Fornecedor_cpf_cnpj = models.IntegerField(default=0, verbose_name='CNPJ')
@@ -13,14 +26,14 @@ class Fornecedores(models.Model):
     Fornecedor_cep = models.IntegerField(default=0, verbose_name='CEP')
     Fornecedor_complemento = models.CharField(max_length=100, verbose_name='Complemento')
     Fornecedor_obs = models.CharField(max_length=100, verbose_name='Observações',default='')
-    Fornecedor_cidade_id = models.ForeignKey(verbose_name='Cidade_ID',on_delete=models.PROTECT)
+    Fornecedor_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade_ID', on_delete=models.PROTECT)
     Fornecedor_ativo = models.CharField(max_length=1)
 
     def __str__(self):
         return '%s %s' % (self.Fornecedor_razao_social, self.Fornecedor_cpf_cnpj)
 
     class Meta:
-        ordering = ('Fornecedor_razao_social', 'Fornecedor_cpf_cnpj')
+        ordering = (['Fornecedor_razao_social', 'Fornecedor_cpf_cnpj'])
         verbose_name = 'Fornecedor'
         verbose_name_plural = 'Fornecedores'
 
@@ -42,24 +55,9 @@ class Clientes(models.Model):
         return '%s %s' % (self.Cliente_nome, self.Cliente_telefone)
 
     class Meta:
-        ordering = ('Cliente_nome', 'Cliente_telefone')
+        ordering = (['Cliente_nome', 'Cliente_telefone'])
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
-
-
-class Cidades(models.Model):
-    Cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
-    Cidade_cep = models.IntegerField(default=0,verbose_name='CEP')
-    Cidade_ativo = models.CharField(max_length=1)
-
-    def __str__(self):
-        return '%s %s' % (self.Cidade_nome, self.Cidade_cep)
-
-    class Meta:
-        ordering = ('Cidade_nome', 'Cidade_cep')
-        verbose_name = 'Cidade'
-        verbose_name_plural = 'Cidades'
-
 
 class Segmentos(models.Model):
     Segmento_nome = models.CharField(max_length=100,verbose_name='Segmento')
@@ -69,7 +67,7 @@ class Segmentos(models.Model):
         return '%s' % (self.Segmento_nome)
 
     class Meta:
-        ordering = ('Segmento_nome')
+        ordering = (['Segmento_nome'])
         verbose_name = 'Segmento'
         verbose_name_plural = 'Segmentos'
 
@@ -86,7 +84,7 @@ class Produtos(models.Model):
         return '%s %s' % (self.Produto_nome, self.Produto_descricao)
 
     class Meta:
-        ordering = ('Produto_nome','Produto_descricao')
+        ordering = (['Produto_nome','Produto_descricao'])
         verbose_name = 'Produto'
         verbose_name_plural = 'Produtos'
 
@@ -103,7 +101,7 @@ class Pedidos(models.Model):
         return '%s' % (self.Pedido_data_pedido)
 
     class Meta:
-        ordering = ('Pedido_data_pedido')
+        ordering = (['Pedido_data_pedido'])
         verbose_name = 'Pedido'
         verbose_name_plural = 'Pedidos'
     
@@ -117,6 +115,6 @@ class Itensped(models.Model):
         return '%s' % (self.Itensped_qtde)
 
     class Meta:
-        ordering = ('Itensped_qtde')
+        ordering = (['Itensped_qtde'])
         verbose_name = 'Itens do pedido'
         verbose_name_plural = 'Item do pedido'
