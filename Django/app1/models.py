@@ -118,3 +118,7 @@ class Itensped(models.Model):
         ordering = (['Itensped_qtde'])
         verbose_name = 'Itens do pedido'
         verbose_name_plural = 'Item do pedido'
+
+class Teste(models.Model):
+    Teste_nome = models.CharField(max_length=1)
+
