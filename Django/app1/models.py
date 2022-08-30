@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+#Create your models here.
 
 class Cidades(models.Model):
     Cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
@@ -121,4 +121,3 @@ class Itensped(models.Model):
 
 class Teste(models.Model):
     Teste_nome = models.CharField(max_length=1)
-
