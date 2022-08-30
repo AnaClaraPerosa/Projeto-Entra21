@@ -9,8 +9,6 @@ Desenvolvedores:
 - Lucas Dimon
 - Renan Oliveira;
 
-# JAM Board:
-
 ## **Nomes pro projeto:**
 - Foodfit;
 - eFit;
@@ -113,7 +111,6 @@ Quem fez não testa!
   - Filtro por nichos no site;
   - Carrinho;
   - Exemplo fictício pra apresentação;
-  -  
 
 ## Quinta feira 18/08/22 - Ferramentas em utilização:
 
@@ -129,7 +126,7 @@ Quem fez não testa!
 ## Historia do usuário
 - Desenvolver uma aplicação utilizando Django, com a finalidade de facilitar o acesso a alimentos saudáveis. 
 
-O projeto facilitará  a comercialização de alimentos saudáveis(incluindo orgânicos), como também, para pessoas com restrição alimentar de forma regionalizada, possibilitando as vendas de formas mais assertivas através de encomendas.
+- O projeto facilitará  a comercialização de alimentos saudáveis(incluindo orgânicos), como também, para pessoas com restrição alimentar de forma regionalizada, possibilitando as vendas de formas mais assertivas através de encomendas.
 
 - O nosso projeto vai tornar facil a localização e comercialização de alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
 
@@ -244,16 +241,16 @@ REFERENCES `FORNECEDORES` (`FORNECEDORES_ID`);
 ALTER TABLE `ITENSPED` ADD CONSTRAINT `fk_ITENSPED_ITENSPED_ID` FOREIGN KEY(`ITENSPED_ID`)
 REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
-## User story:
+## User story pro formulário:
 - O nosso projeto vai tornar fácil a localização e comercialização de alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
 
 ## 22/08/22 - 26/08/22:
-**Estudando banco de dados na nuvem (aws) e o virtual enviroment**
+**Estudando banco de dados na nuvem (aws) e o virtual environment**
 
 ## 29/08/22:
 - Acessando o banco de dados na nuvem com o repositório oficial do projeto;
 
 ## 30/08/22:
-- Últimos ajustes no banco de dados para inciar a inserção de dados;
+- Últimos ajustes no banco de dados para iniciar a inserção de dados;
 
 
