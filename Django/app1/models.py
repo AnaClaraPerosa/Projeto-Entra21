@@ -4,7 +4,7 @@ from django.db import models
 
 class Cidades(models.Model):
     cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
-    cidade_cep = models.IntegerField(default=0,verbose_name='CEP')
+    cidade_cep = models.CharField(max_length=10,verbose_name='CEP')
     cidade_ativo = models.CharField(max_length=1)
 
     def __str__(self):
@@ -17,9 +17,9 @@ class Cidades(models.Model):
 
 class Fornecedores(models.Model):
     fornecedor_razao_social = models.CharField(max_length=100, verbose_name='Razão social')
-    fornecedor_cpf_cnpj = models.IntegerField(default=0, verbose_name='CNPJ')
+    fornecedor_cpf_cnpj = models.CharField(max_length=20, verbose_name='CPFJ/CNPJ')
     fornecedor_contato = models.CharField(max_length=100, verbose_name='Email')
-    fornecedor_telefone = models.IntegerField(default=0, verbose_name='Telefone')
+    fornecedor_telefone = models.CharField(max_length=30, verbose_name='Telefone')
     fornecedor_logradouro = models.CharField(max_length=100, verbose_name='Logradouro')
     fornecedor_bairro = models.CharField(max_length=100, verbose_name='Bairro')
     fornecedor_numero = models.IntegerField(default=0, verbose_name='Número')
@@ -41,14 +41,14 @@ class Fornecedores(models.Model):
 class Clientes(models.Model):
     cliente_nome = models.CharField(max_length=100,verbose_name='Nome')
     cliente_telefone = models.CharField(max_length=100,verbose_name='Telefone')
-    cliente_cpf = models.CharField(max_length=100,verbose_name='Cpf')
+    cliente_cpf = models.CharField(max_length=100,verbose_name='CPF')
     cliente_logradouro = models.CharField(max_length=100, verbose_name='Logradouro')
     cliente_bairro = models.CharField(max_length=100, verbose_name='Bairro')
     cliente_numero = models.IntegerField(default=0, verbose_name='Número')
     cliente_cep = models.IntegerField(default=0, verbose_name='CEP')
     cliente_complemento = models.CharField(max_length=100, verbose_name='Complemento')
     cliente_obs = models.CharField(max_length=100, verbose_name='Observações')
-    cliente_cidade_id = models.IntegerField(verbose_name='Cidade_ID', default=0)
+    cliente_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade_ID', on_delete=models.PROTECT)
     cliente_ativo = models.CharField(max_length=1)
 
     def __str__(self):
@@ -77,7 +77,7 @@ class Produtos(models.Model):
     produto_descricao = models.CharField(max_length=100,verbose_name='Descrição')
     produto_valor_unit = models.IntegerField(default=0,verbose_name='Valor Unitário')
     produto_qtde = models.IntegerField(default=0,verbose_name='Quantidade')
-    produto_segmento_id = models.IntegerField(verbose_name='Segmento_ID',default=0)
+    produto_segmento_id = models.ForeignKey(Segmentos,verbose_name='Segmento_ID', on_delete=models.PROTECT)
     produto_ativo = models.CharField(max_length=1)
 
     def __str__(self):
@@ -90,10 +90,10 @@ class Produtos(models.Model):
 
 
 class Pedidos(models.Model):
-    pedido_cliente_id = models.IntegerField(verbose_name='Cliente_ID',default=0)
-    pedido_fornecedor_id = models.IntegerField(verbose_name='Fornecedor_ID',default=0)
-    pedido_data_pedido = models.CharField(max_length=10, verbose_name='Data do pedido')
-    pedido_prazo_entrega = models.CharField(max_length=10, verbose_name='Prazo da entrega')
+    pedido_cliente_id = models.ForeignKey(Clientes,verbose_name='Cliente_ID', on_delete=models.PROTECT)
+    pedido_fornecedor_id = models.ForeignKey(Fornecedores,verbose_name='Fornecedor_ID', on_delete=models.PROTECT)
+    pedido_data_pedido = models.DateField(verbose_name='Data do pedido')
+    pedido_prazo_entrega = models.DateField(verbose_name='Prazo da entrega')
     pedido_obs = models.CharField(max_length=100,verbose_name='Observações')
     pedido_ativo = models.CharField(max_length=1)
 
@@ -107,7 +107,7 @@ class Pedidos(models.Model):
     
 
 class Itensped(models.Model):
-    itensped_produto_id = models.IntegerField(verbose_name='Produto_ID',default=0)
+    itensped_produto_id = models.ForeignKey(Produtos,verbose_name='Produto_ID', on_delete=models.PROTECT)
     itensped_qtde = models.IntegerField(default= 0 , verbose_name='Quantidade')
     itensped_ativo = models.CharField(max_length=1)
 
