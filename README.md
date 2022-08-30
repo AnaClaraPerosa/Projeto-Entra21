@@ -103,15 +103,9 @@ Quem fez não testa!
   - Produtos;
   - Pedidos;
   - Itens do pedido;
-<<<<<<< HEAD
-  - 
-  - 
-=======
 
 ## Segunda Feira 15/08/22:
 - Colocação de um modelo de formulário de cadastro;
->>>>>>> 967f6cd11e8228ca4122907601dd74f7c650b1b8
-
 
 ## Terça feira 16/08/22:
 - Reunião com o professor -> Precisamos pro projeto:
@@ -124,16 +118,8 @@ Quem fez não testa!
 ## Quinta feira 18/08/22 - Ferramentas em utilização:
 
 - Jamboard para definições do projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-- Trello para definição do Scrum - 
-=======
-=======
-
->>>>>>> 8b509f1f517649f2aa898a9ca50bf34821fba28c
 - Trello para definição do Kanban - https://trello.com/b/1VD9MM5o/projeto-grupo3
->>>>>>> 653ba5ecf9db209b3835b3b82ee65e3b25095ff6
 
 - Miro para montar o Business Model Canvas para fazer o planejamento estratégico - https://miro.com/welcomeonboard/Z21CWEt4UW9mdG4wbEJHWDFKczB2aVJPRGVIaThxMDBkN2RHZ3Q1dVFON1pyNWowVldGTllTT2xZeDR4M0xaWHwzNDU4NzY0NTE0NjAxOTE3OTI4?share_link_id=787192381582
 
@@ -145,15 +131,12 @@ Quem fez não testa!
 
 O projeto facilitará  a comercialização de alimentos saudáveis(incluindo orgânicos), como também, para pessoas com restrição alimentar de forma regionalizada, possibilitando as vendas de formas mais assertivas através de encomendas.
 
-  
-<<<<<<< HEAD
 - O nosso projeto vai tornar facil a localização e comercialização de alimentos saudáveis(incluindo organicos) e alimentos para pessoas com restrição alimentar de forma regionalizada...
 
-## Bando de Dados do Projeto
+## Banco de Dados do Projeto:
 
 -- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
 
 CREATE TABLE `CLIENTES` (
     `CLIENTES_ID` INTEGER  NOT NULL ,
@@ -260,16 +243,17 @@ REFERENCES `FORNECEDORES` (`FORNECEDORES_ID`);
 
 ALTER TABLE `ITENSPED` ADD CONSTRAINT `fk_ITENSPED_ITENSPED_ID` FOREIGN KEY(`ITENSPED_ID`)
 REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
-=======
+
+## User story:
 - O nosso projeto vai tornar fácil a localização e comercialização de alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
 
+## 22/08/22 - 26/08/22:
+**Estudando banco de dados na nuvem (aws) e o virtual enviroment**
 
+## 29/08/22:
+- Acessando o banco de dados na nuvem com o repositório oficial do projeto;
 
-
-
-- 
->>>>>>> 8b509f1f517649f2aa898a9ca50bf34821fba28c
-
-
+## 30/08/22:
+- Últimos ajustes no banco de dados para inciar a inserção de dados;
 
 
