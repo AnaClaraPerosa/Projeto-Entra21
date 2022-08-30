@@ -3,15 +3,15 @@ from django.db import models
 #Create your models here.
 
 class Cidades(models.Model):
-    Cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
+    cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
     Cidade_cep = models.IntegerField(default=0,verbose_name='CEP')
     Cidade_ativo = models.CharField(max_length=1)
 
     def __str__(self):
-        return '%s %s' % (self.Cidade_nome, self.Cidade_cep)
+        return '%s %s' % (self.cidade_nome, self.Cidade_cep)
 
     class Meta:
-        ordering = (['Cidade_nome', 'Cidade_cep'])
+        ordering = (['cidade_nome', 'Cidade_cep'])
         verbose_name = 'Cidade'
         verbose_name_plural = 'Cidades'
 
