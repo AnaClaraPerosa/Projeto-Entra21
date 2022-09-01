@@ -254,6 +254,6 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 - Últimos ajustes no banco de dados para iniciar a inserção de dados;
 - Criação da tela de login;
 
-## Quinta-feira 31/08/22:
+## Quinta-feira 01/08/22:
 - Término da tela de login;
 - Criação de algumas templates pro projeto;
