@@ -79,7 +79,7 @@ Deixar a perfumaria para final de setembro quando o projeto/app/dashboard estive
 7.	Treinar APRESENTAÇÃO GRAVADA DE 5-8 MINUTOS DA APLICAÇÃO. O ideal seria uma apresentação pessoal. Lembre-se de trabalhar isso durante todo o período, não deixe para última hora ;)
 
 Dividir as equipes em duplas para cada função (inicialmente):
--	Back-end
+- Back-end
 - Front-end
 - Deploy
 - documentação e testes
@@ -247,10 +247,13 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## 22/08/22 - 26/08/22:
 **Estudando banco de dados na nuvem (aws) e o virtual environment**
 
-## 29/08/22:
+## Segunda feira 29/08/22:
 - Acessando o banco de dados na nuvem com o repositório oficial do projeto;
 
-## 30/08/22:
+## Terça feira 30/08/22:
 - Últimos ajustes no banco de dados para iniciar a inserção de dados;
+- Criação da tela de login;
 
-
+## Quinta-feira 31/08/22:
+- Término da tela de login;
+- Criação de algumas templates pro projeto;
