@@ -252,5 +252,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 ## 30/08/22:
 - Últimos ajustes no banco de dados para iniciar a inserção de dados;
+- Foi definido um nome inicial para a plataforma - iPicles;
+- Elaboramos um logotipo;
 
 
