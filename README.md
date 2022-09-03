@@ -261,6 +261,6 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## Sexta-feira 02/09/22:
 - Aula sobre HTML e criação de forms;
 
-
-
-
+## Sabado 03/09/22:
+- Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos.
+- Atualização do Trello.
