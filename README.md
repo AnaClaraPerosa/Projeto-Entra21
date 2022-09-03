@@ -91,7 +91,7 @@ Quem fez não testa!
 ## Guia Scrum:
 - https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf
 
-## Sexta feira 12/08/22:
+## Sexta-feira 12/08/22:
 - Criação do banco de dados pelo DBeaver;
 - Tabelas criadas:
   - Clientes;
@@ -102,17 +102,17 @@ Quem fez não testa!
   - Pedidos;
   - Itens do pedido;
 
-## Segunda Feira 15/08/22:
+## Segunda-feira 15/08/22:
 - Colocação de um modelo de formulário de cadastro;
 
-## Terça feira 16/08/22:
+## Terça-feira 16/08/22:
 - Reunião com o professor -> Precisamos pro projeto:
   - Tela de cadastro/login pra cliente e fornecedor;
   - Filtro por nichos no site;
   - Carrinho;
   - Exemplo fictício pra apresentação;
 
-## Quinta feira 18/08/22 - Ferramentas em utilização:
+## Quinta-feira 18/08/22 - Ferramentas em utilização:
 
 - Jamboard para definições do projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
 
@@ -120,7 +120,7 @@ Quem fez não testa!
 
 - Miro para montar o Business Model Canvas para fazer o planejamento estratégico - https://miro.com/welcomeonboard/Z21CWEt4UW9mdG4wbEJHWDFKczB2aVJPRGVIaThxMDBkN2RHZ3Q1dVFON1pyNWowVldGTllTT2xZeDR4M0xaWHwzNDU4NzY0NTE0NjAxOTE3OTI4?share_link_id=787192381582
 
-## Sexta feira 19/08/22: 
+## Sexta-feira 19/08/22: 
 - Atualização Business Model Canvas;
 
 ## Historia do usuário
@@ -247,13 +247,19 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## 22/08/22 - 26/08/22:
 **Estudando banco de dados na nuvem (aws) e o virtual environment**
 
-## Segunda feira 29/08/22:
+## Segunda-feira 29/08/22:
 - Acessando o banco de dados na nuvem com o repositório oficial do projeto;
 
-## Terça feira 30/08/22:
+## Terça-feira 30/08/22:
 - Últimos ajustes no banco de dados para iniciar a inserção de dados;
 - Criação da tela de login;
 
 ## Quinta-feira 01/08/22:
 - Término da tela de login;
 - Criação de algumas templates pro projeto;
+
+## Sexta-feira 02/09/22:
+- Aula sobre HTML e criação de forms;
+
+
+
