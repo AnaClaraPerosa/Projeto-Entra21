@@ -264,3 +264,19 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## Sabado 03/09/22:
 - Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos.
 - Atualização do Trello.
+- O que foi feito:
+ - Renan montou navbar e carrinho de compras do site
+ - Ana montou navbar e formulario de fornecedores
+ - Jaqueline montou logo e prototipação
+ - Lucas esta estudando a conexão do backend com o frontend
+
+## Segunda - feira
+- Daily Scrum
+- Atualização das Sprints e definições dos Kanbans 
+- Foi definido as divisões dos Apps
+  - App1 - Frontend e Contato
+  - App2 - Fornecedores
+  - App3 - Produtos e Segmentos
+  - App4 - Carinho de Compras
+  - App5 - Pedidos e Itens dos Pedidos
+  - App6 - Clientes
