@@ -287,3 +287,4 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
     - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
     - Eu Ana Clara Perosa estou de acordo com a remoção.
     - Eu Renan Oliveira estou de acordo com a remoção.
+    - Eu Lucas Salvaro Dimon estou de acordo com a remoção.
