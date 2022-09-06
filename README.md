@@ -4,7 +4,6 @@
 Desenvolvedores:
 
 - Ana Clara Perosa;
-- Igor Freire;
 - Jaqueline Peres Altismo;
 - Lucas Dimon
 - Renan Oliveira;
@@ -280,3 +279,9 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
   - App4 - Carinho de Compras
   - App5 - Pedidos e Itens dos Pedidos
   - App6 - Clientes
+
+
+## Terça - feira 06/09/2022
+
+- Por unanimidade o grupo decidiu remover o I. F. nesta data, conforme a orientação do professor Adriano Machado.
+    - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
