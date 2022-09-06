@@ -3,10 +3,10 @@
 
 Desenvolvedores:
 
-- Ana Clara Perosa;
-- Jaqueline Peres Altismo;
-- Lucas Dimon
-- Renan Oliveira;
+- Ana Clara Perosa: Front-end;
+- Jaqueline Peres Altismo: DBA;
+- Lucas Dimon: Back-end;
+- Renan Oliveira: Front-end;
 
 ## **Nomes pro projeto:**
 - Foodfit;
@@ -261,28 +261,26 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 - Aula sobre HTML e criação de forms;
 
 ## Sábado 03/09/22:
-- Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos.
-- Atualização do Trello.
+- Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos;
+- Atualização do Trello;
 - O que foi feito:
- - Renan montou navbar e carrinho de compras do site
- - Ana montou navbar e formulario de fornecedores
- - Jaqueline montou logo e prototipação
- - Lucas esta estudando a conexão do backend com o frontend
+ - Renan montou navbar e carrinho de compras do site;
+ - Ana montou navbar e formulário de fornecedores;
+ - Jaqueline montou logo e prototipação;
+ - Lucas está estudando a conexão do back-end com o front-end;
 
-## Segunda - feira
-- Daily Scrum
-- Atualização das Sprints e definições dos Kanbans 
-- Foi definido as divisões dos Apps
-  - App1 - Frontend e Contato
-  - App2 - Fornecedores
-  - App3 - Produtos e Segmentos
-  - App4 - Carinho de Compras
-  - App5 - Pedidos e Itens dos Pedidos
-  - App6 - Clientes
+## Segunda-feira 05/07/22:
+- Daily Scrum;
+- Sprint Planning e definições dos Kanbans; 
+- Foi definido as divisões dos Apps:
+  - App1 - Front-end e Contato;
+  - App2 - Fornecedores;
+  - App3 - Produtos e Segmentos;
+  - App4 - Carinho de Compras;
+  - App5 - Pedidos e Itens dos Pedidos;
+  - App6 - Clientes;
 
-
-## Terça - feira 06/09/2022
-
+## Terça-feira 06/09/22:
 - Por unanimidade o grupo decidiu remover o I. F. nesta data, conforme a orientação do professor Adriano Machado.
     - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
     - Eu Ana Clara Perosa estou de acordo com a remoção.
