@@ -260,7 +260,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## Sexta-feira 02/09/22:
 - Aula sobre HTML e criação de forms;
 
-## Sabado 03/09/22:
+## Sábado 03/09/22:
 - Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos.
 - Atualização do Trello.
 - O que foi feito:
@@ -285,3 +285,4 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 - Por unanimidade o grupo decidiu remover o I. F. nesta data, conforme a orientação do professor Adriano Machado.
     - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
+    - 
