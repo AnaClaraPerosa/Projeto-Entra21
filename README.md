@@ -261,7 +261,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## Sexta-feira 02/09/22:
 - Aula sobre HTML e criação de forms;
 
-## Sabado 03/09/22:
+## Sábado 03/09/22:
 - Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos.
 - Atualização do Trello.
 - O que foi feito:
@@ -270,13 +270,13 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
  - Jaqueline montou logo e prototipação
  - Lucas esta estudando a conexão do backend com o frontend
 
-## Segunda - feira
-- Daily Scrum
-- Atualização das Sprints e definições dos Kanbans 
-- Foi definido as divisões dos Apps
-  - App1 - Frontend e Contato
-  - App2 - Fornecedores
-  - App3 - Produtos e Segmentos
-  - App4 - Carinho de Compras
-  - App5 - Pedidos e Itens dos Pedidos
-  - App6 - Clientes
+## Segunda-feira 05/09/22:
+- Daily Scrum;
+- Atualização das Sprints e definições dos Kanbans; 
+- Foi definido as divisões dos Apps;
+  - App1 - Frontend e Contato;
+  - App2 - Fornecedores;
+  - App3 - Produtos e Segmentos;
+  - App4 - Carinho de Compras;
+  - App5 - Pedidos e Itens dos Pedidos;
+  - App6 - Clientes;
