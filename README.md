@@ -285,4 +285,4 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 - Por unanimidade o grupo decidiu remover o I. F. nesta data, conforme a orientação do professor Adriano Machado.
     - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
-    - 
+    - Eu Ana Clara Perosa estou de acordo com a remoção.
