@@ -6,7 +6,7 @@ from cidades.models import Cidades
 class Fornecedores(models.Model):
     fornecedor_razao_social = models.CharField(max_length=100, verbose_name='Razão social')
     fornecedor_cpf_cnpj = models.CharField(max_length=20, verbose_name='CPFJ/CNPJ')
-    fornecedor_email = models.CharField(max_length=100, verbose_name='Email')
+    fornecedor_email = models.EmailField(max_length=100, verbose_name='Email')
     fornecedor_telefone = models.CharField(max_length=30, verbose_name='Telefone')
     fornecedor_logradouro = models.CharField(max_length=100, verbose_name='Logradouro')
     fornecedor_bairro = models.CharField(max_length=100, verbose_name='Bairro')

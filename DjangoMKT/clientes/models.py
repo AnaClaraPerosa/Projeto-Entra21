@@ -7,7 +7,7 @@ class Clientes(models.Model):
     cliente_nome = models.CharField(max_length=100,verbose_name='Nome')
     cliente_telefone = models.CharField(max_length=100,verbose_name='Telefone')
     cliente_cpf = models.CharField(max_length=100,verbose_name='CPF')
-    cliente_email = models.CharField(max_length=100, verbose_name='Email')
+    cliente_email = models.EmailField(max_length=100, verbose_name='Email')
     cliente_logradouro = models.CharField(max_length=100, verbose_name='Logradouro')
     cliente_bairro = models.CharField(max_length=100, verbose_name='Bairro')
     cliente_numero = models.IntegerField(default=0, verbose_name='Número')
