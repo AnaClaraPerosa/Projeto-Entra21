@@ -269,7 +269,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
  - Jaqueline montou logo e prototipação;
  - Lucas está estudando a conexão do back-end com o front-end;
 
-## Segunda-feira 05/07/22:
+## Segunda-feira 05/09/22:
 - Daily Scrum;
 - Sprint Planning e definições dos Kanbans; 
 - Foi definido as divisões dos Apps:
