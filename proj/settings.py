@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8l_!22x2rw6ec!f1y2)squx1q4q(5iwoq4m^8o3s7t9avr_phv'
+try:
+    SECRET_KEY = os.getenv('SECRET_KEY')
+except ImportError:
+    pass
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','ipicles.herokuapp.com']
 
 
 # Application definition
@@ -88,18 +93,14 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 #     }
 # }
 
+try:
+    DATABASE_URL = os.getenv('DATABASE_URL')
+    DATABASES = {}
+    DATABASES['default'] = dj_database_url.config(conn_max_age = 600)
 
+except ImportError:
+    pass
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'pye2122g3',
-        'USER': 'pye2122g3',
-        'PASSWORD': 'pye2122g3@25@ago',
-        'HOST': '3.89.36.150',
-        'PORT': '3306',
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -141,3 +142,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from . local_settings import *
+except ImportError:
+    pass
