@@ -50,15 +50,12 @@ INSTALLED_APPS = [
     'nucleo',
     'carrinho',
     'clientes',       
-    'depoimentos',
+    # 'depoimentos',
     'endereco',
     'fornecedores',
     'produtos',
-    'carrinho',
-    'pedidos',
-    'clientes',
+    # 'pedidos',
     'usuarios',
-    'crispy-forms',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
