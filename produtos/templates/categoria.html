@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block title %} {{ categoria.titulo }} ¦ {% endblock %}
+
+{% block content %}        
+
+        {% for produto in categoria.produtos.all %}
+            {% include 'lista_itens.html' %}
+        {% endfor %}
+
+{% endblock %}

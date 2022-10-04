@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}        
+    <div class="columns is-multiline mb-6">
+        <h5>Você buscou por: "{{ query }}"</h5>
+    </div>
+
+        {% for produto in produtos %}
+            {% include 'lista_itens.html' %}
+        {% endfor %}
+        
+    </div>
+{% endblock %}
