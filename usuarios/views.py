@@ -52,4 +52,3 @@ class PerfilUpdate(UpdateView):
         context["botao"] = "Atualizar"
 
         return context
-        
