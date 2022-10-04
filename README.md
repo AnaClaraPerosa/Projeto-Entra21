@@ -288,3 +288,5 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
     - Eu Lucas Salvaro Dimon estou de acordo com a remoção.
 
 
+
+teste
