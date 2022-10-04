@@ -4,15 +4,14 @@ from django.shortcuts import render,get_object_or_404, redirect
 from django.db.models import Q
 from .forms import AddNoCarrinhoForm
 from .models import Categoria, Produto
-
 from carrinho.carrinho import Carrinho
 
 
 def pesquisa(request):
-        query = request.GET.get('query','')
-        produtos = Produto.objects.filter(Q(titulo__icontains = query) | Q(descricao__icontains = query))
+    query = request.GET.get('query','')
+    produtos = Produto.objects.filter(Q(titulo__icontains = query) | Q(descricao__icontains = query))
 
-        return render(request, 'pesquisa.html', {'produtos': produtos , 'query' : query})
+    return render(request, 'pesquisa.html', {'produtos': produtos , 'query' : query})
 
 
 def produto(request, categoria_slug, produto_slug):
@@ -35,7 +34,7 @@ def produto(request, categoria_slug, produto_slug):
     else:
         form = AddNoCarrinhoForm
 
-        produto_similar = list(produto.categoria.produtos.exclude(id=produto.id))
+    produto_similar = list(produto.categoria.produtos.exclude(id=produto.id))
 
     if len(produto_similar) >= 4:
         produto_similar = random.sample(produto_similar, 4)
