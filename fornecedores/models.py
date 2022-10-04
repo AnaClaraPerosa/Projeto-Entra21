@@ -1,10 +1,10 @@
+from django.contrib.auth.models import User
 from django.db import models
-from cidades.models import Cidades
 
-#Create your models here.
+# Create your models here.
 
 class Fornecedores(models.Model):
-    fornecedor_razao_social = models.CharField(max_length=100, verbose_name='Razão social')
+    fornecedor_nome = models.CharField(max_length=255,verbose_name='Nome')
     fornecedor_cpf_cnpj = models.CharField(max_length=20, verbose_name='CPFJ/CNPJ')
     fornecedor_email = models.EmailField(max_length=100, verbose_name='Email')
     fornecedor_telefone = models.CharField(max_length=30, verbose_name='Telefone')
@@ -13,15 +13,14 @@ class Fornecedores(models.Model):
     fornecedor_numero = models.IntegerField(default=0, verbose_name='Número')
     fornecedor_cep = models.IntegerField(default=0, verbose_name='CEP')
     fornecedor_complemento = models.CharField(max_length=100, verbose_name='Complemento')
-    fornecedor_obs = models.CharField(max_length=100, verbose_name='Observações',default='')
-    fornecedor_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade_ID', on_delete=models.PROTECT)
     fornecedor_ativo = models.CharField(max_length=1)
-
-    def __str__(self):
-        return '%s %s' % (self.fornecedor_razao_social, self.fornecedor_cpf_cnpj)
+    fornecedor_criem = models.DateTimeField(auto_now_add=True)
+    fornecedor_cripor = models.OneToOneField(User,related_name='fornecedor',on_delete=models.CASCADE)
 
     class Meta:
-        ordering = (['fornecedor_razao_social', 'fornecedor_cpf_cnpj'])
-        verbose_name = 'Fornecedor'
-        verbose_name_plural = 'Fornecedores'
+        ordering = ['fornecedor_nome']
+        verbose_name = 'fornecedor'
+        verbose_name_plural = 'fornecedores'
 
+    def __str__(self):
+        return self.fornecedor_nome
