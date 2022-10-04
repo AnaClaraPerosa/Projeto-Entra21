@@ -1,8 +1,4 @@
 from django.shortcuts import render
-
-# Create your views here.
-
-from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User, Group
 from django.views.generic.list import ListView
