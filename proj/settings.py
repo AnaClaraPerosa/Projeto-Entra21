@@ -53,10 +53,15 @@ INSTALLED_APPS = [
     'depoimentos',
     'endereco',
     'fornecedores',
+    'produtos',
+    'carrinho',
     'pedidos',
-    'produtos',   
+    'clientes',
     'usuarios',
+    'crispy-forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -160,7 +165,6 @@ MEDIA_URL = "/media/"
 LOGIN_REDIRECT_URL = 'fornecedor_admin'
 LOGOUT_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
