@@ -40,7 +40,6 @@
                                         <tr>
                                             <td class="shoping__cart__item">
                                                 <img src="{{ item.produto.get_thumbnail }}" alt="">
-                                                <!-- se ficar estranho posso colocar esse href de baixo em outra td -->
                                                 <h5><a href="{% url 'produto' item.produto.categoria.slug item.produto.slug %}">{{ item.produto.titulo }}</a></h5>
                                             </td>
 
