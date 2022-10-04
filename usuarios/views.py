@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404
 class UsuarioCreate(CreateView):
     template_name = "form.html"
     form_class = UsuarioForm
-    success_url = reverse_lazy('login-geral')
+    success_url = reverse_lazy('login')
 
     def form_valid(self, form):
 
@@ -36,7 +36,7 @@ class UsuarioCreate(CreateView):
 
 
 class PerfilUpdate(UpdateView):
-    template_name = "templates/form.html"
+    template_name = "clientes/form.html"
     model = Perfil
     fields = ["nome", "sobrenome", "telefone"]
     success_url = reverse_lazy("index")
