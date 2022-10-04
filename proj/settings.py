@@ -50,13 +50,15 @@ INSTALLED_APPS = [
     'nucleo',
     'carrinho',
     'clientes',       
-    'depoimentos',
+    # 'depoimentos',
     'endereco',
     'fornecedores',
-    'pedidos',
-    'produtos',   
+    'produtos',
+    # 'pedidos',
     'usuarios',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -160,7 +162,6 @@ MEDIA_URL = "/media/"
 LOGIN_REDIRECT_URL = 'fornecedor_admin'
 LOGOUT_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
