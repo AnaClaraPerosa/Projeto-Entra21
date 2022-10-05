@@ -15,14 +15,14 @@ from .models import Clientes
 class ClienteCreate(CreateView, LoginRequiredMixin):
     login_url = reverse_lazy('login')
     # group_required = [u"Administrador", u"Clientes"]
-    template_name = 'clientes/form.html'
+    template_name = 'cliente-form.html'
     fields = ['cliente_nome', 'cliente_email', 
             'cliente_telefone', 'cliente_cpf', 
             'cliente_bairro','cliente_cep', 
             'cliente_cidade_id', 'cliente_complemento', 
             'cliente_obs']
     model = Clientes
-    success_url = reverse_lazy('listar-cliente')
+    success_url = reverse_lazy('cliente-list')
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -43,8 +43,8 @@ class ClienteUpdate(UpdateView, LoginRequiredMixin):
     'cliente_bairro','cliente_cep', 
     'cliente_cidade_id', 'cliente_complemento', 
     'cliente_obs']
-    template_name = 'cliente-upload.html'
-    success_url = reverse_lazy('index')
+    template_name = 'cliente-update.html'
+    success_url = reverse_lazy('cliente-list')
 
     # def get_context_data(self, *args, **kwargs):
     #     context = super().get_context_data(*args, **kwargs)
@@ -56,16 +56,16 @@ class ClienteUpdate(UpdateView, LoginRequiredMixin):
 
 ################# DELETE #################
 
-# class ClienteDelete(DeleteView, LoginRequiredMixin):
-#     login_url = reverse_lazy('login')
-#     model = Clientes
-#     template_name = 'cliente-delete.html'
-#     success_url = reverse_lazy('cliente-form')
+class ClienteDelete(DeleteView, LoginRequiredMixin):
+    login_url = reverse_lazy('login')
+    model = Clientes
+    template_name = 'cliente-delete.html'
+    success_url = reverse_lazy('cliente-list')
 
 ################# LISTA #################
 
-# class ClienteList(ListView, LoginRequiredMixin):
-#     login_url = reverse_lazy('login')
-#     model = Clientes
-#     template_name = 'cliente-form.html'
+class ClienteList(ListView, LoginRequiredMixin):
+    login_url = reverse_lazy('login')
+    model = Clientes
+    template_name = 'cliente-list.html'
 

@@ -118,11 +118,13 @@
                   >
                 </li>
                 <li>
-                  <i class="fa fa-user"></i>Registre-se</a
+                  <a href="{% url 'registre-se' %}"
+                    ><i class="fa fa-user"></i>Registre-se</a
                   >
                 </li>
                 <li>
-                  <i class="fa fa-user"></i>Cliente</a
+                  <a href="{% url 'cliente-form' %}"
+                    ><i class="fa fa-user"></i>Cliente</a
                   >
                 </li>
               </ul>
@@ -130,6 +132,46 @@
             </div>
           </div>
         </div>
+
+        <!-- {% if request.user.is_authenticated %}
+        COLOCAR NAVBAR COM O QUE SÓ QUEM ESTÁ CADASTRADO PODE VISUALIZAR
+        {% endif %}
+
+        {% if request.user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <span id="username">{{ request.user }}</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'atualizar-dados' %}">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  Meus dados</a>
+              <a class="dropdown-item" href="#">
+                  <i class="fa fa-lock" aria-hidden="true"></i>
+                  Alterar senha</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'logout' %}">
+                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  Sair</a>
+          </div>
+        </li>
+        {% else %}
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'registre-se' %}">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+            Registrar
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'login' %}">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
+              Login
+          </a>
+        </li>
+        {% endif %} -->
+        
         <div class="humberger__open">
           <i class="fa fa-bars"></i>
         </div>
