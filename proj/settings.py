@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'endereco',
     'fornecedores',
     'produtos',
-    # 'pedidos',
+    'pedidos',
     'usuarios',
 ]
 

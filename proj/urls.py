@@ -29,7 +29,7 @@ urlpatterns = [
     # path('depoimentos/',include('depoimentos.urls')),
     path('endereco/',include('endereco.urls')),
     path('fornecedores/',include('fornecedores.urls')),
-    # path('pedidos/',include('pedidos.urls')),
+    path('pedidos/',include('pedidos.urls')),
     path('produtos/',include('produtos.urls')),    
     path('usuarios/',include('usuarios.urls')),
  ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
