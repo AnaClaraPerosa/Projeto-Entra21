@@ -8,7 +8,7 @@ from produtos.views import produto
 
 
 def index(request):
-    produto = Produto.objects.all()
+    produto = Produto.objects.order_by('?').all()
     context = {
         'produto1' : produto
     }
