@@ -340,8 +340,6 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 - Revisar as paginas
 
-- Carrossel
-
 - Pedido do Cliente
 
 - Depoimento da nossa pagina iPicles (Sobre)
@@ -373,6 +371,8 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 
 ## Feito
+
+- Carrossel com link para a compra do produto
 
 - Deploy
 
