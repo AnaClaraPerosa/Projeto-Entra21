@@ -40,33 +40,16 @@
     <div class="humberger__menu__wrapper">
       <div class="humberger__menu__logo">
         <a href="#"><img src="{% static 'img/Logo.png' %}" alt="" /></a>
-        <!-- src="{% static 'img/logotopo-w.png' %}" -->
       </div>
       <div class="humberger__menu__cart">
         <ul>
-          <li>
-            <a href="#"><i class="fa fa-heart"></i> <span>0</span></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a>
-          </li>
+          <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-bag"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
         </ul>
-        <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->
       </div>
       <nav class="humberger__menu__nav mobile-menu">
         <ul>
           <li class="active"><a href="{% url 'index' %}">Início</a></li>
-          <li><a href="./shop-grid.html">Produtos</a></li>
-          <li>
-            <a href="#">Pages</a>
-            <ul class="header__menu__dropdown">
-              <li><a href="./shop-details.html">Shop Details</a></li>
-              <li><a href="./shoping-cart.html">Shopping Cart</a></li>
-              <li><a href="./checkout.html">Check Out</a></li>
-              <li><a href="./blog-details.html">Blog Details</a></li>
-            </ul>
-          </li>
-          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
           <li><a href="{% url 'contato' %}">Contato</a></li>
         </ul>
       </nav>
@@ -99,7 +82,7 @@
                                     
                                 </ul>-->
                 </li>
-                <li><a href="./blog.html">Depoimentos</a></li>
+                <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
               </ul>
             </nav>
@@ -355,68 +338,42 @@
     </section>
     <!-- Blog Section End -->
     {% endblock %}
-    <!-- Footer Section Begin -->
-    <footer class="footer spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer__about">
-              <div class="footer__about__logo">
-                <a href="{% url 'index' %}"
-                  ><img src="{% static 'img/logo.png' %}" alt=""
-                /></a>
-              </div>
-              <ul>
-                <li>Fone: 48 99999 9999</li>
-                <li>Email: ipicless@gmail.com</li>
-              </ul>
+
+  <!-- Footer Section Begin -->
+
+<footer class="footer spad">
+  <div class="container">
+      <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__about__logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-            <div class="footer__widget">
-              <h6>Links Úteis</h6>
-              <ul>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="{% url 'loja' %}">Loja</a></li>
-                <li><a href="#">Área do cliente</a></li>
-                <li><a href="{% url 'fornecedor_admin' %}">Área do fornecedor</a></li>
-                <li><a href="#">Perguntas frequentes</a></li>
-              </ul>
-              <ul>
-                <li><a href="#">Depoimentos</a></li>
-                <li><a href="#">Política de segurança</a></li>
-                <li><a href="{% url 'contato' %}">Contato</a></li>
-              </ul>
+            <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-1">
+                <div class="footer__widget">
+                    <h6>Links Úteis</h6>
+                        <ul>
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="{% url 'loja' %}">Loja</a></li>    
+                            <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>                                                    
+                        </ul>
+                        <ul>
+                        <li><a href="{% url 'fornecedor_admin' %}">Área do fornecedor</a></li>
+                        <li><a href="{% url 'contato' %}">Contato</a></li>
+                        </ul>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="footer__widget">
-              <h6>Receba nossas novidades</h6>
-              <p>
-                Receba em seu e-mail nossas novidades, lançamentos e ofertas
-                especiais.
-              </p>
-              <form action="#">
-                <input type="text" placeholder="Informe seu e-mail" />
-                <!-- <button type="submit" class="site-btn">Cadastre-se</button> -->
-                <button type="submit" onclick="news();" class="site-btn">
-                  Cadastre-se
-                </button>
-                <script
-                  type="text/javascript"
-                  src="{% static 'js/script.js' %}"
-                ></script>
-              </form>
-              <div class="footer__widget__social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </div>
+            <div class="footer__widget__social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
             </div>
-          </div>
-        </div>
       </div>
-    </footer>
-    <!-- Footer Section End -->
+  </div>
+</footer> 
+
+<!-- Footer Section End -->
 
     <!-- Js Plugins -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>

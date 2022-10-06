@@ -60,7 +60,7 @@
                         <li><a href="./blog-details.html">Blog Details</a></li>
                     </ul>
                 </li>
-                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
             </ul>
         </nav>
@@ -89,7 +89,7 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul> -->
                             </li>
-                            <li><a href="./blog.html">Depoimentos</a></li>
+                            <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                             <li><a href="{% url 'contato' %}">Contato</a></li>
                         </ul>
                     </nav>
@@ -168,7 +168,7 @@
                             <ul>
                                 <li><a href="#">Sobre nós</a></li>
                                 <li><a href="{% url 'loja' %}">Loja</a></li>    
-                                <li><a href="#">Depoimentos</a></li>                                                    
+                                <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>                                                    
                             </ul>
                             <ul>
                             <li><a href="{% url 'fornecedor_admin' %}">Área do fornecedor</a></li>
