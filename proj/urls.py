@@ -31,4 +31,5 @@ urlpatterns = [
     path('fornecedores/',include('fornecedores.urls')),
     path('produtos/',include('produtos.urls')),    
     path('usuarios/',include('usuarios.urls')),
+    # path('pagamento/',include('pagamento.urls')),
  ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

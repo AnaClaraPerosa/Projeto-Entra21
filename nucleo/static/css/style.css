@@ -478,7 +478,7 @@ ol {
 }
 
 .header__menu ul li a {
-	font-size: 12px;  /*Altera o tamanho da fonte do menu*/
+	font-size: 12px;   /*Altera o tamanho da fonte do menu*/
 	color: #252525;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -614,7 +614,6 @@ ol {
 .herox.hero-x .hero__search {
 	margin-bottom: 0;
 }
-
 
 /* fim do novo hero */
 

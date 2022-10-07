@@ -4,10 +4,20 @@ from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from produtos.models import Produto
+from produtos.views import produto
 
 
 def index(request):
-    return render(request,'index.html')
+    produto = Produto.objects.order_by('?').all()
+    context = {
+        'produto1' : produto
+    }
+    return render(request,'index.html', context)
+
+def pagamento(request):
+    return render(request,'pagamento.html')
+
+
 
 def contato(request):
     return render(request,'contato.html')
@@ -37,6 +47,4 @@ def loja(request):
     context = {
         'novos_produtos' : page
     }
-
     return render(request,'loja.html', context)
-    

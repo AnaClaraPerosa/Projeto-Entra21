@@ -340,8 +340,6 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 - Revisar as paginas
 
-- Carrossel
-
 - Pedido do Cliente
 
 - Depoimento da nossa pagina iPicles (Sobre)
@@ -350,11 +348,6 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 - Loja fazer a filtragem
 
-- Area do Fornecedor fazer a paginação
-
-- Migrar da base teste para a base oficial
-
-- Atualizar o Readme com o Trello
 
 
 ## Em andamento
@@ -373,6 +366,14 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 
 ## Feito
+
+- Migrar da base teste para a base oficial
+
+- Atualizar o Readme com o Trello
+
+- Area do Fornecedor fazer a paginação
+
+- Carrossel com link para a compra do produto
 
 - Deploy
 

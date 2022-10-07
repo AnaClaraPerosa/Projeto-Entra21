@@ -75,12 +75,6 @@
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
                 <li>
                   <a href="{% url 'fornecedor_admin' %}">Area do Fornecedor</a>
-                  <!--<ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    
-                                </ul>-->
                 </li>
                 <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
@@ -232,56 +226,42 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Categories Section Begin -->
+        {% for item in produtos %}
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="product__item">
+              <div class="product__item__pic set-bg" data-setbg="{{ produto.get_thumbnail }}">
+                  <ul class="product__item__pic__hover">
+                      <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul>
+              </div>
+              <div class="product__item__text">
+                  <h6><a href="#">{{ produto.titulo }}</a></h6>
+                  <h5>R$ {{ produto.preco }}</h5>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+    
+
+    <!-- Categories Section Begin - INICIO CARROSSEL -->
+
     <section class="categories">
       <div class="container">
         <div class="row">
           <div class="categories__slider owl-carousel">
+            {% for produto in produto1 %}
             <div class="col-lg-3">
-              <div
-                class="categories__item set-bg"
-                data-setbg="{% static 'img/categories/cat-1.jpg' %}"
-              >
-                <h5><a href="#">Sem Lactose</a></h5>
+              <div class="categories__item set-bg" data-setbg="{{ produto.get_thumbnail }}">
+                <h5><a href="{% url 'produto' produto.categoria.slug produto.slug %}">{{ produto.titulo }}</a></h5>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div
-                class="categories__item set-bg"
-                data-setbg="{% static 'img/categories/cat-2.jpg' %}"
-              >
-                <h5><a href="#">Orgânicos</a></h5>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div
-                class="categories__item set-bg"
-                data-setbg="{% static 'img/categories/cat-3.jpg' %}"
-              >
-                <h5><a href="#">Sem Glúten</a></h5>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div
-                class="categories__item set-bg"
-                data-setbg="{% static 'img/categories/cat-4.jpg' %}"
-              >
-                <h5><a href="#">Oleaginosas</a></h5>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div
-                class="categories__item set-bg"
-                data-setbg="{% static 'img/categories/cat-5.jpg' %}"
-              >
-                <h5><a href="#">Shakes</a></h5>
-              </div>
-            </div>
+            {% endfor %} 
           </div>
         </div>
       </div>
     </section>
-    <!-- Categories Section End -->
+      
+    <!-- Categories Section End - FIM CARROSSEL -->
 
     <!-- Depoimentos Blog Section Begin -->
     <section class="from-blog spad">
