@@ -1,50 +1,36 @@
-# import stripe
-
-# from django.conf import settings
-# from django.contrib import messages
+from django.contrib import messages
 from django.shortcuts import render,redirect
 
-# from.forms import CheckoutForm
+from.forms import CheckoutForm
 from .carrinho import Carrinho
 
-# from app5.utilitarios import checkout
+from pedidos.utilitarios import checkout
 
 # Create your views here.
 
 
-def carrinhho_detalhe(request):
+def carrinho_detalhe(request):
     carrinho = Carrinho(request)
 
-    # if request.method == 'POST':
-    #     form = CheckoutForm(request.POST)
+    if request.method == 'POST':
+        form = CheckoutForm(request.POST)
 
-    #     if form.is_valid():
-    #         stripe.api_key = settings.STRIPE_SECRET_KEY
+        if form.is_valid():
+            primeiro_nome = form.cleaned_data['primeiro_nome']
+            sobrenome = form.cleaned_data['sobrenome']
+            email = form.cleaned_data['email']
+            endereco = form.cleaned_data['endereco']
+            cep = form.cleaned_data['cep']
+            cidade = form.cleaned_data['cidade']
+            telefone = form.cleaned_data['telefone']
 
-    #         stripe_token = form.cleaned_data['stripe_token']
+            pedido = checkout(request, primeiro_nome, sobrenome, email, endereco, cep, cidade, telefone, carrinho.get_custo_total())
 
-    #         carrega = stripe.Charge.create(
-    #             valor = int(carrinho.get_custo_total() * 100),
-    #             moeda = 'BRL',
-    #             descricao = 'Cobrança da loja',
-    #             fonte = stripe_token
-    #         )
+            carrinho.clear()
 
-    #         primeiro_nome = form.cleaned_data['primeiro_nome']
-    #         sobrenome = form.cleaned_data['sobrenome']
-    #         email = form.cleaned_data['email']
-    #         telefone = form.cleaned_data['telefone']
-    #         endereco = form.cleaned_data['endereco']
-    #         cep = form.cleaned_data['cep']
-    #         cidade = form.cleaned_data['cidade']
-
-    #         pedido = checkout(request, primeiro_nome, sobrenome, email, telefone, endereco, cep, cidade, carrinho.get_custo_total())
-
-    #         carrinho.clear()
-
-    #         return redirect('sucesso')
-    # else:
-    #     form = CheckoutForm()
+            return redirect('sucesso')
+    else:
+        form = CheckoutForm()
 
     remove_do_carrinho = request.GET.get('remove_do_carrinho','')
     muda_quantidade = request.GET.get('muda_quantidade','')
@@ -60,7 +46,8 @@ def carrinhho_detalhe(request):
 
         return redirect('carrinho')
     
-    return render(request, 'carrinho.html')
+    return render(request, 'carrinho.html',{'form' : form})
 
-# def sucesso(request):
-#      return render(request, 'sucesso.html')
+
+def sucesso(request):
+     return render(request, 'sucesso.html')
