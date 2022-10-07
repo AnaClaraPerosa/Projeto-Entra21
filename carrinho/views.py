@@ -7,6 +7,7 @@ from django.shortcuts import render,redirect
 # from.forms import CheckoutForm
 from .carrinho import Carrinho
 
+
 # from app5.utilitarios import checkout
 
 # Create your views here.
@@ -64,3 +65,5 @@ def carrinhho_detalhe(request):
 
 # def sucesso(request):
 #      return render(request, 'sucesso.html')
+
+
