@@ -16,13 +16,18 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
     login_url = reverse_lazy('login')
     # group_required = [u"Administrador", u"Clientes"]
     template_name = 'cliente-form.html'
-    fields = ['cliente_nome', 'cliente_email', 
-            'cliente_telefone', 'cliente_cpf', 
-            'cliente_bairro','cliente_cep', 
-            'cliente_cidade_id', 'cliente_complemento', 
-            'cliente_obs']
+    fields = ['cliente_nome', 'cliente_telefone', 
+            'cliente_cpf', 'cliente_email', 
+            'cliente_logradouro', 'cliente_bairro',
+            'cliente_numero', 'cliente_cep', 
+            'cliente_complemento', 
+            'cliente_obs', 'cliente_cidade_id']
     model = Clientes
     success_url = reverse_lazy('cliente-list')
+
+    def form_valid(self, form):
+        form.instance.usuario = self.request.user
+        return super().form_valid(form)
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -38,21 +43,22 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
 class ClienteUpdate(UpdateView, LoginRequiredMixin):
     login_url = reverse_lazy('login')
     model = Clientes
-    fields = ['cliente_nome', 'cliente_email', 
-    'cliente_telefone', 'cliente_cpf', 
-    'cliente_bairro','cliente_cep', 
-    'cliente_cidade_id', 'cliente_complemento', 
-    'cliente_obs']
+    fields = ['cliente_nome', 'cliente_telefone', 
+            'cliente_cpf', 'cliente_email', 
+            'cliente_logradouro', 'cliente_bairro',
+            'cliente_numero', 'cliente_cep', 
+            'cliente_complemento', 
+            'cliente_obs', 'cliente_cidade_id']
     template_name = 'cliente-update.html'
     success_url = reverse_lazy('cliente-list')
 
-    # def get_context_data(self, *args, **kwargs):
-    #     context = super().get_context_data(*args, **kwargs)
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
 
-    #     context['titulo'] = "Editar cadastro de Clientes"
-    #     context['botao'] = "Salvar"
+        context['titulo'] = "Editar cadastro de Clientes"
+        context['botao'] = "Salvar"
 
-    #     return context
+        return context
 
 ################# DELETE #################
 
