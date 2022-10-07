@@ -17,8 +17,6 @@ def index(request):
 def pagamento(request):
     return render(request,'pagamento.html')
 
-
-
 def contato(request):
     return render(request,'contato.html')
 
