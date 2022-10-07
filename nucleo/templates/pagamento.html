@@ -19,20 +19,30 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
-    <section class="from-blog spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                    <div class="blog__item__x">
-                        <img src="{% static 'img/pix.png' %}" alt="" />
-                    </div>
-                    <div class="blog__item__text">
-                        <h5><a href="#">PIX</a></h5>
-                    </div>
-                    </div>
+
+<section class="shoping-cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shoping__cart__table">
+                      <table>
+                          <tbody>
+                              <tr>
+                                <td class="shoping__cart__item"><img src="{% static 'img/pix.png' %}" text-align="text-center"> 
+                                    <a href="#">Pix</td> 
+                                <td class="shoping__cart__item"><img src="{% static 'img/Cartao.png' %}" text-align="text-center"> 
+                                    <a href="#">Cartão</td> 
+                                <td class="shoping__cart__item"><img src="{% static 'img/boleto.png' %}" text-align="text-center"> 
+                                    <a href="#">Boleto</td> 
+                              </tr>
+                          </tbody>
+                      </table>
                 </div>
             </div>
         </div>
-    </section>  
+    </div>
+</section>
+
+
 {% endblock %}
+
