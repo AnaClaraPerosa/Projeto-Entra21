@@ -3518,6 +3518,22 @@ ol {
 	float: right;
   }
 
+  .fas.fa-trash {
+	color: #db1e47;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 15px;
+	float: right;
+  }
+
+  .fa.fa-plus-circle {
+	color: #7fad39;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 10px;
+	float: right;
+  }
+  
   .fa-shopping-bag:before {
 	content: "\f290";
   }

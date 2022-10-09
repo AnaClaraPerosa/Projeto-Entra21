@@ -43,7 +43,7 @@
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i> <span>0</span></a></li>
             </ul>
             <!-- <div class="header__cart__price">item: <span>$0.00</span></div> -->
         </div>
@@ -92,7 +92,7 @@
                     <div class="header__cart">
                         <ul>
                             <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li> -->
-                            <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-bag"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
+                            <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
                             <!-- add aqui a parte tag do @login_required para mostrar só se o user tiver logoff(if else) -->
                             <li><a href="{% url 'login' %}"><i class="fa fa-user"></i> Login</a></li>
                             <li><a href="{% url 'seja_fornecedor' %}"><i class="fa fa-user"></i>Registre-se</a></li>

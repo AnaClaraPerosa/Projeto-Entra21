@@ -31,7 +31,7 @@
                                         <th>Quantidade</th>
                                         <th>Preço</th>
                                         <!-- <th>Total</th> -->
-                                        <th></th>
+                                        <th>Remover</th>
                                     </tr>
                                 </thead>
 
@@ -39,23 +39,19 @@
                                     {% for item in carrinho %}
                                         <tr>
                                             <td class="shoping__cart__item">
-                                                <img src="{{ item.produto.get_thumbnail }}" alt="">
+                                                <img src="{{ item.produto.get_thumbnail }}" alt="" height="100" width="130">
                                                 <h5><a href="{% url 'produto' item.produto.categoria.slug item.produto.slug %}">{{ item.produto.titulo }}</a></h5>
                                             </td>
 
                                             <td class="shoping__cart__quantity">
+                                                <a href="?muda_quantidade={{ item.id }}&quantidade=-1" ><i class="fa fa-minus-circle"></i></a>
                                                 {{ item.quantidade }}
-
-                                                <a href="?muda_quantidade={{ item.id }}&quantidade=-1">-</a>
-                                                <a href="?muda_quantidade={{ item.id }}&quantidade=1">+</a>
+                                                <a href="?muda_quantidade={{ item.id }}&quantidade=1"><i class="fa fa-plus-circle"></i></a>
                                             </td>
 
                                             <td class="shoping__cart__total">R${{ item.preco_total }}</td>
-                                            <td><a href="?remove_do_carrinho={{ item.id }}" class="delete">Remover</a></td>
+                                            <td><a href="?remove_do_carrinho={{ item.id }}" class="delete"><i class="fa fa-trash"></i></a></td>
 
-                                            <td class="shoping__cart__item__close">
-                                                <span class="icon_close"></span>
-                                            </td>
                                         </tr>
                                    {% endfor %} 
 
