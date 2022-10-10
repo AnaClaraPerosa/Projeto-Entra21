@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render,redirect
-
+from django.contrib.auth.decorators import login_required
 from.forms import CheckoutForm
 from .carrinho import Carrinho
 
@@ -8,7 +8,7 @@ from pedidos.utilitarios import checkout
 
 # Create your views here.
 
-
+@login_required
 def carrinho_detalhe(request):
     carrinho = Carrinho(request)
 
