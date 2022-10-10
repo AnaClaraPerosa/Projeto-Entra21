@@ -1,0 +1,97 @@
+<!-- OUTRO FORMS AQUI -->
+
+<section class="intro">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="card" style="border-radius: 1rem;">
+              <div class="card-body p-5">
+
+                <h2 class="mb-5 text-center">Formulário de Checkout</h2>
+
+                <form method="post" action="." id="payment-form">
+                      {% csrf_token %}
+          
+                      {% if form.non_field_errors %}
+                          <div class="notification is-danger">
+                              {{ form.non_field_errors }}
+                          </div>
+                      {% endif %}
+          
+                      {% if form.errors %}
+                          <div class="notification is-danger">
+                              <ul>
+                                  {% for field in form %}
+                                      {% for error in field.errors %}
+                                          <li><strong>{{ field.label }}: </strong>{{ error }}</li>
+                                      {% endfor %}
+                                  {% endfor %}
+                              </ul>
+                          </div>
+                      {% endif %}
+  
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="primeiro_nome" class="form-control" />
+                            <label class="form-label" name="primeiro_nome">Nome</label>
+                          </div>
+                        </div>
+
+                      <div class="col-12 col-md-6 mb-4">
+                          <div class="form-outline">
+                          <input type="text" id="form6Example2" class="form-control" />
+                          <label class="form-label" name="sobrenome">Sobrenome</label>
+                          </div>
+                      </div>
+                      </div>
+  
+                      <!-- Text input -->
+                      <div class="form-outline mb-4">
+                      <input type="text" id="form6Example3" class="form-control" />
+                      <label class="form-label" name="cep">CEP</label>
+                      </div>
+  
+                      <!-- Text input -->
+                      <div class="form-outline mb-4">
+                      <input type="text" id="form6Example4" class="form-control" />
+                      <label class="form-label" name="cidade">Cidade</label>
+                      </div>
+
+                      <!-- Text input -->
+                      <div class="form-outline mb-4">
+                          <input type="text" id="form6Example4" class="form-control" />
+                          <label class="form-label" name="endereco">Endereço</label>
+                          </div>
+  
+                      <!-- Email input -->
+                      <div class="form-outline mb-4">
+                      <input type="email" id="form6Example5" class="form-control" />
+                      <label class="form-label" name="email">Email</label>
+                      </div>
+  
+                      <!-- Number input -->
+                      <div class="form-outline mb-4">
+                      <input type="number" id="form6Example6" class="form-control" />
+                      <label class="form-label" name="telefone">Telefone</label>
+                      </div>
+
+                      {% if messages %}
+                          {% for message in messages %}
+                              <div class="notification is-danger">{{ message }}</div>
+                          {% endfor %}
+                      {% endif %}
+  
+                      <!-- Submit button -->
+                      <button type="submit" class="btn btn-secondary btn-rounded btn-block">Enviar pedido</button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

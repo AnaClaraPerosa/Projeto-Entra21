@@ -10,10 +10,9 @@
     <title>iPicles</title>
 
     <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
     <!-- Css Styles -->
     <!-- <script src="{% static 'css/styles.css' %}"></script> -->
@@ -43,7 +42,7 @@
       </div>
       <div class="humberger__menu__cart">
         <ul>
-          <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-bag"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
+          <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
         </ul>
       </div>
       <nav class="humberger__menu__nav mobile-menu">
@@ -86,7 +85,7 @@
               <ul>
                 <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li> -->
                 <li>
-                  <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-bag"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
+                  <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
                 </li>
                 <!-- add aqui a parte tag do @login_required para mostrar só se o user tiver logoff(if else) -->
                 <li>

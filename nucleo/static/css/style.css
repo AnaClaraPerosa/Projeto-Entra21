@@ -3517,7 +3517,28 @@ ol {
 	float: right;
   }
 
-  
+  .fa.fa-trash {
+	color: #db1e47;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
+  }
+
+  .fa.fa-plus-circle {
+	color: #7fad39;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 15px;
+  }
+
+  .fa.fa-minus-circle {
+	color: #db1e47;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 15px;
+  }
+
+
 /**
 * Notificação toast
 */
