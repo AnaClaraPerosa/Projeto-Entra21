@@ -6,7 +6,7 @@
 
 {% block content %} 
 
-    <!-- Breadcrumb Section Begin -->
+    <!-- Breadcrumb Section Começo -->
     <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/breadcrumb.jpg' %}">
         <div class="container">
             <div class="row">
@@ -18,72 +18,61 @@
             </div>
         </div>
     </section>
+    <!-- Breadcrumb Section Fim -->
 
-    <section class="hero hero-normal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                </div>
-                <div class="col-lg-12">
-                    <p class="mt-5 mb-3 text-muted"></p>
-
-                    <!-- O programa começa aqui -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 my-auto p-5">
+                <div class="lc-block">
                     {% if produto.imagem %}
-                        <figure class="image is-4by3 mb-6">
-                            <img src=" {{ produto.imagem.url }}">
-                        </figure>
+                        <img class="img-fluid" src="{{ produto.imagem.url }}">
                     {% endif %}
-
-                    <h4 class="title"> {{ produto.titulo }}</h4>
-
-                    <p class="mb-6"> <span class="tag is-dark"> Vendedor: {{ produto.fornecedor.fornecedor_nome }}</span></p>
-                    <p class="mb-1"> <span class="tag is-dark"> Descrição </span></p>    
-                    <h5 class="title">{{ produto.descricao }}</h5>
-
-                    <hr>
-                    <p class="mb-1"> <span class="tag is-dark"> Valor </span></p>
-                    <h4 class="title">R${{ produto.preco }}</h4>
-                    <p class="mb-3"> </p>
-
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="notification is-success is-toast">{{ message }}</div>
-                        {% endfor %}
-                    {% endif %}
-
-                    <form method="post" action=".">
-                        {% csrf_token %}
-
-                        <!-- <div class="field has-addons"> -->
-                            <!-- <div class="control">
-                                <p class="mb-1"> <span class="tag is-dark"> Quantidade </span></p>
-                                <input type="number" name="quantidade" value="1" class="input" min="1">
-                            </div> -->
-                            
-                            <div class="control">
-                                <p class="mt-5 mb-3 text-muted"></p>
-                                <button class="btn btn-lg btn-success is-uppercase" type="number" name="quantidade" value="1" class="input" min="1">Adicionar ao carrinho</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-                    {% if produto_similar %}
+            <div class="col-md-7" style="padding:10vw">
+  
+                <div class="lc-block mb-3 me-lg-5">
+                    <div editable="rich">
+                        <h2>{{ produto.titulo }}</h2>
                         <hr>
+                        <h4>Descrição:</h4>
+                        <h5>{{ produto.descricao }}</h5>
+                        <br>
+                        <h6>Vendedor: {{ produto.fornecedor.fornecedor_nome }}</h6>
+                        <hr>
+                        <h5>Valor: R${{ produto.preco }} </h5>
+                    </div>
+                </div>
 
-                        <div class="columns is-multiline">
-                            <div class="column is-12">
-                                <h3 class="subtitle">Produtos Similares</h3>
-                            </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="notification btn-lg btn-success is-toast">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
 
-                            {% for produto in produto_similar %}
-                                {% include 'lista_itens.html' %}
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                    <!-- O programa termina aqui -->
+                <form method="post" action=".">
+                    {% csrf_token %}
 
+                    <div class="control">
+                        <p class="mt-5 mb-3 text-muted"></p>
+                        <button class="btn btn-lg btn-success" type="number" name="quantidade" value="1" class="input" min="1">Adicionar ao carrinho</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if produto_similar %}
+        <hr>
+
+        <div class="columns is-multiline">
+            <div class="column is-12">
+                <h3 class="subtitle">Produtos Similares</h3>
+                <br>
+            </div class='row'>
+            {% for produto in produto_similar %}
+                {% include 'lista_itens.html' %}
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endblock %}

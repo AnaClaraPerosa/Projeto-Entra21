@@ -11,6 +11,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Css Styles -->
     <!-- <script src="{% static 'css/styles.css' %}"></script> -->
@@ -44,7 +45,7 @@
             <a href="#"><i class="fa fa-heart"></i> <span>0</span></a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-shopping-bag"></i> <span>0</span></a>
+            <a href="#"><i class="fa fa-shopping-cart"></i> <span>0</span></a>
           </li>
         </ul>
         <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->
@@ -87,7 +88,7 @@
                 <li><a href="{% url 'loja' %}">Loja</a></li>
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
                 <li>
-                  <a href="{% url 'fornecedor_admin' %}">Area do Fornecedor</a>
+                  <a href="{% url 'fornecedor_admin' %}">Área do Fornecedor</a>
                 </li>
                 <li><a href="./blog.html">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
@@ -98,7 +99,7 @@
             <div class="header__cart">
               <ul>
                 <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li> -->
-                <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-bag"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
+                <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
                 <!-- add aqui a parte tag do @login_required para mostrar só se o user tiver logoff(if else) -->
                 <li><a href="{% url 'login' %}"><i class="fa fa-user"></i> Login</a></li>
                 <li><a href="{% url 'seja_fornecedor' %}"><i class="fa fa-user"></i>Registre-se</a></li>
