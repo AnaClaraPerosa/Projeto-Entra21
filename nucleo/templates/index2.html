@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<h3>Página inicial</h3>
+
+{% if user.perfil.nome_completo %}
+Bem vindo ao IPicles {{ user.perfil.nome_completo }}.
+{% else %}
+Você precisa completar se registrar. Acesse os <a href="{% url 'registre-se' %}">meus dados</a> para atualizar.
+{% endif %}
+
+{% endblock %}
