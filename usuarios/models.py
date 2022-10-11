@@ -14,8 +14,8 @@ class Perfil(models.Model):
     numero = models.IntegerField(default=0, verbose_name='Número')
     cep = models.IntegerField(default=0, verbose_name='CEP')
     complemento = models.CharField(max_length=100, verbose_name='Complemento')
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
-    cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade', on_delete=models.PROTECT)
+    usuario = models.OneToOneField(User,on_delete=models.CASCADE)
+    cidade_id = models.ForeignKey(Cidades, null=0, verbose_name='Cidade', on_delete=models.PROTECT)
     
     class Meta:
         ordering = ['nome']

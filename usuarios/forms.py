@@ -1,7 +1,11 @@
 from django import forms
+from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+from django.forms import ModelForm
+
+from usuarios.models import Perfil
 
 class UsuarioForm(UserCreationForm):
     email = forms.EmailField(max_length=100)
@@ -18,4 +22,9 @@ class UsuarioForm(UserCreationForm):
         return e
         
 
-# class PerfilForm():
+class PerfilForm(forms.ModelForm):
+    class Meta:
+        model = Perfil
+        fields = [ 'nome','sobrenome','telefone',
+        'logradouro','bairro','numero','cep',
+        'complemento','cidade_id']
