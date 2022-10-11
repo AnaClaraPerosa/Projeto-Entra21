@@ -75,3 +75,7 @@ class ClienteList(ListView, LoginRequiredMixin):
     model = Clientes
     template_name = 'cliente-list.html'
 
+####################
+
+def cliente_admin(request):
+    return render(request,'cliente-admin.html')
