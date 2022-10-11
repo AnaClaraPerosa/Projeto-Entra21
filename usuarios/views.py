@@ -8,6 +8,7 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
+# PerfilCreate
 class UsuarioCreate(CreateView):
     template_name = "form.html"
     form_class = UsuarioForm
