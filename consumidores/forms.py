@@ -8,8 +8,7 @@ class ConsumidoresForm(forms.ModelForm):
 
     class Meta:
         model = Consumidores
-        field_list = ['consumidor_nome', 'consumidor_telefone', 
-            'consumidor_cpf', 'consumidor_email', 
+        field_list = ['apelido', 'cpf', 
             'consumidor_logradouro', 'consumidor_bairro',
             'consumidor_numero', 'consumidor_cep', 
             'consumidor_complemento', 

@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Perfil
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.models import User, Group
@@ -9,10 +8,10 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 # PerfilCreate
-class UsuarioCreate(CreateView):
+class PerfilCreate(CreateView):
     template_name = "form.html"
     form_class = UsuarioForm
-    success_url = reverse_lazy('cliente-admin')
+    success_url = reverse_lazy('index')
 
     def form_valid(self, form):
 
