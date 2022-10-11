@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'braces',
     'nucleo',
     'carrinho',
-    'clientes',       
+    'consumidores',       
     # 'depoimentos',
     'endereco',
     'fornecedores',

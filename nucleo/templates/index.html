@@ -76,8 +76,16 @@
 
                   {% if request.user| has_group:"Fornecedor" %}
 
-                  {% elseif request.user| has_group:"Usuario" %}
-                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a>
+                  {% elseif request.user| has_group:"Consumidor" %}
+
+                    {% if request.user.usuario.nome %}
+                      <a href="{% url 'perfil_usuario_update'%}">edite seu cadastro aqui</a>
+                    {% else %}
+                      <a href="{% url 'perfil_usuario_create'%}" class="alarme">preencha seu cdadastro aqui</a>
+                      <!-- piscando em vermelho -->
+                    {% endif %}
+                    
+                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor (contato)</a>
                   {% else %}
 
                   {% endif %}
@@ -106,8 +114,8 @@
                   >
                 </li>
                 <li>
-                  <a href="{% url 'cliente-form' %}"
-                    ><i class="fa fa-user"></i>Cliente</a
+                  <a href="{% url 'consumidor-form' %}"
+                    ><i class="fa fa-user"></i>Consumidor</a
                   >
                 </li>
               </ul>

@@ -5,15 +5,15 @@ from usuarios.models import Perfil
 # Create your models here.
 
 class Fornecedores(models.Model):
-    fornecedor_razao = models.CharField(max_length=255,verbose_name='Razão')
-    fornecedor_ativo = models.CharField(max_length=1)
-    fornecedor_criem = models.DateTimeField(auto_now_add=True)
-    fornecedor_cripor = models.ForeignKey(Perfil,related_name='fornecedor',on_delete=models.CASCADE)
-
+    razao = models.CharField(max_length=255,verbose_name='Razão')
+    ativo = models.CharField(max_length=1)
+    criem = models.DateTimeField(auto_now_add=True)
+    cripor = models.ForeignKey(Perfil,related_name='Fornecedor',on_delete=models.CASCADE)
+    cnpj = models.CharField(max_length=20, verbose_name='CNPJ')
     class Meta:
-        ordering = ['fornecedor_razao']
-        verbose_name = 'fornecedor'
-        verbose_name_plural = 'fornecedores'
+        ordering = ['razao']
+        verbose_name = 'Fornecedor'
+        verbose_name_plural = 'Fornecedores'
 
     def __str__(self):
-        return self.fornecedor_razao
+        return self.razao

@@ -9,13 +9,15 @@
 :----------------------------:-------------------:----------------:-----------------:
 :                            : aut via site ***      : via painelAdmin: aut via site    : 
 :                            :                   :                :                 : não autenticado
-:                            : is_autenticated   : is_fornecedor  : is_cliente      :
-:----------------------------:-------------------:----------------:-----------------:-----------------
+:                            : is_autenticated   : is_fornecedor  : is_consumidor      :
+:-------------------------:-------------------:----------------:-----------------:-----------------
 : home                       :         x         :      x         :      x          :      x
 : loja                       :         x         :      x         :      x          :      x
 : perfilusuario-registre-se  :                   :                :                 :       x
-: perfilcliente create       :        x          :      x         :                 :  
-: perfilcliente update       :        x          :      x         :      x          :
+: perfil create              :         x         :      x         :      x          : 
+: perfil update              :         x         :      x         :      x          : 
+: perfilconsumidor create    :        x          :      x         :                 :  
+: perfilconsumidor update    :        x          :      x         :      x          :
 : perfilfornecedor create    :                   :      x         :                 :
 : perfilfornecedor update    :                   :      x         :                 :
 : produtos create            :                   :      x         :                 :
@@ -28,8 +30,9 @@
 
 6. Mudar novamente para Onetoonefield
     request.user 
-    - PerfilConsumidor -> User   (user_id) --> fk(User)
-    - PerfilFornecedor -> user (user_id) --> fk(User)
+    - PerfilConsumidor -> User (Perfil_id) --> FK(Perfil)
+    - PerfilFornecedor -> user (Perfil_id) --> Fk(Perfil)
+    - Perfil           -> User (user_id) --> O2O(User)
 
 (by prof)
 7. criar um migrate empty para incluir produtos automaticamente. 
