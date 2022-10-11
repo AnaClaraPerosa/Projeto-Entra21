@@ -73,22 +73,7 @@
                 <li><a href="{% url 'loja' %}">Loja</a></li>
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
                 <li>
-
-                  {% if request.user| has_group:"Fornecedor" %}
-
-                  {% elseif request.user| has_group:"Consumidor" %}
-
-                    {% if request.user.usuario.nome %}
-                      <a href="{% url 'perfil_usuario_update'%}">edite seu cadastro aqui</a>
-                    {% else %}
-                      <a href="{% url 'perfil_usuario_create'%}" class="alarme">preencha seu cdadastro aqui</a>
-                      <!-- piscando em vermelho -->
-                    {% endif %}
-                    
-                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor (contato)</a>
-                  {% else %}
-
-                  {% endif %}
+                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a>
                 </li>
                 <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
