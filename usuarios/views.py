@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Perfil
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.models import User, Group
