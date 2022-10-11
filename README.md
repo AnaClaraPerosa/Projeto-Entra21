@@ -287,6 +287,162 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
     - Eu Renan Oliveira estou de acordo com a remoção.
     - Eu Lucas Salvaro Dimon estou de acordo com a remoção.
 
+---------------------------------------------------------------------------------------------
+
+# SCRUM - iPicles
+
+## Backlog
+
+**Created:** 05/09/2022 14:20:12
+
+**Created by: Grupo 3** 
+
+#### Identidade Visual e Logo
+
+#### Produtos - Saudável e sustentável
+
+#### Cadastro de Clientes
+
+#### Localização aproximada
+
+#### Cadastro de produtos
+
+#### Compras por encomendas
+
+#### Backend - Integração com Frontend
+
+#### Carrinho de compras
+
+#### Cadastro de Fornecedores
+
+#### Prototipação
+
+#### Banco de dados
 
 
-teste
+## 1º Sprint 05/09/22 a 10/09/22
+
+
+## 2º Sprint 11/09/22 a 16/09/22
+
+
+## 3º Sprint 16/09/22 a 23/09/22
+
+
+## 4º Sprint 24/09/22 a 01/10/22
+
+
+## 5º Sprint 02/10/22 a 09/10/22
+
+- Definir as categorias
+
+- Criar um front para pagamentos
+
+- Revisar as paginas
+
+- Pedido do Cliente
+
+- Depoimento da nossa pagina iPicles (Sobre)
+
+- Loja fazer o icone do carrinho adicionar o produto ao carrinho
+
+- Loja fazer a filtragem
+
+
+
+## Em andamento
+
+- Ajustes nos Front dos templates
+
+- Testar inserção de dados
+
+- Área de depoimentos para fornecedores, linkada ao produto
+
+- Separar grupo de fornecedores e clientes
+
+- Ajustar a adição da quantidade de produtos na pagina de compra de produtos
+
+- Carrinho ao finalizar a compra direcionar para o cadastro do cliente se ja tiver cadastrada, ir para a finalização do pedido
+
+
+## Feito
+
+- Migrar da base teste para a base oficial
+
+- Atualizar o Readme com o Trello
+
+- Area do Fornecedor fazer a paginação
+
+- Carrossel com link para a compra do produto
+
+- Deploy
+
+- Adicionar arquivos estáticos( css, js)
+
+- Criar aplicativo para visualizações principais e adicionar aos aplicativos instalados - Main - Inicio - Clientes -Fornecedores - Produtos - Projeto iPicles
+
+- Inserção, deleção e update dos produtos pelos fornecedores
+
+- tirar do rodapé o link para a área do cliente  - perguntas do cliente - depoimentos e politicas de segurança
+
+- Loja fazer a contagem dos produtos
+
+- Carrinho (app, banco, integrar com Front)
+
+- Adicionar o Produto na area do fornecedor fazer a formatação
+
+- Formatar a pagina de compra de produtos
+
+- Tirar o cupom de desconto do carrinho de compras
+
+- Loja fazer a paginação
+
+- Formularios cadastro de login e fornecedores
+
+- Ajuste do Front do Carrinho
+
+- Mostrar uma categoria
+
+- Mostrar visualização detalhada de um produto
+
+- Mostrar lista de produtos na área do fornecedor
+
+- Mostrar os produtos mais recentes na página de produtos
+
+- Permitir que os fornecedores adicionem produtos
+
+- Criar área simples para fornecedores( painel com os dados e produtos que ele irá adicionar)
+
+- Criar um pesquisa para os produtos (search)
+
+- pesquisar imagens para o frontend freepik
+
+- Tornar possível fazer login e logout
+
+- Criar visualização(view), modelo(model) e formulário(form) para login
+
+- Adicionar uma frontpage simples(html - conexão)
+
+- Definir os nomes para os aplicativos comitar da base teste para a base oficial. Primeiro ver como limpar a base oficial
+
+- Criar um aplicativo para fornecedores e adicionar aos aplicativos instalados
+
+- Criar modelo de banco de dados para os fornecedores (models main)
+
+- Criar aplicativo e modelos para produtos e categorias (models e app2)
+
+- Definir os apps e criar os models
+
+- Instalar o Django e iniciar um projeto
+
+- Criar e ativar um ambiente virtual (venv)
+  
+- Identidade visual e logo
+
+
+--------------------------------------------------
+
+
+
+
+

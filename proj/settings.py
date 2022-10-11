@@ -33,6 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','ipicles.herokuapp.com']
 
+SESSION_COOKIE_AGE = 86400
+CART_SESSION_ID = 'carrinho'
 
 # Application definition
 
@@ -43,14 +45,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
+    'crispy_forms',
+    'braces',
+    'nucleo',
+    'carrinho',
+    'clientes',       
+    # 'depoimentos',
+    'endereco',
     'fornecedores',
     'produtos',
-    'carrinho',
     'pedidos',
-    'clientes',
-    'cidades'
+    'usuarios',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,6 +70,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ROOT_URLCONF = 'proj.urls'
 
@@ -76,6 +86,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'produtos.context_processors.menu_categorias',
+                'carrinho.context_processors.carrinho'
             ],
         },
     },
@@ -138,11 +150,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
+LOGIN_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
