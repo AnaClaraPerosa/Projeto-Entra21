@@ -52,7 +52,7 @@ class PerfilUpdate(UpdateView):
         context["botao"] = "Atualizar"
 
         return context
-# alt ------------------------------------------------
+# alt -------------------------------------------------
 class PerfilComplemento(CreateView):
     template_name = "cadastro.html"
     form_class = PerfilForm
