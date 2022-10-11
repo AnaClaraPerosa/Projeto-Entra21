@@ -18,6 +18,7 @@ class Perfil(models.Model):
     perfil_email = models.EmailField(max_length=100, verbose_name='Email')
     perfil_usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     perfil_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade', on_delete=models.PROTECT)
-class Meta:
+    
+    class Meta:
         ordering = ['perfil_nome']
         verbose_name = 'perfil'
