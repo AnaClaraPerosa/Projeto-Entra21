@@ -1,7 +1,7 @@
 1. [ok] mover a Loja para Inicio / home. 
 2. modificar url do menu principal para apontar o REGISTRE-SE para o AUTH do django.
 3. Adicionar registre-se na tela de login 
-4. Alterar no app usuarios a view UsuarioCreate para PerfilCreate
+4. [ok] Alterar no app usuarios a view UsuarioCreate para PerfilCreate
 5. condicionar o menu de (nucleo/templates/index.html) ao grupo em que o usuario pertence. 
 
 
@@ -16,8 +16,8 @@
 : perfilusuario-registre-se  :                   :                :                 :      x
 : perfil create              :         x         :      x         :      x          : 
 : perfil update              :         x         :      x         :      x          : 
-: perfilconsumidor create    :        x          :      x         :                 :  
-: perfilconsumidor update    :        x          :      x         :      x          :
+: perfilconsumidor create    :         x         :      x         :                 :  
+: perfilconsumidor update    :         x         :      x         :      x          :
 : perfilfornecedor create    :                   :      x         :                 :
 : perfilfornecedor update    :                   :      x         :                 :
 : produtos create            :                   :      x         :                 :
@@ -28,7 +28,7 @@
 : contato create             :                   :                :                 :      x
 :----------------------------:-------------------:----------------:-----------------:---------------
 
-6. Mudar novamente para Onetoonefield
+6. [ok] Mudar novamente para Onetoonefield
     request.user 
     - PerfilConsumidor -> User (Perfil_id) --> FK(Perfil)
     - PerfilFornecedor -> user (Perfil_id) --> Fk(Perfil)
