@@ -8,12 +8,12 @@
 *** = Basta que o usuario esteja autenticado via django (Auth)
 :----------------------------:-------------------:----------------:-----------------:
 :                            : aut via site ***      : via painelAdmin: aut via site    : 
-:                            :                   :                :                 : não autenticado
-:                            : is_autenticated   : is_fornecedor  : is_consumidor      :
+:                            :                   :                :                     : não autenticado
+:                            : is_autenticated   : is_fornecedor  : is_consumidor       :
 :-------------------------:-------------------:----------------:-----------------:-----------------
 : home                       :         x         :      x         :      x          :      x
 : loja                       :         x         :      x         :      x          :      x
-: perfilusuario-registre-se  :                   :                :                 :       x
+: perfilusuario-registre-se  :                   :                :                 :      x
 : perfil create              :         x         :      x         :      x          : 
 : perfil update              :         x         :      x         :      x          : 
 : perfilconsumidor create    :        x          :      x         :                 :  
@@ -39,3 +39,22 @@
     - migrate fake (tenho modelo pronto do arquivo para fazer isto acontecer)
 
 8. upload de imagens para dentro do banco de dados. 
+
+
+Requestes pra index no futuro
+
+                  {% if request.user| has_group:"Fornecedor" %}
+
+                  {% elseif request.user| has_group:"Consumidor" %}
+
+                    {% if request.user.usuario.nome %}
+                      <a href="{% url 'perfil_usuario_update'%}">edite seu cadastro aqui</a>
+                    {% else %}
+                      <a href="{% url 'perfil_usuario_create'%}" class="alarme">preencha seu cdadastro aqui</a>
+                      <!-- piscando em vermelho -->
+                    {% endif %}
+                    
+                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor (contato)</a>
+                  {% else %}
+
+                  {% endif %}
