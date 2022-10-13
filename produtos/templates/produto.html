@@ -1,0 +1,78 @@
+{% extends 'index.html' %}
+
+{% block title %} {{ produto.titulo }} ¦ {% endblock %}
+
+{% load static %} 
+
+{% block content %} 
+
+    <!-- Breadcrumb Section Começo -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/breadcrumb.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="text-white h3">
+                        <h3>Carrinho de compras</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section Fim -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 my-auto p-5">
+                <div class="lc-block">
+                    {% if produto.imagem %}
+                        <img class="img-fluid" src="{{ produto.imagem.url }}">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-7" style="padding:10vw">
+  
+                <div class="lc-block mb-3 me-lg-5">
+                    <div editable="rich">
+                        <h2>{{ produto.titulo }}</h2>
+                        <hr>
+                        <h4>Descrição:</h4>
+                        <h5>{{ produto.descricao }}</h5>
+                        <br>
+                        <h6>Vendedor: {{ produto.fornecedor.fornecedor_nome }}</h6>
+                        <hr>
+                        <h5>Valor: R${{ produto.preco }} </h5>
+                    </div>
+                </div>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="notification btn-lg btn-success is-toast">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="post" action=".">
+                    {% csrf_token %}
+
+                    <div class="control">
+                        <p class="mt-5 mb-3 text-muted"></p>
+                        <button class="btn btn-lg btn-success" type="number" name="quantidade" value="1" class="input" min="1">Adicionar ao carrinho</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if produto_similar %}
+        <hr>
+
+        <div class="columns is-multiline">
+            <div class="column is-12">
+                <h3 class="subtitle">Produtos Similares</h3>
+                <br>
+            </div class='row'>
+            {% for produto in produto_similar %}
+                {% include 'lista_itens.html' %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

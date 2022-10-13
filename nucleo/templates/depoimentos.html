@@ -1,0 +1,90 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %} 
+
+<!-- Depoimentos Section Begin -->
+<section class="from-blog spad">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title from-blog__title">
+            <h2>Depoimentos</h2>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="blog__item">
+            <div class="blog__item__x">
+                <img src="{% static 'img/blog/aspas.png' %}" alt="" />
+            </div>
+            <div class="blog__item__text">
+                <h5><a href="#">Joana Candida, Timbó</a></h5>
+                <p>
+                "Aqui eu encontrei a alimentação necessária, pertinho da minha
+                casa, para minha filha celíaca. "
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="blog__item">
+            <div class="blog__item__x">
+                <img src="{% static 'img/blog/aspas.png' %}" alt="" />
+            </div>
+            <div class="blog__item__text">
+                <h5><a href="#">Adalberto Santos, Praia Grande</a></h5>
+                <p>"Pego sempre orgânicos fresquinhos graças à este site."</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="blog__item">
+            <div class="blog__item__x">
+                <img src="{% static 'img/blog/aspas.png' %}" alt="" />
+            </div>
+            <div class="blog__item__text">
+                <h5><a href="#">Alice Martins, Itajai</a></h5>
+                <p>
+                "Minhas vendas de pães sem glúten aumentaram bastante com este
+                site. "
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<!-- Depoimentos Section End -->
+
+<!-- Contact Form Begin -->
+<div class="contact-form spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contact__form__title">
+                    <h2>Deixe seu depoimento</h2>
+                </div>
+            </div>
+        </div>
+        <form action="#">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <input type="text" placeholder="Nome">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="col-lg-12 text-center">
+                    <textarea placeholder="Sua menssagem"></textarea>
+                    <button type="submit" class="site-btn">ENVIAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Contact Form End -->
+
+{% endblock %}
