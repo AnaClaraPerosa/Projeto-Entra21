@@ -24,7 +24,7 @@ class Clientes(models.Model):
     usuario = models.ForeignKey(User, default=0, on_delete=models.PROTECT, verbose_name='cliente')
 
     def __str__(self):
-        return '%s %s' % (self.cliente_nome, self.cliente_telefone, self.cliente_cpf)
+        return '%s %s %s' % (self.cliente_nome, self.cliente_telefone, self.cliente_cpf)
 
     class Meta:
         ordering = (['cliente_nome', 'cliente_telefone'])
