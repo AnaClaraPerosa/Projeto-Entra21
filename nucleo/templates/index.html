@@ -88,21 +88,37 @@
                   <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
                 </li>
                 <!-- add aqui a parte tag do @login_required para mostrar só se o user tiver logoff(if else) -->
+
+                {% if request.user.is_authenticated %}
                 <li>
-                  <a href="{% url 'login' %}"
-                    ><i class="fa fa-user"></i> Login</a
-                  >
+                <a href="{% url 'cliente-form' %}"
+                  ><i class="fa fa-user"></i>Cliente</a>
                 </li>
-                <li>
-                  <a href="{% url 'registre-se' %}"
-                    ><i class="fa fa-user"></i>Registre-se</a
-                  >
+                    <div class="container">
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                          <span id="username">{{ request.user }}</span> 
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'cliente-list' %}">Alterar dados</a> 
+                          <a class="dropdown-item" href="#">Alterar senha</a>
+                          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                      </div>
+                {% else %}
+                <!-- <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'registre-se' %}">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    Registrar
+                  </a>
+                </li> -->
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'login' %}">
+                      <i class="fa fa-sign-in" aria-hidden="true"></i>
+                      Login
+                  </a>
                 </li>
-                <li>
-                  <a href="{% url 'cliente-form' %}"
-                    ><i class="fa fa-user"></i>Cliente</a
-                  >
-                </li>
+                {% endif %}
               </ul>
               <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->
             </div>
@@ -363,5 +379,9 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>
