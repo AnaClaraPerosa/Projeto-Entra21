@@ -23,7 +23,6 @@ def contato(request):
 def depoimentos(request):
     return render(request,'depoimentos.html')
 
-
 def loja(request):
     parametro_page = request.GET.get('page', '1')
     parametro_limit = request.GET.get('limit', '8')

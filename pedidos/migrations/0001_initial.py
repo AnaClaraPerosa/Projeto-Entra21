@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('produtos', '0001_initial'),
-        ('fornecedores', '0002_alter_fornecedores_options_and_more'),
+        ('fornecedores', '0001_initial'),
     ]
 
     operations = [

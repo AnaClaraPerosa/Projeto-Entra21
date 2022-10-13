@@ -71,7 +71,7 @@
                 <li><a href="{% url 'loja' %}">Loja</a></li>
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
                 <li>
-                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a>
+                  <a href="{% url 'fornecedor_admin' %}">Área do Fornecedor</a>
                 </li>
                 <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
@@ -93,10 +93,9 @@
                   <a href="{% url 'registre-se' %}"><i class="fa fa-user"></i> Registre-se</a>
                 </li>
                 <li>
-                  <a href="{% url 'consumidor-form' %}"><i class="fa fa-user"></i>Consumidor</a>
-                </li>
-                <li>
-                  <a href="{% url 'cadastro' %}"><i class="fa fa-user"></i>Cadastro</a>
+                  <a href="{% url 'cliente-form' %}"
+                    ><i class="fa fa-user"></i>Cliente</a
+                  >
                 </li>
               </ul>
             </div>
@@ -293,7 +292,7 @@
                             <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>                                                    
                         </ul>
                         <ul>
-                        <li><a href="{% url 'seja_fornecedor' %}">Área do fornecedor</a></li>
+                        <li><a href="{% url 'fornecedor_admin' %}">Área do fornecedor</a></li>
                         <li><a href="{% url 'contato' %}">Contato</a></li>
                         </ul>
                 </div>

@@ -1,6 +1,6 @@
 1. [ok] mover a Loja para Inicio / home. 
-2. modificar url do menu principal para apontar o REGISTRE-SE para o AUTH do django.
-3. Adicionar registre-se na tela de login 
+2. [ok] modificar url do menu principal para apontar o REGISTRE-SE para o AUTH do django.
+3. [ok] Adicionar registre-se na tela de login 
 4. [ok] Alterar no app usuarios a view UsuarioCreate para PerfilCreate
 5. condicionar o menu de (nucleo/templates/index.html) ao grupo em que o usuario pertence. 
 
@@ -39,6 +39,8 @@
     - migrate fake (tenho modelo pronto do arquivo para fazer isto acontecer)
 
 8. upload de imagens para dentro do banco de dados. 
+
+9. loginrequiredmixin para a view - PerfilCompleto de Usuarios . 
 
 
 Requestes pra index no futuro

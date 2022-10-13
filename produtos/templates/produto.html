@@ -64,13 +64,15 @@
 
     {% if produto_similar %}
         <hr>
-        <h3 class="subtitle">Produtos Similares</h3>
-        <br>
-        </div class='row'>
+
+        <div class="columns is-multiline">
+            <div class="column is-12">
+                <h3 class="subtitle">Produtos Similares</h3>
+                <br>
+            </div class='row'>
             {% for produto in produto_similar %}
                 {% include 'lista_itens.html' %}
             {% endfor %}
         </div>
     {% endif %}
-
 {% endblock %}
