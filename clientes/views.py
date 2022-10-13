@@ -12,9 +12,9 @@ from .models import Clientes
 
 # Create your views here.
 
-class ClienteCreate(CreateView, LoginRequiredMixin):
+class ClienteCreate(CreateView, LoginRequiredMixin, GroupRequiredMixin):
     login_url = reverse_lazy('login')
-    # group_required = [u"Administrador", u"Clientes"]
+    # group_required = u"Usuários"
     template_name = 'cliente-form.html'
     fields = ['cliente_nome', 'cliente_telefone', 
             'cliente_cpf', 'cliente_email', 
@@ -40,8 +40,9 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
 
 ################# UPDATE #################
 
-class ClienteUpdate(UpdateView, LoginRequiredMixin):
+class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
     login_url = reverse_lazy('login')
+    group_required = u"Clientes"
     model = Clientes
     fields = ['cliente_nome', 'cliente_telefone', 
             'cliente_cpf', 'cliente_email', 
@@ -70,8 +71,9 @@ class ClienteDelete(DeleteView, LoginRequiredMixin):
 
 ################# LISTA #################
 
-class ClienteList(ListView, LoginRequiredMixin):
+class ClienteList(ListView, LoginRequiredMixin, GroupRequiredMixin):
     login_url = reverse_lazy('login')
+    group_required = u"Clientes"
     model = Clientes
     template_name = 'cliente-list.html'
 
