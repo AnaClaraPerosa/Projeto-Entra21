@@ -2,7 +2,6 @@ from multiprocessing import context
 from queue import Empty
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import DepoimentoGeral
 
 from produtos.models import Produto
 from produtos.views import produto
@@ -10,10 +9,8 @@ from produtos.views import produto
 
 def index(request):
     produto = Produto.objects.order_by('?').all()
-    depoimento = DepoimentoGeral.objects.order_by('?').all()[:3]
     context = {
-        'produto1' : produto,
-        'depoimento1' : depoimento
+        'produto1' : produto
     }
     return render(request,'index.html', context)
 
@@ -25,7 +22,6 @@ def contato(request):
 
 def depoimentos(request):
     return render(request,'depoimentos.html')
-
 
 def loja(request):
     parametro_page = request.GET.get('page', '1')

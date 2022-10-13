@@ -1,48 +1,28 @@
-{% extends 'basesubp3.html' %}
+{% extends 'index.html' %}
 {% load static %}
 
+{% load crispy_forms_tags %}
 {% block content %}        
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/breadcrumb.jpg' %}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Seja Fornecedor</h2>
-                    </div>
-                </div>
+    <h3 class="title">Fornecedores</h3>
+
+    <form method="post" action=".">
+        {% csrf_token %}
+
+        <!-- {{ form.as_p }} -->
+        {{ form|crispy }}
+
+        <div class="field">
+            <div class="control">
+                <button>Inscreva-se</button>
             </div>
         </div>
-    </section>
+    </form>
 
-    <!-- Breadcrumb Section End -->
+    <hr>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-5 my-auto p-5">
-                <div class="lc-block">
-                    <img class="img-fluid" src="{% static 'img/logog.jpg' %}">
-                </div>
-            </div>
-            <div class="col-md-7" style="padding:10vw">
-  
-                <div class="lc-block mb-3 me-lg-5">
-                    <div editable="rich">
-                        <h2>Venha vender com a gente</h2>
-                        <hr>
-                        <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis dolorum,
-                             doloribus ex laboriosam ab assumenda cum maxime non vel quae deserunt. 
-                             Minima illo corporis earum velit optio, quos ab consequatur.</h5>
-                    </div>
-                </div>
+    <h5 class="subtitle">Já possui uma conta? </h5>
 
-                <div class="control">
-                    <p class="mt-5 mb-3 text-muted"></p>
-                    <h4>Entre em contato através do nosso</h4>
-                    <a href="https://wa.me/5548996465733"><h3 style="color:#7fad39">Whatsapp</h3></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <a href="{% url 'login-forn' %}">Log in</a>
 {% endblock %}
+  
+<!-- O FORMULÁRIO DE CADASTRO VEM PRA DENTRO DO CORPO DESTE TEMPLATE  -->

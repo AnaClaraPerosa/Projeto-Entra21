@@ -3531,19 +3531,13 @@ ol {
 	font-size: 15px;
   }
 
-.fa.fa-minus-circle {
+  .fa.fa-minus-circle {
 	color: #db1e47;
 	cursor: pointer;
 	margin: 5px;
 	font-size: 15px;
   }
 
-.fab.fa-whatsapp {
-	color: #7fad39;
-	cursor: pointer;
-	margin: 2px;
-	font-size: 25px;
-}
 
 /**
 * Notificação toast

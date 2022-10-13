@@ -287,14 +287,6 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
     - Eu Renan Oliveira estou de acordo com a remoção.
     - Eu Lucas Salvaro Dimon estou de acordo com a remoção.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-teste
-=======
-=======
->>>>>>> 1cf00dcf2556fa0a6454a68605878470f31dfe41
 ---------------------------------------------------------------------------------------------
 
 # SCRUM - iPicles
@@ -454,7 +446,3 @@ teste
 
 
 
-<<<<<<< HEAD
->>>>>>> feature-jaqueline
-=======
->>>>>>> 1cf00dcf2556fa0a6454a68605878470f31dfe41
