@@ -73,7 +73,7 @@
                 <li><a href="{% url 'loja' %}">Loja</a></li>
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
                 <li>
-                  <a href="{% url 'fornecedor_admin' %}">Área do Fornecedor</a>
+                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a>
                 </li>
                 <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                 <li><a href="{% url 'contato' %}">Contato</a></li>
@@ -99,54 +99,18 @@
                   >
                 </li>
                 <li>
-                  <a href="{% url 'cliente-form' %}"
-                    ><i class="fa fa-user"></i>Cliente</a
-                  >
+                  <a href="{% url 'consumidor-form' %}"
+                    ><i class="fa fa-user"></i>Consumidor</a>
+                </li>
+                <li>
+                  <a href="{% url 'cadastro' %}"
+                    ><i class="fa fa-user"></i>Cadastro</a>
                 </li>
               </ul>
               <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->
             </div>
           </div>
         </div>
-
-        <!-- {% if request.user.is_authenticated %}
-        COLOCAR NAVBAR COM O QUE SÓ QUEM ESTÁ CADASTRADO PODE VISUALIZAR
-        {% endif %}
-
-        {% if request.user.is_authenticated %}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-              <span id="username">{{ request.user }}</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="{% url 'atualizar-dados' %}">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  Meus dados</a>
-              <a class="dropdown-item" href="#">
-                  <i class="fa fa-lock" aria-hidden="true"></i>
-                  Alterar senha</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'logout' %}">
-                  <i class="fa fa-sign-out" aria-hidden="true"></i>
-                  Sair</a>
-          </div>
-        </li>
-        {% else %}
-        <li class="nav-item ">
-          <a class="nav-link" href="{% url 'registre-se' %}">
-            <i class="fa fa-user-plus" aria-hidden="true"></i>
-            Registrar
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="{% url 'login' %}">
-              <i class="fa fa-sign-in" aria-hidden="true"></i>
-              Login
-          </a>
-        </li>
-        {% endif %} -->
         
         <div class="humberger__open">
           <i class="fa fa-bars"></i>
@@ -261,60 +225,34 @@
     </section>
       
     <!-- Categories Section End - FIM CARROSSEL -->
-    <!-- Depoimentos Blog Section Begin -->
-    <section class="from-blog spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title from-blog__title">
-              <h2>Depoimentos</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__x">
-                <img src="{% static 'img/blog/aspas.png' %}" alt="" />
-              </div>
-              <div class="blog__item__text">
-                <h5><a href="#">Joana Candida, Timbó</a></h5>
-                <p>
-                  "Aqui eu encontrei a alimentação necessária, pertinho da minha
-                  casa, para minha filha celíaca. "
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__x">
-                <img src="{% static 'img/blog/aspas.png' %}" alt="" />
-              </div>
-              <div class="blog__item__text">
-                <h5><a href="#">Adalberto Santos, Praia Grande</a></h5>
-                <p>"Pego sempre orgânicos fresquinhos graças à este site."</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__x">
-                <img src="{% static 'img/blog/aspas.png' %}" alt="" />
-              </div>
-              <div class="blog__item__text">
-                <h5><a href="#">Alice Martins, Itajai</a></h5>
-                <p>
-                  "Minhas vendas de pães sem glúten aumentaram bastante com este
-                  site. "
-                </p>
-              </div>
-            </div>
-          </div>
+
+<!-- Depoimentos Blog Section Begin - INICIO DOS DEPOIMENTOS -->
+
+<section class="from-blog spad"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title from-blog__title">
+          <h2>Depoimentos</h2>
         </div>
       </div>
-    </section>
-    <!-- Blog Section End -->
+    </div>
+    <div class="row">
+        {% for s in depoimento1 %}           
+          <div class="col-lg-4 col-md-4 col-sm-6">
+              <img src="{% static 'img/blog/aspas.png' %}" alt="" />
+            <div class="blog__item__text">
+              <h5><a href="#">{{ s.nome }}</a></h5>
+              <p>{{ s.depoimento }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog Section End - FIM DEPOIMENTOS -->
+
     {% endblock %}
 
   <!-- Footer Section Begin -->
@@ -338,7 +276,7 @@
                             <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>                                                    
                         </ul>
                         <ul>
-                        <li><a href="{% url 'fornecedor_admin' %}">Área do fornecedor</a></li>
+                        <li><a href="{% url 'seja_fornecedor' %}">Área do fornecedor</a></li>
                         <li><a href="{% url 'contato' %}">Contato</a></li>
                         </ul>
                 </div>

@@ -1,17 +1,18 @@
-from django.shortcuts import render
+from gc import get_objects
 from .models import Perfil
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.models import User, Group
-from .forms import UsuarioForm
+from .forms import  UsuarioForm,PerfilForm
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 
 # Create your views here.
 
-class UsuarioCreate(CreateView):
+# PerfilCreate
+class PerfilCreate(CreateView):
     template_name = "form.html"
     form_class = UsuarioForm
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('index')
 
     def form_valid(self, form):
 
@@ -36,7 +37,7 @@ class UsuarioCreate(CreateView):
 
 
 class PerfilUpdate(UpdateView):
-    template_name = "clientes/form.html"
+    template_name = "form.html"
     model = Perfil
     fields = ["nome", "sobrenome", "telefone"]
     success_url = reverse_lazy("index")
@@ -52,3 +53,30 @@ class PerfilUpdate(UpdateView):
         context["botao"] = "Atualizar"
 
         return context
+# alt -------------------------------------------------
+class PerfilComplemento(CreateView):
+    template_name = "cadastro.html"
+    form_class = PerfilForm
+    success_url = reverse_lazy('index')
+
+    def dispatch(self, request, *args, **kwargs):
+        self.usuario_id=request.user.id
+        if request.user:
+            id_perfil = get_object_or_404(Perfil, usuario=request.user.id)
+            if(id_perfil):
+                return redirect('index')
+
+        return super().dispatch(request, *args, **kwargs)
+
+
+    def form_valid(self, form):
+
+        url = super().form_valid(form)
+
+        self.object.usuario_id=self.usuario_id
+        self.object.save()
+
+        Perfil.objects.create(usuario=self.object)
+
+        return url
+    
