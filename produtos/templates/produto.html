@@ -39,6 +39,10 @@
                         <h5>{{ produto.descricao }}</h5>
                         <br>
                         <h6>Vendedor: {{ produto.fornecedor.fornecedor_nome }}</h6>
+                        <br>
+                        <a href="#"><button type="submit" class="site-btn">Avaliações do fornecedor</button></a>
+
+
                         <hr>
                         <h5>Valor: R${{ produto.preco }} </h5>
                     </div>
@@ -55,7 +59,9 @@
 
                     <div class="control">
                         <p class="mt-5 mb-3 text-muted"></p>
-                        <button class="btn btn-lg btn-success" type="number" name="quantidade" value="1" class="input" min="1">Adicionar ao carrinho</button>
+                        <button class="site-btn" type="number" name="quantidade" value="1" class="input" min="1">Adicionar ao carrinho</button>
+                        <!-- <a href="#"><button type="submit" class="site-btn">Avaliações do fornecedor</button></a> -->
+
                     </div>
                 </form>
             </div>
