@@ -17,14 +17,13 @@ class Estados(models.Model):
 
 class Cidades(models.Model):
     cidade_nome = models.CharField(max_length=100,verbose_name='Cidade')
-    cidade_cep = models.CharField(max_length=10,verbose_name='CEP')
     cidade_ativo = models.CharField(max_length=1)
     cidade_estado = models.ForeignKey(Estados, max_length=20, on_delete=models.PROTECT)
 
     def __str__(self):
-        return '%s %s' % (self.cidade_nome, self.cidade_cep)
+        return '%s' % (self.cidade_nome)
 
     class Meta:
-        ordering = (['cidade_nome', 'cidade_cep'])
+        ordering = (['cidade_nome'])
         verbose_name = 'Cidade'
         verbose_name_plural = 'Cidades'
