@@ -7,5 +7,5 @@ urlpatterns = [
     path('registre-se/', PerfilCreate.as_view(), name='registre-se'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('atualizar-dados/', PerfilUpdate.as_view(), name='atualizar-dados'),
-    path('cadastro/',PerfilComplemento.as_view(), name='cadastro')
+    path('cadastro/', PerfilComplemento.as_view(), name='cadastro')
 ]

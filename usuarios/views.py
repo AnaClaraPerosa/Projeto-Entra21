@@ -1,3 +1,4 @@
+from gc import get_objects
 from .models import Perfil
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.models import User, Group
@@ -57,6 +58,7 @@ class PerfilComplemento(CreateView):
     template_name = "cadastro.html"
     form_class = PerfilForm
     success_url = reverse_lazy('index')
+
     def dispatch(self, request, *args, **kwargs):
         self.usuario_id=request.user.id
         if request.user:
@@ -65,6 +67,7 @@ class PerfilComplemento(CreateView):
                 return redirect('index')
 
         return super().dispatch(request, *args, **kwargs)
+
 
     def form_valid(self, form):
 
@@ -76,3 +79,4 @@ class PerfilComplemento(CreateView):
         Perfil.objects.create(usuario=self.object)
 
         return url
+    
