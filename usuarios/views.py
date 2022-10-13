@@ -1,7 +1,7 @@
 from .models import Perfil
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.models import User, Group
-from .forms import  UsuarioForm,PerfilForm
+from .forms import  UsuarioForm, PerfilForm
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect
 
@@ -47,18 +47,19 @@ class PerfilUpdate(UpdateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-
         context["titulo"] = "Meus dados pessoais"
         context["botao"] = "Atualizar"
 
         return context
 # alt ------------------------------------------------
+
 class PerfilComplemento(CreateView):
     template_name = "cadastro.html"
     form_class = PerfilForm
     success_url = reverse_lazy('index')
+
     def dispatch(self, request, *args, **kwargs):
-        self.usuario_id=request.user.id
+        self.usuario_id= request.user.id
         if request.user:
             id_perfil = get_object_or_404(Perfil, usuario=request.user.id)
             if(id_perfil):
