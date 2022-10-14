@@ -77,7 +77,9 @@
                                 <li><span>{{ carrinho | length }} Itens</span></li>
                                 <li><strong>R${{ carrinho.get_custo_total }}</strong></li>
                                 <!-- <a href="#" class="primary-btn">FINALIZAR COMPRAS</a> -->
-                                <input type="button" class="primary-btn" onClick=" parent.location='cliente-form.html'" value="ALTERAR DADOS" target="_blank">
+
+                                <a href="{%  url 'cliente-form' %}" target="_blank"><button class="primary-btn" value="cliente_id={{ user.id }}" type="submit">Alterar dados</button></a>
+                          
                                 <hr>
                                 <input type="button" class="primary-btn" onClick="parent.location='#'" value="FINALIZAR COMPRAS" target="_blank">
                             </ul>
