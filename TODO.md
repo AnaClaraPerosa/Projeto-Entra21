@@ -60,3 +60,11 @@ Requestes pra index no futuro
                   {% else %}
 
                   {% endif %}
+
+
+14.10 as 15h
+10. [ ] criar 2 botões no carrinho:
+          - atualizar dados (target=blank) (nova view mesmo form ja criado)
+          - neste form vai ter um botão FECHAR 
+
+11. [ ] JAVASCRIPT: request se foi criado o registro no model clientes. 
