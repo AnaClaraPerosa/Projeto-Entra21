@@ -22,7 +22,7 @@ class FornecedorCreate(CreateView, LoginRequiredMixin):
     login_url = reverse_lazy('login')
     # group_required = u"Usuários"
     template_name = 'fornecedor-form.html'
-    fields = ['fornecedor_nome', 'fornecedor_cnpj', 
+    fields = ['fornecedor_nome', 'fornecedor_datanasc', 'fornecedor_cnpj', 
             'fornecedor_email', 'fornecedor_telefone',
             'fornecedor_datanasc', 'fornecedor_logradouro',
             'fornecedor_bairro',
@@ -51,11 +51,12 @@ class FornecedorUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
     login_url = reverse_lazy('login')
     group_required = u"Fornecedores"
     model = Fornecedores
-    fields = ['fornecedor_nome', 'fornecedor_cnpj', 
-            'fornecedor_email', 'fornecedor_telefone', 
-            'fornecedor_logradouro', 'fornecedor_bairro',
+    fields = ['fornecedor_nome', 'fornecedor_datanasc', 'fornecedor_cnpj', 
+            'fornecedor_email', 'fornecedor_telefone',
+            'fornecedor_datanasc', 'fornecedor_logradouro',
+            'fornecedor_bairro',
             'fornecedor_numero', 'fornecedor_cep', 
-            'fornecedor_complemento','fornecedor_datanasc',
+            'fornecedor_complemento', 
             'fornecedor_obs', 'fornecedor_cidade']
     template_name = 'fornecedor-update.html'
     success_url = reverse_lazy('fornecedor-list')
