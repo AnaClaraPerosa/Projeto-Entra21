@@ -9,12 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iPicles</title>
 
-    <!--Font -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
     <!-- Css Styles -->
+    <!-- <script src="{% static 'css/styles.css' %}"></script> -->
+
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" />
@@ -47,6 +49,7 @@
         <ul>
           <li class="active"><a href="{% url 'index' %}">Início</a></li>
           <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
+          <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
         </ul>
       </nav>
     </div>
@@ -71,14 +74,14 @@
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
                 
                 <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
-                <li><a href="{% url 'seja_fornecedor' %}">Area do Fornecedor</a></li>
+                <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
               </ul>
             </nav>
           </div>
-            <!-- nav --- icones e login -->
           <div class="col-lg-3">
             <div class="header__cart">
               <ul>
+                <!-- <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li> -->
                 <li>
                   <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
                 </li>
@@ -92,6 +95,30 @@
                 <li>
                 <a href="{% url 'fornecedor-form' %}"
                   ><i class="fa fa-user"></i>Fornecedor</a>
+                </li>
+                    <div class="container">
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                          <span id="username">{{ request.user }}</span> 
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'cliente-list' %}">Alterar dados</a> 
+                          <a class="dropdown-item" href="#">Alterar senha</a>
+                          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                      </div>
+                {% else %}
+                <!-- <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'registre-se' %}">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    Registrar
+                  </a>
+                </li> -->
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'login' %}">
+                      <i class="fa fa-sign-in" aria-hidden="true"></i>
+                      Login
+                  </a>
                 </li>
                 {% endif %}
               </ul>
@@ -161,6 +188,16 @@
                {% for categoria in menu_categorias %}
                   <ul>
                     <li><a href="{% url 'categoria' categoria.slug %}">{{ categoria.titulo }}</a></li>
+                    <!--<li><a href="#">Diet</a></li>
+                    <li><a href="#">Naturais</a></li>
+                    <li><a href="#">Sustentáveis</a></li>
+                    <li><a href="#">Refeição Saudável</a></li>
+                    <li><a href="#">Cereais</a></li>
+                    <li><a href="#">Farinhas</a></li>
+                    <li><a href="#">Oleaginosas</a></li>
+                    <li><a href="#">Sem Glúten</a></li>
+                    <li><a href="#">Sem Lactose</a></li>
+                    <li><a href="#">Sem Açúcar</a></li>  UHUUUU DEU CERTO É SÓ REPLICAR ESSA DIV NA LOJA TBM --> 
                   </ul>
                {% endfor %}
             </div>
@@ -288,9 +325,8 @@
                         <ul>
                             <li><a href="#">Sobre nós</a></li>
                             <li><a href="{% url 'loja' %}">Loja</a></li>    
-                            <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>                                                    
-                        </ul>
-                        <ul>
+                            <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>       
+                            <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>                                             
                         </ul>
                 </div>
             </div>
