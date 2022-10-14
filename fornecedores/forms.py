@@ -8,11 +8,12 @@ class FornecedorForm(forms.ModelForm):
 
     class Meta:
         model = Fornecedores
-        fields = ['fornecedor_nome', 'fornecedor_cnpj', 
-            'fornecedor_email', 'fornecedor_telefone', 
-            'fornecedor_logradouro', 'fornecedor_bairro',
+        fields = ['fornecedor_nome', 'fornecedor_datanasc', 'fornecedor_cnpj', 
+            'fornecedor_email', 'fornecedor_telefone',
+            'fornecedor_datanasc', 'fornecedor_logradouro',
+            'fornecedor_bairro',
             'fornecedor_numero', 'fornecedor_cep', 
-            'fornecedor_complemento','fornecedor_datanasc',
+            'fornecedor_complemento', 
             'fornecedor_obs', 'fornecedor_cidade']
 
 
