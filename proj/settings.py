@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'nucleo',
     'carrinho',
     'clientes',       
-    # 'depoimentos',
     'endereco',
     'fornecedores',
     'produtos',
