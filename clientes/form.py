@@ -12,7 +12,7 @@ class ClienteForm(forms.ModelForm):
             'cliente_cpf', 'cliente_email', 
             'cliente_logradouro', 'cliente_bairro',
             'cliente_numero', 'cliente_cep', 
-            'cliente_complemento', 
+            'cliente_complemento','cliente_datanasc',
             'cliente_obs', 'cliente_cidade_id'
             ]
             

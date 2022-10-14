@@ -20,7 +20,7 @@ class ClienteCreate(CreateView, LoginRequiredMixin, GroupRequiredMixin):
             'cliente_cpf', 'cliente_email', 
             'cliente_logradouro', 'cliente_bairro',
             'cliente_numero', 'cliente_cep', 
-            'cliente_complemento', 
+            'cliente_complemento','cliente_datanasc',
             'cliente_obs', 'cliente_cidade_id']
     model = Clientes
     success_url = reverse_lazy('cliente-list')
@@ -48,7 +48,7 @@ class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
             'cliente_cpf', 'cliente_email', 
             'cliente_logradouro', 'cliente_bairro',
             'cliente_numero', 'cliente_cep', 
-            'cliente_complemento', 
+            'cliente_complemento','cliente_datanasc',
             'cliente_obs', 'cliente_cidade_id']
     template_name = 'cliente-update.html'
     success_url = reverse_lazy('cliente-list')
