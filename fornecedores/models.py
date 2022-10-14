@@ -20,7 +20,7 @@ class Fornecedores(models.Model):
     fornecedor_ativo = models.CharField(max_length=1)
     fornecedor_criem = models.DateTimeField(auto_now_add=True)
     fornecedor_cripor = models.OneToOneField(User,related_name='fornecedor',on_delete=models.CASCADE)
-
+   
     class Meta:
         ordering = ['fornecedor_nome']
         verbose_name = 'fornecedor'
