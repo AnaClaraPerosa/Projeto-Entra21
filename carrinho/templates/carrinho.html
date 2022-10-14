@@ -76,6 +76,10 @@
                                 <!-- <li>Subtotal <span>R$91.00</span></li> -->
                                 <li><span>{{ carrinho | length }} Itens</span></li>
                                 <li><strong>R${{ carrinho.get_custo_total }}</strong></li>
+                                <!-- <a href="#" class="primary-btn">FINALIZAR COMPRAS</a> -->
+                                <input type="button" class="primary-btn" onClick=" parent.location='cliente-form.html'" value="ALTERAR DADOS" target="_blank">
+                                <hr>
+                                <input type="button" class="primary-btn" onClick="parent.location='#'" value="FINALIZAR COMPRAS" target="_blank">
                             </ul>
                         </div>
                     </div>
@@ -83,143 +87,7 @@
             </div>
         </section>
      <!-- Shoping Cart Section End -->
-        <hr>
-        <section class="intro">
-            <div class="mask d-flex align-items-center h-100">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-10">
-                            <div class="card" style="border-radius: 1rem;">
-                                <div class="card-body p-5">
-    
-                                    <h2 class="mb-5 text-center">Formulário de Checkout</h2>
 
-                                    <form method="post" action="." id="payment-form">
-                                        {% csrf_token %}
-
-                                        {% if form.non_field_errors %}
-                                            <div class="notification is-danger">
-                                                {{ form.non_field_errors }}
-                                            </div>
-                                        {% endif %}
-
-                                        {% if form.errors %}
-                                            <div class="notification is-danger">
-                                                <ul>
-                                                    {% for field in form %}
-                                                        {% for error in field.errors %}
-                                                            <li><strong>{{ field.label }}: </strong>{{ error }}</li>
-                                                        {% endfor %}
-                                                    {% endfor %}
-                                                </ul>
-                                            </div>
-                                        {% endif %}
-                                
-                                        <div class="row">
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <label class="form-label" name="primeiro_nome">Nome</label>
-
-                                                    <div class="control">
-                                                        <input class="input" type="text" name="primeiro_nome">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <div class="field">
-                                                        <label class="form-label" name="sobrenome">Sobrenome</label>
-
-                                                        <div class="control">
-                                                            <input class="input" type="text" name="sobrenome">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                                
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <div class="field">
-                                                        <label class="form-label" name="email">Email</label>
-
-                                                        <div class="control">
-                                                            <input class="input" type="email" name="email">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <div class="field">
-                                                        <label class="form-label" name="telefone">Telefone</label>
-
-                                                        <div class="control">
-                                                            <input class="input" type="text" name="telefone">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <div class="field">
-                                                        <label class="form-label" name="endereco">Endereço</label>
-
-                                                        <div class="control">
-                                                            <input class="input" type="text" name="endereco">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <div class="field">
-                                                        <label class="form-label" name="cep">CEP</label>
-
-                                                        <div class="control">
-                                                            <input class="input" type="text" name="cep">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <div class="field">
-                                                        <label class="form-label" name="cidade">Cidade</label>
-
-                                                        <div class="control">
-                                                            <input class="input" type="text" name="cidade">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        {% if messages %}
-                                            {% for message in messages %}
-                                                <div class="notification is-danger">{{ message }}</div>
-                                            {% endfor %}
-                                        {% endif %}
-
-                                        <div class="field">
-                                            <div class="control">
-                                                <button type="submit" class="btn btn-success btn-rounded btn-block">Enviar pedido</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     {% else %}
         <p>Você não tem produtos no seu carrinho</p>
