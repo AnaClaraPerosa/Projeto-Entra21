@@ -3,7 +3,7 @@ from django.shortcuts import render,redirect
 
 from.forms import CheckoutForm
 from .carrinho import Carrinho
-
+# from clientes.models import Clientes
 from pedidos.utilitarios import checkout
 
 # Create your views here.
@@ -16,6 +16,7 @@ def carrinho_detalhe(request):
         form = CheckoutForm(request.POST)
 
         if form.is_valid():
+            # cliente = Clientes.objects.filter(id=form.request.user.id)
             primeiro_nome = form.cleaned_data['primeiro_nome']
             sobrenome = form.cleaned_data['sobrenome']
             email = form.cleaned_data['email']
