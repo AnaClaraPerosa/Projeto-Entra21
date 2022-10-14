@@ -64,7 +64,6 @@
             </ul>
           </li>
           <li><a href="./blog.html">Blog</a></li>
-          <li><a href="{% url 'contato' %}">Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -87,11 +86,8 @@
                 <li class="active"><a href="{% url 'index' %}">Início</a></li>
                 <li><a href="{% url 'loja' %}">Loja</a></li>
                 <!-- colocar aqui aquela tag do login required para acessar a area do fornecedor(if else) -->
-                <li>
-                  <a href="{% url 'fornecedor_admin' %}">Área do Fornecedor</a>
-                </li>
-                <li><a href="./blog.html">Depoimentos</a></li>
-                <li><a href="{% url 'contato' %}">Contato</a></li>
+                <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
+                <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
               </ul>
             </nav>
           </div>
