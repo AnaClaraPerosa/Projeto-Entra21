@@ -1,5 +1,5 @@
-# from django.forms import ModelForm
-# from produtos.models import Produto
+from django.forms import ModelForm
+from produtos.models import Produto
 
 from django import forms 
 from .models import Fornecedores
@@ -17,8 +17,8 @@ class FornecedorForm(forms.ModelForm):
 
 
 
-# class ProdutoForm(ModelForm):
-#     class Meta:
-#         model = Produto 
-#         fields = ['titulo','descricao','preco','imagem','categoria']
+class ProdutoForm(ModelForm):
+    class Meta:
+        model = Produto 
+        fields = ['titulo','descricao','preco','imagem','categoria']
     

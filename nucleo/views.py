@@ -21,11 +21,10 @@ def index(request):
 def pagamento(request):
     return render(request,'pagamento.html')
 
-def contato(request):
-    return render(request,'contato.html')
 
 def depoimentos(request):
     return render(request,'depoimentos.html')
+
 
 def loja(request):
     parametro_page = request.GET.get('page', '1')
