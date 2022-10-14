@@ -12,7 +12,7 @@ class FornecedorForm(forms.ModelForm):
             'fornecedor_email', 'fornecedor_telefone', 
             'fornecedor_logradouro', 'fornecedor_bairro',
             'fornecedor_numero', 'fornecedor_cep', 
-            'fornecedor_complemento', 
+            'fornecedor_complemento','fornecedor_datanasc',
             'fornecedor_obs', 'fornecedor_cidade']
 
 
