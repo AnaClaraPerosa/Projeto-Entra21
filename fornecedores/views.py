@@ -1,6 +1,4 @@
-from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.utils.text import slugify
 from django.shortcuts import get_object_or_404, render,redirect
@@ -33,7 +31,7 @@ class FornecedorCreate(CreateView, LoginRequiredMixin):
     success_url = reverse_lazy('fornecedor-list')
 
     def form_valid(self, form):
-        form.instance.usuario = self.request.user
+        form.instance.fornecedor_cripor = self.request.user
         return super().form_valid(form)
 
     def get_context_data(self, *args, **kwargs):
@@ -83,11 +81,12 @@ class FornecedorList(ListView, LoginRequiredMixin):
     model = Fornecedores
     template_name = 'fornecedor-list.html'
 
-################ PARTE QUE JÁ ESTAVA ################
+################ SEJA FORNECEDOR - CONTATO ################
 
 def seja_fornecedor(request):
     return render(request, 'seja_fornecedor.html')
 
+################ AREA DO FORNECEDOR (LOGADO) ################
 
 @login_required
 def fornecedor_admin(request):
