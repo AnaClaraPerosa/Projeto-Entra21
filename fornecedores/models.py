@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL  
+
 from email.policy import default
 from django.contrib.auth.models import User
 from django.db import models
@@ -8,7 +8,7 @@ from endereco.models import Cidades
 
 class Fornecedores(models.Model):
     fornecedor_nome = models.CharField(max_length=255,verbose_name='Nome')
-    fornecedor_datanasc = models.DateField(default=0, blank=True, verbose_name = 'Data de Nascimento')
+    fornecedor_datanasc = models.DateField(null=True, blank=True, verbose_name = 'Data de Nascimento')
     fornecedor_cnpj = models.CharField(max_length=20,default=0, verbose_name='CNPJ')
     fornecedor_email = models.EmailField(max_length=100, verbose_name='Email')
     fornecedor_telefone = models.CharField(max_length=30, verbose_name='Telefone')
@@ -17,7 +17,7 @@ class Fornecedores(models.Model):
     fornecedor_numero = models.IntegerField(default=0, verbose_name='Número')
     fornecedor_cep = models.IntegerField(default=0, verbose_name='CEP')
     fornecedor_complemento = models.CharField(max_length=100,blank=True, verbose_name='Complemento')
-    fornecedor_obs = models.CharField(max_length=100,default=NULL, verbose_name='Obs')
+    fornecedor_obs = models.CharField(max_length=100,blank=True, verbose_name='Obs')
     fornecedor_cidade = models.ForeignKey(Cidades,verbose_name='Cidade',default=0, on_delete=models.PROTECT)
     fornecedor_ativo = models.CharField(max_length=1)
     fornecedor_criem = models.DateTimeField(auto_now_add=True)

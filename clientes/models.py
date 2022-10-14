@@ -12,7 +12,7 @@ def user_path(instance, filename):
 
 class Clientes(models.Model):
     cliente_nome = models.CharField(max_length=100,verbose_name='Nome')
-    cliente_datanasc = models.DateField(default=0, blank=False, verbose_name = 'Data de Nascimento')
+    cliente_datanasc = models.DateField(null=True, blank=True, verbose_name = 'Data de Nascimento')
     cliente_telefone = models.CharField(max_length=100,verbose_name='Telefone')
     cliente_cpf = models.CharField(max_length=100,verbose_name='CPF')
     cliente_email = models.EmailField(max_length=100, verbose_name='Email')
@@ -24,8 +24,7 @@ class Clientes(models.Model):
     cliente_obs = models.CharField(max_length=100, blank=True, verbose_name='Observações')
     cliente_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade', on_delete=models.PROTECT)
     cliente_ativo = models.CharField(max_length=1)
-    cliente_criem = models.DateTimeField(auto_now_add=True)
-    usuario = models.OneToOneField(User, default=0, on_delete=models.PROTECT, verbose_name='cliente')
+    usuario = models.OneToOneField(User, on_delete=models.PROTECT, verbose_name='cliente')
 
     def __str__(self):
         return '%s %s %s' % (self.cliente_nome, self.cliente_telefone, self.cliente_cpf)
