@@ -38,9 +38,12 @@ def carrinho_detalhe(request):
                 )
 
             newped.save()
-            carrinho.clear()            
+            
+            carrinho.clear()   
+            data = { 'valor_total' : newped.valor_total }         
             return render(request, 'sucesso.html', 
-                    {   'CLI': json.dumps(cli,   default=str)
+                    {   'CLI': json.dumps(cli,   default=str),
+                        'DATA' : json.dumps(data, default=str)
                     }
                 )
 
