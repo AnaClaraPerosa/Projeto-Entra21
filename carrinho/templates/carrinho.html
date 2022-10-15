@@ -2,6 +2,7 @@
 {% load static %}
 
 {%  block content %}
+{% csrf_token %}  
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/breadcrumb.jpg' %}">
@@ -81,7 +82,10 @@
                                 <a href="{%  url 'cliente-form' %}" target="_blank"><button class="primary-btn" value="cliente_id={{ user.id }}" type="submit">Alterar dados</button></a>
                           
                                 <hr>
-                                <input type="button" class="primary-btn" onClick="parent.location='#'" value="FINALIZAR COMPRAS" target="_blank">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" class="primary-btn">VAI QUE É TUA</button>
+                                </form>
                             </ul>
                         </div>
                     </div>
