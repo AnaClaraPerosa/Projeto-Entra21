@@ -16,7 +16,8 @@ class Pedido(models.Model):
     criado_em = models.DateTimeField(auto_now_add=True)
     quant_paga =models.DecimalField(max_digits=8, decimal_places=2)
     fornecedores = models.ManyToManyField(Fornecedores, related_name='pedidos')
-    
+    valor_total = models.FloatField(default=0)
+
     class Meta:
         ordering = ['-criado_em']
 
