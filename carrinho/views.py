@@ -1,53 +1,70 @@
-from django.contrib import messages
-from django.shortcuts import render,redirect
-
-from.forms import CheckoutForm
-from .carrinho import Carrinho
-
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
+from pedidos.models import Pedido
+from clientes.models import Clientes
 from pedidos.utilitarios import checkout
+from .carrinho import Carrinho
+from django.contrib import messages
+from django.shortcuts import render, redirect
+import json
+
+from .forms import CheckoutForm
+
 
 # Create your views here.
 
 
+@csrf_exempt
+@login_required
 def carrinho_detalhe(request):
+
     carrinho = Carrinho(request)
 
     if request.method == 'POST':
-        form = CheckoutForm(request.POST)
 
-        if form.is_valid():
-            primeiro_nome = form.cleaned_data['primeiro_nome']
-            sobrenome = form.cleaned_data['sobrenome']
-            email = form.cleaned_data['email']
-            endereco = form.cleaned_data['endereco']
-            cep = form.cleaned_data['cep']
-            cidade = form.cleaned_data['cidade']
-            telefone = form.cleaned_data['telefone']
+        cli = Clientes.objects.filter(usuario_id=request.user.id)
 
-            pedido = checkout(request, primeiro_nome, sobrenome, email, endereco, cep, cidade, telefone, carrinho.get_custo_total())
+        if (cli):
+            for x in cli.values():
+                newped = Pedido(
+                    primeiro_nome=x["cliente_nome"],
+                    email=x["cliente_email"],
+                    endereco=x["cliente_logradouro"],
+                    cep=x["cliente_cep"],
+                    cidade=x["cliente_cidade_id_id"],
+                    telefone=x["cliente_telefone"],
+                    valor_total=carrinho.get_custo_total(),
+                    quant_paga=1
+                )
 
-            carrinho.clear()
+            newped.save()
+            carrinho.clear()            
+            return render(request, 'sucesso.html', 
+                    {   'CLI': json.dumps(cli,   default=str)
+                    }
+                )
 
-            return redirect('sucesso')
-    else:
-        form = CheckoutForm()
+        else:
+            return render(request, 'sucesso.html', 
+                {   'CLI': json.dumps(cli,   default=str)
+                }
+            )       
 
-    remove_do_carrinho = request.GET.get('remove_do_carrinho','')
-    muda_quantidade = request.GET.get('muda_quantidade','')
-    quantidade = request.GET.get('quantidade',0)
+
+
+    remove_do_carrinho = request.GET.get('remove_do_carrinho', '')
+    muda_quantidade = request.GET.get('muda_quantidade', '')
+    quantidade = request.GET.get('quantidade', 0)
 
     if remove_do_carrinho:
         carrinho.remove(remove_do_carrinho)
-
         return redirect('carrinho')
 
     if muda_quantidade:
         carrinho.add(muda_quantidade, quantidade, True)
-
         return redirect('carrinho')
-    
-    return render(request, 'carrinho.html',{'form' : form})
+
+    return render(request, 'carrinho.html')
 
 
-def sucesso(request):
-     return render(request, 'sucesso.html')
+
