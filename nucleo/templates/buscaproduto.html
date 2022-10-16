@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="hero__search">
+    <div class="hero__search__form">
+      <form method="get" action="{% url 'pesquisa' %}">
+        <div class="hero__search__categories">Busque por Produtos</div>
+        <input type="text" placeholder="O que você precisa?" name="query"/>
+        <button type="submit" class="site-btn">BUSCA</button>
+      </form>
+    </div>
+</div>

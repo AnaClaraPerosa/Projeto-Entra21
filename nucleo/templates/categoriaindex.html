@@ -1,0 +1,62 @@
+{% load static %}
+
+<!-- CATEGORIA INDEX  -->
+<section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="hero__categories">
+            <div class="hero__categories__all">
+              <i class="fa fa-bars"></i>
+              <span>Segmentos</span>
+            </div>
+             {% for categoria in menu_categorias %}
+                <ul>
+                  <li><a href="{% url 'categoria' categoria.slug %}">{{ categoria.titulo }}</a></li>
+                </ul>
+             {% endfor %}
+          </div>
+        </div>
+        <div class="col-lg-9">
+            {% include 'buscaproduto.html' %}
+
+          <div class="hero__item set-bg" data-setbg="{% static 'img/hero/banner.jpg' %}">
+            <div class="hero__text">
+              <h2>
+                Encontre aqui os <br />
+                produtos para <br />
+                a sua dieta e <br />
+                muito mais!
+              </h2>
+              <p>
+                Localize um fornecedor<br />
+                pertinho de você.
+              </p>
+              <a href="{% url 'loja' %}"><button type="submit" class="site-btn">LOJA</button></a>
+              <script type="text/javascript" src="{% static 'js/script.js' %}"
+              ></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Hero Section End -->
+
+      {% for item in produtos %}
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="product__item">
+            <div class="product__item__pic set-bg" data-setbg="{{ produto.get_thumbnail }}">
+                <ul class="product__item__pic__hover">
+                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+            <div class="product__item__text">
+                <h6><a href="#">{{ produto.titulo }}</a></h6>
+                <h5>R$ {{ produto.preco }}</h5>
+            </div>
+        </div>
+      </div>
+      {% endfor %}
