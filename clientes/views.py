@@ -12,7 +12,7 @@ from .models import Clientes
 
 # Create your views here.
 
-class ClienteCreate(CreateView, LoginRequiredMixin, GroupRequiredMixin):
+class ClienteCreate(CreateView):
     login_url = reverse_lazy('login')
     # group_required = u"Usuários"
     template_name = 'cliente-form.html'
@@ -24,6 +24,19 @@ class ClienteCreate(CreateView, LoginRequiredMixin, GroupRequiredMixin):
             'cliente_obs', 'cliente_cidade_id']
     model = Clientes
     success_url = reverse_lazy('cliente-list')
+
+    # def form_valid(self, form):
+
+    #     grupo = get_object_or_404(Group, name="Clientes")
+
+    #     url = super().form_valid(form)
+
+    #     self.object.groups.add(grupo)
+    #     self.object.save()
+
+    #     Clientes.objects.create(usuario=self.object)
+
+    #     return url
 
     def form_valid(self, form):
         form.instance.usuario = self.request.user
