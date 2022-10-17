@@ -4,6 +4,7 @@ from django.contrib.auth.models import User, Group
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
+from .form import ClienteForm
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from braces.views import GroupRequiredMixin
@@ -12,18 +13,19 @@ from .models import Clientes
 
 # Create your views here.
 
-class ClienteCreate(CreateView):
+class ClienteCreate(CreateView, LoginRequiredMixin):
     login_url = reverse_lazy('login')
     # group_required = u"Usuários"
+    form_class = ClienteForm
     template_name = 'cliente-form.html'
-    fields = ['cliente_nome', 'cliente_telefone', 
-            'cliente_cpf', 'cliente_email', 
-            'cliente_logradouro', 'cliente_bairro',
-            'cliente_numero', 'cliente_cep', 
-            'cliente_complemento','cliente_datanasc',
-            'cliente_obs', 'cliente_cidade_id']
+    # fields = ['cliente_nome', 'cliente_telefone', 
+    #         'cliente_cpf', 'cliente_email', 
+    #         'cliente_logradouro', 'cliente_bairro',
+    #         'cliente_numero', 'cliente_cep', 
+    #         'cliente_complemento','cliente_datanasc',
+    #         'cliente_obs', 'cliente_cidade_id']
     model = Clientes
-    success_url = reverse_lazy('cliente-list')
+    success_url = reverse_lazy('index')
 
     # def form_valid(self, form):
 

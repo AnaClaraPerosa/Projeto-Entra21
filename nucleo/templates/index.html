@@ -93,10 +93,10 @@
                 <a href="{% url 'cliente-form' %}"
                   ><i class="fa fa-user"></i>Cliente</a>
                 </li>
-                <li>
+                <!-- <li>
                 <a href="{% url 'fornecedor-form' %}"
                   ><i class="fa fa-user"></i>Fornecedor</a>
-                </li>
+                </li> -->
                     <div class="container">
                       <div class="dropdown">
                         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
@@ -123,7 +123,17 @@
                 </li>
                 {% endif %}
 
-                
+                {% if request.user|has_group:"Clientes" %}
+                <li>
+                  <a href="{% url 'fornecedor-form' %}"
+                    ><i class="fa fa-user"></i>Fornecedor</a>
+                </li>
+                {% else %}
+                <li>
+                  <a href="{% url 'cliente-form' %}"
+                    ><i class="fa fa-user"></i>Cliente</a>
+                </li>
+                {% endif %}
 
               </ul>
               <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->

@@ -8,7 +8,7 @@ class ClienteForm(forms.ModelForm):
 
     class Meta:
         model = Clientes
-        field_list = ['cliente_nome', 'cliente_telefone', 
+        fields = ['cliente_nome', 'cliente_telefone', 
             'cliente_cpf', 'cliente_email', 
             'cliente_logradouro', 'cliente_bairro',
             'cliente_numero', 'cliente_cep', 
