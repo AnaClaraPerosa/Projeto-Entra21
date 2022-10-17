@@ -1,0 +1,95 @@
+
+   {% load static %}
+   <!-- Humberger Begin -->
+   <div class="humberger__menu__overlay"></div>
+        <div class="humberger__menu__wrapper">
+            <div class="humberger__menu__logo">
+            <a href="#"><img src="{% static 'img/Logo.png' %}" alt="" /></a>
+            </div>
+            <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a></li>
+            </ul>
+            </div>
+            <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
+                <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
+            </ul>
+            </nav>
+        </div>
+   <!-- Humberger End -->
+
+   <!-- Header Section Begin -->
+   <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                <div class="header__logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'img/Logo.png' %}" alt=""/></a>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="{% url 'index' %}">Início</a></li>
+                            <li><a href="{% url 'loja' %}">Loja</a></li>
+                            <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
+                            <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <div class="header__cart">
+                    <ul>
+                    <li>
+                        <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li>
+                    <a href="{% url 'cliente-form' %}"
+                        ><i class="fa fa-user"></i>Cliente</a>
+                    </li>
+                    <li>
+                    <a href="{% url 'fornecedor-form' %}"
+                        ><i class="fa fa-user"></i>Fornecedor</a>
+                    </li>
+                        <div class="container">
+                            <div class="dropdown">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span id="username">{{ request.user }}</span> 
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{% url 'cliente-list' %}">Alterar dados</a> 
+                                <a class="dropdown-item" href="#">Alterar senha</a>
+                                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                            </div>
+                            </div>
+                    {% else %}
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'registre-se' %}">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        Registrar
+                        </a>
+                    </li> -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'login' %}">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            Login
+                        </a>
+                    </li>
+                    {% endif %}
+                    </ul>
+                    <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->
+                </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+   </header>
+   <!-- Header Section End -->
+
+  

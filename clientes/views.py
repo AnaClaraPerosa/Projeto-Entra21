@@ -92,3 +92,4 @@ class ClienteList(ListView, LoginRequiredMixin, GroupRequiredMixin):
     model = Clientes
     template_name = 'cliente-list.html'
 
+
