@@ -49,7 +49,10 @@
                 <div class="header__cart">
                     <ul>
                     <li>
-                        <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
+                        <a href="{% url 'carrinho' %}" style="color:#7fad39">
+                            <i class="fa fa-shopping-cart"></i>
+                            <strong>{% if carrinho %} {{carrinho|length}} {% endif %}</strong>
+                        </a>
                     </li>
                     {% if request.user.is_authenticated %}
                     <li>
