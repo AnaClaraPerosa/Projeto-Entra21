@@ -24,7 +24,7 @@
     </div>
     {% else %}
 
-    <div class="col-md-4 mx-auto">
+    <div class="col-md-4 mx-auto text">
         
         <h3>Autenticação</h3>
         
@@ -39,10 +39,12 @@
         
             {{ form|crispy }}
         
-            <button type="submit" class="btn btn-light mt-3">Entrar</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-light mt-3 " style="background-color: #7fad39; color: antiquewhite;">Entrar</button>
+            </div>
             
-            <div class="card-footer text-center">
-                <a href="{% url 'registre-se' %}">Registre-se</a>
+            <div class="card-footer text-center">Ainda não tem uma conta? 
+                <a style="color:#7fad39;" href="{% url 'registre-se' %}">Registre-se</a>
             </div>
         </form>
 

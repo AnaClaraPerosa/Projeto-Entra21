@@ -3509,35 +3509,51 @@ ol {
 	float: right;
   }
   
-  .fas.fa-trash {
+.fas.fa-trash {
 	color: #db1e47;
 	cursor: pointer;
 	margin: 5px;
 	font-size: 15px;
 	float: right;
-  }
+}
 
-  .fa.fa-trash {
+.fa.fa-trash {
 	color: #db1e47;
 	cursor: pointer;
 	margin: 5px;
 	font-size: 20px;
-  }
+}
 
-  .fa.fa-plus-circle {
+.fa.fa-plus-circle {
 	color: #7fad39;
 	cursor: pointer;
 	margin: 5px;
 	font-size: 15px;
-  }
+}
 
-  .fa.fa-minus-circle {
+.fa.fa-minus-circle {
 	color: #db1e47;
 	cursor: pointer;
 	margin: 5px;
 	font-size: 15px;
-  }
+}
 
+.fa .fa-instagram {
+	color:  #517fa4;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 15px;
+}
+
+.fa .fa-facebook {
+	color: #db1e47;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 15px;
+}
+.fa.fa-sign-in{
+	color: white;
+}
 
 /**
 * Notificação toast
