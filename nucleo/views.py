@@ -21,6 +21,9 @@ def index(request):
 def pagamento(request):
     return render(request,'pagamento.html')
 
+def sobrenos(request):
+    return render(request,'sobrenos.html')
+
 
 def depoimentos(request):
     return render(request,'depoimentos.html')
