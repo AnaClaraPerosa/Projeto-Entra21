@@ -27,22 +27,22 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
     model = Clientes
     success_url = reverse_lazy('index')
 
-    # def form_valid(self, form):
-
-    #     grupo = get_object_or_404(Group, name="Clientes")
-
-    #     url = super().form_valid(form)
-
-    #     self.object.groups.add(grupo)
-    #     self.object.save()
-
-    #     Clientes.objects.create(usuario=self.object)
-
-    #     return url
-
     def form_valid(self, form):
-        form.instance.usuario = self.request.user
-        return super().form_valid(form)
+
+        grupo = get_object_or_404(Group, name="Clientes")
+
+        url = super().form_valid(form)
+
+        self.object.groups.add(grupo)
+        self.object.save()
+
+        Clientes.objects.create(usuario=self.object)
+
+        return url
+
+    # def form_valid(self, form):
+    #     form.instance.usuario = self.request.user
+    #     return super().form_valid(form)
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)

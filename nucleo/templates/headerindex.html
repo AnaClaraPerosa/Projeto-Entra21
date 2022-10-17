@@ -1,5 +1,6 @@
 
    {% load static %}
+
    <!-- Humberger Begin -->
    <div class="humberger__menu__overlay"></div>
         <div class="humberger__menu__wrapper">
@@ -78,18 +79,6 @@
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                             Login
                         </a>
-                    </li>
-                    {% endif %}
-
-                    {% if request.user|has_group:"Clientes" %}
-                    <li>
-                        <a href="{% url 'fornecedor-form' %}"
-                            ><i class="fa fa-user"></i>Fornecedor</a>
-                    </li>
-                    {% else %}
-                    <li>
-                        <a href="{% url 'cliente-form' %}"
-                            ><i class="fa fa-user"></i>Cliente</a>
                     </li>
                     {% endif %}
                     </ul>
