@@ -51,13 +51,6 @@
                     </li>
                     {% if request.user.is_authenticated %}
                     <li>
-                    <a href="{% url 'cliente-form' %}"
-                        ><i class="fa fa-user"></i>Cliente</a>
-                    </li>
-                    <li>
-                    <a href="{% url 'fornecedor-form' %}"
-                        ><i class="fa fa-user"></i>Fornecedor</a>
-                    </li>
                         <div class="container">
                             <div class="dropdown">
                             <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
@@ -69,13 +62,9 @@
                                 <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                             </div>
                             </div>
+                        </div>
+                    </li>
                     {% else %}
-                    <!-- <li class="nav-item ">
-                        <a class="nav-link" href="{% url 'registre-se' %}">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
-                        Registrar
-                        </a>
-                    </li> -->
                     <li class="nav-item ">
                         <a class="nav-link" href="{% url 'login' %}">
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
@@ -84,9 +73,8 @@
                     </li>
                     {% endif %}
                     </ul>
-                    <!-- <div class="header__cart__price">Itens: <span>R$0.00</span></div> -->
                 </div>
-                </div>
+            </div>
             </div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
