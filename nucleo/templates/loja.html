@@ -66,12 +66,12 @@
 
                         {% for num in novos_produtos.paginator.page_range %}
                         {% if num == novos_produtos.number %}
-                        <li class="page-item bg-success active">
-                            <a class="page-link bg-success" href="#">{{ num }}</a>
+                        <li class="page-item">
+                            <a class="page-link" style="background-color: #7fad39; color: antiquewhite;" href="#">{{ num }}</a>
                         </li>
                         {% else %} 
-                        <li class="page-item text-success bg-white">
-                            <a class="page-link text-success bg-white" href="{% url 'loja' %}?page={{ num }}">{{ num }}</a>
+                        <li class="page-item">
+                            <a class="page-link" style="background-color: #7fad39; color: antiquewhite;" href="{% url 'loja' %}?page={{ num }}">{{ num }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
