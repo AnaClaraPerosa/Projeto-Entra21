@@ -3538,18 +3538,24 @@ ol {
 	font-size: 15px;
 }
 
-.fa .fa-instagram {
-	color:  #517fa4;
+.fab.fa-instagram{
+	color:  #dd2a7b;
 	cursor: pointer;
 	margin: 5px;
-	font-size: 15px;
+	font-size: 20px;
 }
 
-.fa .fa-facebook {
-	color: #db1e47;
+.fab.fa-facebook-square{
+	color: #3b5998;
 	cursor: pointer;
 	margin: 5px;
-	font-size: 15px;
+	font-size: 20px;
+}
+.fab.fa-whatsapp{
+	color: #34af23;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
 }
 .fa.fa-sign-in{
 	color: white;
