@@ -50,19 +50,14 @@
                         <a href="{% url 'carrinho' %}"><i class="fa fa-shopping-cart"></i>{% if carrinho %} {{carrinho|length}} {% endif %}</a>
                     </li>
                     {% if request.user.is_authenticated %}
-                    <li class="nav-item ">
-                        <a class="nav-link" href="{% url 'cliente-form' %}">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            Cliente
-                        </a>
-                    </li>
                     <li>
                         <div class="container">
                             <div class="dropdown">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            <button type="button" class="btn dropdown-toggle" 
+                                style="background-color: #7fad39; color: antiquewhite;" data-toggle="dropdown">
                                 <span id="username">{{ request.user }}</span> 
                             </button>
-                            <div class="dropdown-menu"> 
+                            <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Alterar senha</a>
                                 <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                             </div>
