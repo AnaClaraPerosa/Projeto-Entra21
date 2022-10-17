@@ -3608,10 +3608,10 @@ ol {
 	position: relative;
   }
   .shape {
-	height: 1px;
+	height: 3px;
 	margin: 0 auto 30px;
 	position: relative;
-	width: 60px;
+	width: 80px;
 	background-color: #7fad39;
   }
   /* Team Item */
