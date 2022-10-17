@@ -73,7 +73,8 @@
                     <li>
                         <div class="container">
                             <div class="dropdown">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            <button type="button" class="btn dropdown-toggle" 
+                                style="background-color: #7fad39; color: antiquewhite;" data-toggle="dropdown">
                                 <span id="username">{{ request.user }}</span> 
                             </button>
                             <div class="dropdown-menu">
@@ -85,10 +86,10 @@
                         </div>
                     </li>
                     {% else %}
-                    <li class="nav-item ">
-                        <a class="nav-link" href="{% url 'login' %}">
-                            <i class="fa fa-sign-in" aria-hidden="true"></i>
-                            Login
+                    <li>
+                        <a href="{% url 'login' %}">
+                            <button class="btn btn-light mt-0 "
+                            style="background-color: #7fad39; color: antiquewhite;"><i class="fa fa-sign-in"></i> Login</button>
                         </a>
                     </li>
                     {% endif %}
