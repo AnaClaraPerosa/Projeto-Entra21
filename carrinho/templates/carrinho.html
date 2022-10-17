@@ -74,19 +74,23 @@
                         <div class="shoping__checkout">
                             <h5>Total do Carrinho</h5>
                             <ul>
-                                <!-- <li>Subtotal <span>R$91.00</span></li> -->
                                 <li><span>{{ carrinho | length }} Itens</span></li>
                                 <li><strong>R${{ carrinho.get_custo_total }}</strong></li>
-                                <!-- <a href="#" class="primary-btn">FINALIZAR COMPRAS</a> -->
-
-                                <a href="{%  url 'cliente-form' %}" target="_blank"><button class="primary-btn" value="cliente_id={{ user.id }}" type="submit">Alterar dados</button></a>
-                          
-                                <hr>
-                                <form method="POST">
-                                    {% csrf_token %}
-                                    <button type="submit" class="primary-btn">VAI QUE É TUA</button>
-                                </form>
                             </ul>
+                            <ul>
+                            <table>
+                                <td>
+                                    <a href="{%  url 'cliente-form' %}" target="_blank">
+                                        <button class="primary-btn" value="cliente_id={{ user.id }}" type="submit">Alterar dados</button>
+                                    </a>
+                                </td>
+                                <td>
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <button style="margin: 0 30px;" type="submit" class="primary-btn">Finalizar compra</button>
+                                    </form>
+                                </td>
+                            </table>
                         </div>
                     </div>
                 </div>
