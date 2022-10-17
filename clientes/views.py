@@ -30,10 +30,10 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
     def form_valid(self, form):
 
         grupo = get_object_or_404(Group, name="Clientes")
-
+        form.instance.usuario= self.request.user
         url = super().form_valid(form)
 
-        self.object.groups.add(grupo)
+        self.object.groups.add(grupo['id'])
         self.object.save()
 
         Clientes.objects.create(usuario=self.object)

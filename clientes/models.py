@@ -20,9 +20,9 @@ class Clientes(models.Model):
     cliente_cep = models.IntegerField(default=0, verbose_name='CEP')
     cliente_complemento = models.CharField(max_length=100,blank=True, verbose_name='Complemento')
     cliente_obs = models.CharField(max_length=100, blank=True, verbose_name='Observações')
-    cliente_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade', on_delete=models.PROTECT)
+    cliente_cidade_id = models.ForeignKey(Cidades,verbose_name='Cidade', on_delete=models.CASCADE)
     cliente_ativo = models.CharField(max_length=1)
-    usuario = models.OneToOneField(User, on_delete=models.PROTECT, verbose_name='cliente')
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='cliente')
 
     def __str__(self):
         return '%s %s %s' % (self.cliente_nome, self.cliente_telefone, self.cliente_cpf)

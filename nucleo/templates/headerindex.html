@@ -51,6 +51,12 @@
                     </li>
                     {% if request.user.is_authenticated %}
                     <li>
+                        <a href="{% url 'cliente-form' %}">
+                            <button class="btn btn-light mt-0 "
+                            style="background-color: #7fad39; color: antiquewhite;"><i class="fa fa-user"></i> Cliente</button>
+                        </a>
+                    </li>
+                    <li>
                         <div class="container">
                             <div class="dropdown">
                             <button type="button" class="btn dropdown-toggle" 
