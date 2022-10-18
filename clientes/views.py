@@ -32,9 +32,10 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
         grupo = get_object_or_404(Group, name="Clientes")
         form.instance.usuario= self.request.user
         url = super().form_valid(form)
+        
+        # self.object.groups.add(grupo)
+        # self.object.save()
 
-        self.object.groups.add(grupo['id'])
-        self.object.save()
 
         Clientes.objects.create(usuario=self.object)
 
