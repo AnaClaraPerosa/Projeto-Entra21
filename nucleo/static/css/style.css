@@ -3573,6 +3573,25 @@ ol {
 	color: white;
 }
 
+/* .fab.fa-bootstrap {
+	color: #211f1f;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
+} */
+/* .fab.fa-html5 {
+	color: #211f1f;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
+} */
+/* .fab.fa-trello{
+	color: #211f1f;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 20px;
+} */
+
 /**
 * Notificação toast
 */
@@ -3597,9 +3616,16 @@ ol {
 .section-padding {
 	padding: 60px 0;
   }
-  .section-header {
+
+.section-header {
 	margin-bottom: 30px;
-  }
+}
+
+.section-header p {
+	text-align: center;
+	font-weight: 400;
+	line-height: 26px;
+}
   .section-title {
 	font-size: 30px;
 	color: #222222;
@@ -3694,4 +3720,96 @@ ol {
   
   .team-item:hover .team-overlay {
 	opacity: 1;
+  }
+
+/* Features section do template sobre */
+
+#features {
+	background: #fff;
+  }
+  
+  #features .icon {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 4px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+  }
+  
+  #features .content-left span {
+	float: right;
+  }
+  
+  #features .content-left .text {
+	text-align: right;
+  }
+  
+  #features .content-right span {
+	float: left;
+  }
+  
+  #features .box-item {
+	box-shadow: 0 0 12px #F4F4F4;
+	padding: 15px;
+	line-height: 22px;
+	margin-top: 30px;
+	border-radius: 3px;
+	background-color: #fff;
+	-webkit-transition: all .3s ease-in-out;
+	-mox-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	position: relative;
+	top: 0;
+  }
+  
+  #features .box-item .icon {
+	text-align: center;
+	margin: 12px;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+  }
+  
+  #features .box-item .icon i {
+	color: #7fad39;
+	font-size: 30px;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+  }
+  
+  #features .box-item .text h4 {
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+  }
+  
+  #features .box-item .text p {
+	font-size: 14px;
+	line-height: 26px;
+  }
+  
+  #features .box-item:hover {
+	box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  }
+  
+  #features .box-item:hover h4 {
+	color: #7fad39;
+  }
+  
+  #features .show-box {
+	margin-top: 50px;
+  }
+  
+  #features .show-box img {
+	width: 100%;
   }
