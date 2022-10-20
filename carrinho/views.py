@@ -2,13 +2,10 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from pedidos.models import Pedido, ItemPedido
 from clientes.models import Clientes
-from pedidos.utilitarios import checkout
 from .carrinho import Carrinho
 from django.contrib import messages
 from django.shortcuts import render, redirect
 import json
-
-from .forms import CheckoutForm
 
 
 # Create your views here.
@@ -51,28 +48,22 @@ def carrinho_detalhe(request):
 
             newped.save()
 
-            # salvar itens do pedido
-            
-            print(carr)
-
+####################### salvar itens do pedido ###############
             for x in carrinho:
-                print(x)
-                print (f'PRODUTOS---> { x["quantidade"]}')
-                print (f'PRODUTOS---> { x["id"]}')
-                print (f'PRODUTOS---> { x["preco_total"]}')
-
-                a = ""
                 newitemsped = ItemPedido(
-                    pedido = newped.id,
-                    produto = x['produto...'],
-                    fornecedor = a,
-                    fornecedor_pago = a,
-                    preco = a,
-                    quantidade = a
+                    pedido = newped,
+                    produto = x['produto'],
+                    fornecedor = x['produto'].fornecedor,
+                    preco = x['produto'].preco,
+                    quantidade = x['quantidade']
                 )
-                newitemsped.save()
 
-            # carrinho.clear()   
+                newped.fornecedores.add(x['produto'].fornecedor)
+
+
+            newitemsped.save()
+
+            carrinho.clear()   
             data = { 'valor_total' : newped.valor_total }         
             return render(request, 'sucesso.html', 
                     {   'CLI': json.dumps(cli,   default=str),
@@ -88,7 +79,6 @@ def carrinho_detalhe(request):
             )       
 
 
-    print("linha 59 ")
     remove_do_carrinho = request.GET.get('remove_do_carrinho', '')
     muda_quantidade = request.GET.get('muda_quantidade', '')
     quantidade = request.GET.get('quantidade', 0)
@@ -108,6 +98,3 @@ def carrinho_detalhe(request):
             'CLIENTE'     : cli
         }
     )
-
-
-
