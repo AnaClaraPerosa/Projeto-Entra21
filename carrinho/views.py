@@ -53,15 +53,18 @@ def carrinho_detalhe(request):
 
             # salvar itens do pedido
             
+            print(carr)
+
             for x in carrinho:
+                print(x)
                 print (f'PRODUTOS---> { x["quantidade"]}')
                 print (f'PRODUTOS---> { x["id"]}')
                 print (f'PRODUTOS---> { x["preco_total"]}')
 
                 a = ""
                 newitemsped = ItemPedido(
-                    pedido = a,
-                    produto = a,
+                    pedido = newped.id,
+                    produto = x['produto...'],
                     fornecedor = a,
                     fornecedor_pago = a,
                     preco = a,
