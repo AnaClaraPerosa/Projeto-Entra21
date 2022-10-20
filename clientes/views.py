@@ -42,26 +42,26 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
 
 ################# UPDATE #################
 
-class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
-    login_url = reverse_lazy('login')
-    # group_required = u"Clientes"
-    model = Clientes
-    fields = ['cliente_nome', 'cliente_telefone', 
-            'cliente_cpf', 'cliente_email', 
-            'cliente_logradouro', 'cliente_bairro',
-            'cliente_numero', 'cliente_cep', 
-            'cliente_complemento','cliente_datanasc',
-            'cliente_obs', 'cliente_cidade_id']
-    template_name = 'cliente-update.html'
-    success_url = reverse_lazy('index')
+# class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
+#     login_url = reverse_lazy('login')
+#     # group_required = u"Clientes"
+#     model = Clientes
+#     fields = ['cliente_nome', 'cliente_telefone', 
+#             'cliente_cpf', 'cliente_email', 
+#             'cliente_logradouro', 'cliente_bairro',
+#             'cliente_numero', 'cliente_cep', 
+#             'cliente_complemento','cliente_datanasc',
+#             'cliente_obs', 'cliente_cidade_id']
+#     template_name = 'cliente-update.html'
+#     success_url = reverse_lazy('index')
 
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
+#     def get_context_data(self, *args, **kwargs):
+#         context = super().get_context_data(*args, **kwargs)
 
-        context['titulo'] = "Editar cadastro de Clientes"
-        context['botao'] = "Salvar"
+#         context['titulo'] = "Editar cadastro de Clientes"
+#         context['botao'] = "Salvar"
 
-        return context
+#         return context
 
 ################# DELETE #################
 
@@ -76,3 +76,23 @@ class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
 
 
 
+
+class ClienteUpdate(UpdateView):
+    login_url = reverse_lazy('carrinho')    
+    model = Clientes
+    template_name = 'cliente-update.html'
+    success_url = reverse_lazy('carrinho')
+    fields = ['cliente_nome', 'cliente_telefone', 
+        'cliente_cpf', 'cliente_email', 
+        'cliente_logradouro', 'cliente_bairro',
+        'cliente_numero', 'cliente_cep', 
+        'cliente_complemento','cliente_datanasc',
+        'cliente_obs', 'cliente_cidade_id']
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        context['titulo'] = "Editar cadastro de Clientes"
+        context['botao'] = "Salvar"
+
+        return context

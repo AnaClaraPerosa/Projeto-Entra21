@@ -19,6 +19,8 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Shoping Cart Section Begin -->
+
+
     {% if carrinho %}
         <section class="shoping-cart spad">
             <div class="container">
@@ -84,17 +86,34 @@
                             <ul>
                             <table>
                                 <td>
+                                    {% if NOVOCLIENTE %}
                                     <a href="{%  url 'cliente-form' %}" target="_blank">
                                         <button class="btn" style="background-color: #7fad39; color: antiquewhite; height: 50px; width:230px"
                                             value="cliente_id={{ user.id }}" type="submit"> 
-                                            <strong>SEUS DADOS </strong>
+                                            <strong>CADASTRE SEUS DADOS </strong>
                                         </button>
                                     </a>
+                                    {% else %}
+                                    {% for X in CLIENTE %}
+                                    <a href="{%  url 'cliente-update' X.id %} ">
+                                        <button class="btn" style="background-color: #7fad39; color: antiquewhite; height: 50px; width:230px"
+                                            value="pk={{ user.id }}" type="submit"> 
+                                            <strong>ATUALIZE SEU DADOS </strong>
+                                        </button>
+                                    </a>
+
+                                    {% endfor %}
+                                    {% endif %}
+
                                 </td>
                                 <td>
                                     <form method="POST">
                                         {% csrf_token %}
-                                        <button class="btn" 
+                                        <button 
+                                            {% if NOVOCLIENTE %}
+                                                disabled
+                                            {% endif %}
+                                            class="btn" 
                                             style="background-color: #7fad39; color: antiquewhite; margin: 0 30px; height: 50px; width:230px"
                                             type="submit"> 
                                             <strong>FINALIZAR COMPRA </strong>

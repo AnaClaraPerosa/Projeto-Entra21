@@ -18,11 +18,22 @@ from .forms import CheckoutForm
 @login_required
 def carrinho_detalhe(request):
 
+    print("Entrou aqui na view Carrinho")
     carrinho = Carrinho(request)
 
-    if request.method == 'POST':
+    cli = Clientes.objects.filter(usuario_id=request.user.id)
 
-        cli = Clientes.objects.filter(usuario_id=request.user.id)
+    if(cli):
+        print("cliente existe")
+        novocliente = False
+
+    else:
+        print("Cliente NÃOOOOOO EXISTE")
+        novocliente = True
+
+    if request.method == 'POST':
+        print( " entrou com post ")
+        
 
         if (cli):
             for x in cli.values():
@@ -48,13 +59,14 @@ def carrinho_detalhe(request):
                 )
 
         else:
+            print("cadiu no else")
             return render(request, 'sucesso.html', 
                 {   'CLI': json.dumps(cli,   default=str)
                 }
             )       
 
 
-
+    print("linha 59 ")
     remove_do_carrinho = request.GET.get('remove_do_carrinho', '')
     muda_quantidade = request.GET.get('muda_quantidade', '')
     quantidade = request.GET.get('quantidade', 0)
@@ -67,7 +79,13 @@ def carrinho_detalhe(request):
         carrinho.add(muda_quantidade, quantidade, True)
         return redirect('carrinho')
 
-    return render(request, 'carrinho.html')
+
+    return render(request, 'carrinho.html',
+        { 
+            'NOVOCLIENTE' : novocliente,
+            'CLIENTE'     : cli
+        }
+    )
 
 
 
