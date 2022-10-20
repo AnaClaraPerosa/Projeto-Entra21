@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, Group
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
-from .form import ClienteForm
+# from .form import ClienteForm
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from braces.views import GroupRequiredMixin
@@ -44,7 +44,7 @@ class ClienteCreate(CreateView, LoginRequiredMixin):
 
 class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
     login_url = reverse_lazy('login')
-    group_required = u"Clientes"
+    # group_required = u"Clientes"
     model = Clientes
     fields = ['cliente_nome', 'cliente_telefone', 
             'cliente_cpf', 'cliente_email', 
@@ -53,7 +53,7 @@ class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
             'cliente_complemento','cliente_datanasc',
             'cliente_obs', 'cliente_cidade_id']
     template_name = 'cliente-update.html'
-    success_url = reverse_lazy('cliente-list')
+    success_url = reverse_lazy('index')
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -65,18 +65,14 @@ class ClienteUpdate(UpdateView, LoginRequiredMixin, GroupRequiredMixin):
 
 ################# DELETE #################
 
-class ClienteDelete(DeleteView, LoginRequiredMixin):
-    login_url = reverse_lazy('login')
-    model = Clientes
-    template_name = 'cliente-delete.html'
-    success_url = reverse_lazy('cliente-list')
+# class ClienteDelete(DeleteView, LoginRequiredMixin):
+#     login_url = reverse_lazy('login')
+#     model = Clientes
+#     template_name = 'cliente-delete.html'
+#     success_url = reverse_lazy('cliente-list')
 
 ################# LISTA #################
 
-class ClienteList(ListView, LoginRequiredMixin, GroupRequiredMixin):
-    login_url = reverse_lazy('login')
-    group_required = u"Clientes"
-    model = Clientes
-    template_name = 'cliente-list.html'
+
 
 

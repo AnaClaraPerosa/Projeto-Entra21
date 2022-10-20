@@ -12,14 +12,14 @@ from produtos.views import produto
 def index(request):
     produto = Produto.objects.order_by('?').all()
     depoimento = DepoimentoGeral.objects.order_by('?').all()[:3]
-    cli = Clientes.objects.get(usuario=request.user.id)
+    # cli = Clientes.objects.get(usuario=request.user.id)
 
     context = {
         'produto1' : produto,
         'depoimento1' : depoimento,        
     }
-    if cli: 
-        context['cliente'] = cli
+    # if cli: 
+    #     context['cliente'] = cli
 
     return render(request,'index.html', context)
 

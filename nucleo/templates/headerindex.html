@@ -56,12 +56,6 @@
                     </li>
                     {% if request.user.is_authenticated %}
                     <li>
-                        <a href="{% url 'cliente-form' %}">
-                            <button class="btn btn-light mt-0 "
-                            style="background-color: #7fad39; color: antiquewhite;"><i class="fa fa-user"></i> Cliente</button>
-                        </a>
-                    </li>
-                    <li>
                         <div class="container">
                             <div class="dropdown">
                             <button type="button" class="btn dropdown-toggle" 
@@ -69,25 +63,7 @@
                                 <span id="username">{{ request.user }}</span> 
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Alterar senha</a>
-                                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-                            </div>
-                            </div>
-                        </div>
-                    </li>
-                    {% elif request.user|has_group:"Clientes" %}
-                    {% if cliente %} 
-                    
-                    {% endif }
-                    <li>
-                        <div class="container">
-                            <div class="dropdown">
-                            <button type="button" class="btn dropdown-toggle" 
-                                style="background-color: #7fad39; color: antiquewhite;" data-toggle="dropdown">
-                                <span id="username">{{ request.user }}</span> 
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{% url 'cliente-list' %}">Alterar dados</a> 
+                                <a class="dropdown-item" href="#">Alterar dados</a> 
                                 <a class="dropdown-item" href="#">Alterar senha</a>
                                 <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                             </div>
