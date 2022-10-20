@@ -1,6 +1,6 @@
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
-from pedidos.models import Pedido
+from pedidos.models import Pedido, ItemPedido
 from clientes.models import Clientes
 from pedidos.utilitarios import checkout
 from .carrinho import Carrinho
@@ -48,9 +48,28 @@ def carrinho_detalhe(request):
                     quant_paga=1
                 )
 
+
             newped.save()
+
+            # salvar itens do pedido
             
-            carrinho.clear()   
+            for x in carrinho:
+                print (f'PRODUTOS---> { x["quantidade"]}')
+                print (f'PRODUTOS---> { x["id"]}')
+                print (f'PRODUTOS---> { x["preco_total"]}')
+
+                a = ""
+                newitemsped = ItemPedido(
+                    pedido = a,
+                    produto = a,
+                    fornecedor = a,
+                    fornecedor_pago = a,
+                    preco = a,
+                    quantidade = a
+                )
+                newitemsped.save()
+
+            # carrinho.clear()   
             data = { 'valor_total' : newped.valor_total }         
             return render(request, 'sucesso.html', 
                     {   'CLI': json.dumps(cli,   default=str),
