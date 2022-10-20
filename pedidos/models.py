@@ -33,5 +33,5 @@ class ItemPedido(models.Model):
     quantidade = models.IntegerField(default=1)
 
     def __str__(self):
-        return '%s' % self.id
+        return '%s %s' % (self.fornecedor, self.produto)
 
