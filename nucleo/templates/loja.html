@@ -71,7 +71,7 @@
                         </li>
                         {% else %} 
                         <li class="page-item">
-                            <a class="page-link" style="background-color: #7fad39; color: antiquewhite;" href="{% url 'loja' %}?page={{ num }}">{{ num }}</a>
+                            <a class="page-link" style="color:black;" href="{% url 'loja' %}?page={{ num }}">{{ num }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
@@ -89,6 +89,6 @@
                 </nav>
             </div>
         </div>
-    </section>
+    </section> 
 
 {% endblock %}

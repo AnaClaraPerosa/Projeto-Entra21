@@ -42,6 +42,18 @@
 
 9. loginrequiredmixin para a view - PerfilCompleto de Usuarios . 
 
+10. Arrumar as medias
+    
+11. Cadastro dos clientes
+    
+12. Pedidos
+    
+13. Fornecedor não tem acesso a area do fornecedor
+    
+14. Depoimentos
+    
+15. Deploy
+
 
 Requestes pra index no futuro
 
@@ -63,8 +75,8 @@ Requestes pra index no futuro
 
 
 14.10 as 15h
-10. [ ] criar 2 botões no carrinho:
+1.  [ ] criar 2 botões no carrinho:
           - atualizar dados (target=blank) (nova view mesmo form ja criado)
           - neste form vai ter um botão FECHAR 
 
-11. [ ] JAVASCRIPT: request se foi criado o registro no model clientes. 
+2.  [ ] JAVASCRIPT: request se foi criado o registro no model clientes. 
