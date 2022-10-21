@@ -87,7 +87,7 @@
                             <table>
                                 <td>
                                     {% if NOVOCLIENTE %}
-                                    <a href="{%  url 'cliente-form' %}" target="_blank">
+                                    <a href="{%  url 'cliente-form' %}">
                                         <button class="btn" style="background-color: #7fad39; color: antiquewhite; height: 50px; width:230px"
                                             value="cliente_id={{ user.id }}" type="submit"> 
                                             <strong>CADASTRE SEUS DADOS </strong>
@@ -130,7 +130,10 @@
 
 
     {% else %}
-        <p>Você não tem produtos no seu carrinho</p>
+    <br>
+        <h2 class="text-center">Você não tem produtos no seu carrinho</h2>
+    </div>
+    <br>
     {% endif %}
 
 {% endblock %}

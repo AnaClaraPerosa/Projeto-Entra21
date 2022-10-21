@@ -1,8 +1,12 @@
-{% extends 'basesubp2.html' %}
+{% load static %}
 
-{% block title %} Sucesso ¦ {% endblock %}
+{% include 'topo.html' %}
+
+{% include 'headerindex.html' %}
 
 {% block content %}        
-    <h2 class="title">Pedido efetuado com sucesso</h2>
-    <p> {{ CLI }} </p>
+    <h2 class="text-center">Pedido efetuado com sucesso</h2>
+    <!-- <p> {{ CLI }} </p> -->
 {% endblock %}
+
+{% include 'rodape.html' %}
