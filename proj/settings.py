@@ -107,12 +107,12 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 
 try:
     DATABASE_URL = os.getenv('DATABASE_URL')
-    DATABASES = {}
-    DATABASES['default'] = dj_database_url.config(conn_max_age = 600)
 
 except ImportError:
     pass
 
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(conn_max_age = 600)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -163,6 +163,22 @@ LOGOUT_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    DBPASSWORD=os.getenv('DBPASSWORD')
+except ImportError:
+    pass
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'pye2122g3',
+        'USER': 'pye2122g3',
+        'PASSWORD': DBPASSWORD,
+        'HOST': '3.89.36.150',
+        'PORT': '3306',
+    }
+}
 
 try:
     from . local_settings import *
