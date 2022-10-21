@@ -44,9 +44,9 @@
 
 10. Arrumar as medias
     
-11. Cadastro dos clientes
+11. [ok]oCadastro dos clientes
     
-12. Pedidos
+12. [ok]Pedidos
     
 13. Fornecedor não tem acesso a area do fornecedor
     
