@@ -72,11 +72,10 @@ def carrinho_detalhe(request):
                 )
 
         else:
-            print("cadiu no else")
-            return render(request, 'sucesso.html', 
-                {   'CLI': json.dumps(cli,   default=str)
-                }
-            )       
+            return render(request, 'sucesso.html')
+            #     {   'CLI': json.dumps(cli,   default=str)
+            #     }
+            # )       
 
 
     remove_do_carrinho = request.GET.get('remove_do_carrinho', '')
