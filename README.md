@@ -334,17 +334,13 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 ## 5º Sprint 02/10/22 a 09/10/22
 
+
+## 6º Sprint 10/10/22 a 17/10/22
+
+
+## 6º Sprint 18/10/22 a 21/10/22
+
 - Definir as categorias
-
-- Criar um front para pagamentos
-
-- Revisar as paginas
-
-- Pedido do Cliente
-
-- Depoimento da nossa pagina iPicles (Sobre)
-
-- Loja fazer o icone do carrinho adicionar o produto ao carrinho
 
 - Loja fazer a filtragem
 
@@ -352,20 +348,31 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 ## Em andamento
 
-- Ajustes nos Front dos templates
-
-- Testar inserção de dados
-
 - Área de depoimentos para fornecedores, linkada ao produto
 
 - Separar grupo de fornecedores e clientes
+
+
+
+## Feito
 
 - Ajustar a adição da quantidade de produtos na pagina de compra de produtos
 
 - Carrinho ao finalizar a compra direcionar para o cadastro do cliente se ja tiver cadastrada, ir para a finalização do pedido
 
+- Ajustes nos Front dos templates
 
-## Feito
+- Testar inserção de dados
+  
+- Depoimento da nossa pagina iPicles
+
+- Loja fazer o icone do carrinho adicionar o produto ao carrinho
+
+- Criar um front para pagamentos
+
+- Revisar as paginas
+
+- Pedido do Cliente
 
 - Migrar da base teste para a base oficial
 
