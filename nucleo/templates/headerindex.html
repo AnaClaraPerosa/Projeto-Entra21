@@ -39,9 +39,13 @@
                         <ul>
                             <li class="active"><a href="{% url 'index' %}">Início</a></li>
                             <li><a href="{% url 'loja' %}">Loja</a></li>
-                            <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
                             <li><a href="{% url 'depoimentos' %}">Depoimentos</a></li>
                             <li><a href="{% url 'sobrenos' %}">Sobre nós</a></li>
+                            {% if request.user|has_group:"Fornecedores"  %}
+                            <li><a href="{% url 'fornecedor_admin' %}">Área do Fornecedor</a></li>
+                            {% else %}
+                            <li><a href="{% url 'seja_fornecedor' %}">Área do Fornecedor</a></li>
+                            {% endif %}
                         </ul>
                     </nav>
                 </div>
