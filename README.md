@@ -15,7 +15,7 @@
 - Lucas Dimon: Back-end;
 - Renan Oliveira: Back-end;
 
-## **Nomes pro projeto:**
+## **Nomes para o projeto:**
 - Foodfit;
 - eFit;
 - eBeet;
