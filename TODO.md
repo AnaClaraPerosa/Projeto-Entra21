@@ -2,7 +2,7 @@
 2. [ok] modificar url do menu principal para apontar o REGISTRE-SE para o AUTH do django.
 3. [ok] Adicionar registre-se na tela de login 
 4. [ok] Alterar no app usuarios a view UsuarioCreate para PerfilCreate
-5. condicionar o menu de (nucleo/templates/index.html) ao grupo em que o usuario pertence. 
+5. [ok] condicionar o menu de (nucleo/templates/index.html) ao grupo em que o usuario pertence. 
 
 
 *** = Basta que o usuario esteja autenticado via django (Auth)
@@ -35,48 +35,40 @@
     - Perfil           -> User (user_id) --> O2O(User)
 
 (by prof)
-7. criar um migrate empty para incluir produtos automaticamente. 
+7. [] criar um migrate empty para incluir produtos automaticamente. 
     - migrate fake (tenho modelo pronto do arquivo para fazer isto acontecer)
 
 8. upload de imagens para dentro do banco de dados. 
 
-9. loginrequiredmixin para a view - PerfilCompleto de Usuarios . 
+9. [ok] loginrequiredmixin para a view - PerfilCompleto de Usuarios . 
 
-10. Arrumar as medias
+10. [ok] Cadastro dos clientes
     
-11. Cadastro dos clientes
+11. [ok] Pedidos
     
-12. Pedidos
+12. Fornecedor não tem acesso a area do fornecedor
     
-13. Fornecedor não tem acesso a area do fornecedor
-    
-14. Depoimentos
-    
-15. Deploy
+13. Depoimentos
 
-
-Requestes pra index no futuro
-
-                  {% if request.user| has_group:"Fornecedor" %}
-
-                  {% elseif request.user| has_group:"Consumidor" %}
-
-                    {% if request.user.usuario.nome %}
-                      <a href="{% url 'perfil_usuario_update'%}">edite seu cadastro aqui</a>
-                    {% else %}
-                      <a href="{% url 'perfil_usuario_create'%}" class="alarme">preencha seu cdadastro aqui</a>
-                      <!-- piscando em vermelho -->
-                    {% endif %}
-                    
-                    <a href="{% url 'seja_fornecedor' %}">Área do Fornecedor (contato)</a>
-                  {% else %}
-
-                  {% endif %}
-
-
-14.10 as 15h
-1.  [ ] criar 2 botões no carrinho:
+14.  [ok] criar 2 botões no carrinho:
           - atualizar dados (target=blank) (nova view mesmo form ja criado)
           - neste form vai ter um botão FECHAR 
 
-2.  [ ] JAVASCRIPT: request se foi criado o registro no model clientes. 
+15.  [ ] JAVASCRIPT: request se foi criado o registro no model clientes. 
+       
+16.  [ok] Deploy
+
+Bugs conhecidos:
+
+- Uploads de imagens no Heroku (para carrossel e loja)
+- Voltar o carrossel como estava para buscar as imagens no banco de dados linkado ao produto
+- Ajustar o site para mobile
+- Ajustar depoimentos dos clientes
+
+  
+Planos futuros:
+- Georeferenciamento para encontrar o fornecedor mais próximo ao cliente.
+- Avaliação do fornecedor 
+- Ajustar para permitir encomendas dos produtos
+- Area de histórico de pedidos para o consumidor final
+- Controle de fidelidade para o consumidor final

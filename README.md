@@ -303,7 +303,9 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 #### Cadastro de Clientes
 
-#### Localização aproximada
+#### Fidelização de consumidor final
+
+#### Localização aproximada geolocalização
 
 #### Cadastro de produtos
 
@@ -318,6 +320,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 #### Prototipação
 
 #### Banco de dados
+
 
 
 ## 1º Sprint 05/09/22 a 10/09/22
@@ -338,114 +341,136 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 ## 6º Sprint 10/10/22 a 17/10/22
 
 
-## 6º Sprint 18/10/22 a 21/10/22
+## 7º Sprint 18/10/22 a 21/10/22
+
+
+## 8º Sprint Futuras
 
 - Definir as categorias
 
 - Loja fazer a filtragem
-
+  
+- Permitir alterar a senha do usuário
+  
+- Upload das medias para o Heroku
+  
+- Georeferenciamento para encontrar o fornecedor mais próximo ao cliente.
+  
+- Avaliação do fornecedor 
+  
+- Ajustar para permitir encomendas dos produtos
+  
+- Area de histórico de pedidos para o consumidor final
+  
+- Controle de fidelidade para o consumidor final
 
 
 ## Em andamento
 
 - Área de depoimentos para fornecedores, linkada ao produto
-
-- Separar grupo de fornecedores e clientes
-
+  
+- Pedido do cliente aparecer na área do fornecedor
+  
+- Cadastro de fornecedores
 
 
 ## Feito
 
-- Ajustar a adição da quantidade de produtos na pagina de compra de produtos
-
-- Carrinho ao finalizar a compra direcionar para o cadastro do cliente se ja tiver cadastrada, ir para a finalização do pedido
-
-- Ajustes nos Front dos templates
-
 - Testar inserção de dados
   
-- Depoimento da nossa pagina iPicles
-
-- Loja fazer o icone do carrinho adicionar o produto ao carrinho
-
-- Criar um front para pagamentos
-
-- Revisar as paginas
-
-- Pedido do Cliente
-
-- Migrar da base teste para a base oficial
-
-- Atualizar o Readme com o Trello
-
-- Area do Fornecedor fazer a paginação
-
-- Carrossel com link para a compra do produto
-
+- Ajustes nos Front dos templates
+  
+- Depoimento da nossa pagina iPicles (Sobre)
+  
+- Carrinho ao finalizar a compra direcionar para o cadastro do cliente se ja tiver cadastrada, ir para a finalização do pedido
+  
 - Deploy
-
+  
+- Separar grupo de fornecedores e clientes
+  
+- Uma nova release para o Heroku
+  
+- Revisar as paginas
+  
+- Pedido do Cliente ser cadastrado no banco de dados
+  
+- Ajustar os produtos similares da Loja
+  
 - Adicionar arquivos estáticos( css, js)
-
+  
+- Carrossel, intregrado com o banco de dados e o produto esta linkado para a compra na loja
+  
 - Criar aplicativo para visualizações principais e adicionar aos aplicativos instalados - Main - Inicio - Clientes -Fornecedores - Produtos - Projeto iPicles
-
+  
 - Inserção, deleção e update dos produtos pelos fornecedores
-
-- tirar do rodapé o link para a área do cliente  - perguntas do cliente - depoimentos e politicas de segurança
-
+  
+- Loja fazer o icone do carrinho adicionar o produto ao carrinho
+  
+- Ajustar a adição da quantidade de produtos na pagina de compra de produtos
+  
+- Tirar do rodapé o link para a área do cliente  - perguntas do cliente - depoimentos e politicas de segurança
+  
+- Criar um front para pagamentos
+  
 - Loja fazer a contagem dos produtos
-
+  
 - Carrinho (app, banco, integrar com Front)
-
+  
 - Adicionar o Produto na area do fornecedor fazer a formatação
-
+  
 - Formatar a pagina de compra de produtos
-
+  
 - Tirar o cupom de desconto do carrinho de compras
-
+  
 - Loja fazer a paginação
-
+  
 - Formularios cadastro de login e fornecedores
-
+  
 - Ajuste do Front do Carrinho
-
+  
 - Mostrar uma categoria
-
+  
 - Mostrar visualização detalhada de um produto
-
+  
 - Mostrar lista de produtos na área do fornecedor
-
+  
 - Mostrar os produtos mais recentes na página de produtos
-
+  
 - Permitir que os fornecedores adicionem produtos
-
+  
 - Criar área simples para fornecedores( painel com os dados e produtos que ele irá adicionar)
-
+  
 - Criar um pesquisa para os produtos (search)
-
-- pesquisar imagens para o frontend freepik
-
+  
+- Pesquisar imagens para o frontend freepik
+  
+- Area do Fornecedor fazer a paginação
+  
+- Migrar da base teste para a base oficial
+  
 - Tornar possível fazer login e logout
-
+  
+- Atualizar o Readme com o Trello
+  
 - Criar visualização(view), modelo(model) e formulário(form) para login
-
+  
 - Adicionar uma frontpage simples(html - conexão)
-
+  
 - Definir os nomes para os aplicativos comitar da base teste para a base oficial. Primeiro ver como limpar a base oficial
-
+  
 - Criar um aplicativo para fornecedores e adicionar aos aplicativos instalados
-
+  
 - Criar modelo de banco de dados para os fornecedores (models main)
-
+  
 - Criar aplicativo e modelos para produtos e categorias (models e app2)
-
+  
 - Definir os apps e criar os models
-
+  
 - Instalar o Django e iniciar um projeto
-
-- Criar e ativar um ambiente virtual (venv)
+  
+- Criar e ativar um ambiente virtual (venv)  
   
 - Identidade visual e logo
-
 
 --------------------------------------------------
 
