@@ -1,12 +1,19 @@
-# Projeto-Entra21
-## Esse projeto é um treinamento, realizado em 2022, para demonstar nosso aprendizado no curso online de Python; 
+# Projeto-Entra21  <img widht="50px" height="50px" src= "static/img/entra21.png"></img>
 
-Desenvolvedores:
 
-- Ana Clara Perosa: Front-end;
-- Jaqueline Peres Altismo: DBA;
+## Esse projeto é um treinamento, realizado em 2022, para demonstrar nosso aprendizado no curso online de Python; 
+
+<a href="https://ipicles.herokuapp.com/"><img src="static/img/logogr.png"/></a>
+###### Acesse o nosso site clicando no logo
+
+## Professor:
+- Adriano Machado
+## Desenvolvedores:
+
+- Ana Clara Perosa: Back-end;
+- Jaqueline Peres Altismo: DBA, Front-end, PO;
 - Lucas Dimon: Back-end;
-- Renan Oliveira: Front-end;
+- Renan Oliveira: Back-end;
 
 ## **Nomes pro projeto:**
 - Foodfit;
@@ -30,9 +37,9 @@ Desenvolvedores:
 - 
 
 ## **Nicho:**
-- Pessoas com restrições alimentares?
-- Pequenos produtores?
-- Produtos naturais diversos?
+- Pessoas com restrições alimentares
+- Pequenos produtores
+- Produtos naturais diversos
 - ...
 
 ## **Outros:**
@@ -49,7 +56,7 @@ Desenvolvedores:
 - Cartão fidelidade;
 - Programa de avaliação/feedback dos clientes;
 
-# Guia do professor:
+## Guia do professor:
 
 1.	Scrum - Backlog
     a.	Product Owner
@@ -68,7 +75,7 @@ Desenvolvedores:
 
 Foco em desenvolver apenas o que realmente importa!!!
 
-Deixar a perfumaria para final de setembro quando o projeto/app/dashboard estiver funcional. 
+Deixar os detalhes para o final de setembro quando o projeto/app/dashboard estiver funcional. 
 
 5.	Definir as bibliotecas que serão utilizadas no projeto.  (re-atribuição)
 
@@ -90,7 +97,7 @@ Quem fez não testa!
 ## Guia Scrum:
 - https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf
 
-## Sexta-feira 12/08/22:
+### Sexta-feira 12/08/22:
 - Criação do banco de dados pelo DBeaver;
 - Tabelas criadas:
   - Clientes;
@@ -101,17 +108,17 @@ Quem fez não testa!
   - Pedidos;
   - Itens do pedido;
 
-## Segunda-feira 15/08/22:
+### Segunda-feira 15/08/22:
 - Colocação de um modelo de formulário de cadastro;
 
-## Terça-feira 16/08/22:
+### Terça-feira 16/08/22:
 - Reunião com o professor -> Precisamos pro projeto:
   - Tela de cadastro/login pra cliente e fornecedor;
   - Filtro por nichos no site;
   - Carrinho;
   - Exemplo fictício pra apresentação;
 
-## Quinta-feira 18/08/22 - Ferramentas em utilização:
+### Quinta-feira 18/08/22 - Ferramentas em utilização:
 
 - Jamboard para definições do projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
 
@@ -119,7 +126,7 @@ Quem fez não testa!
 
 - Miro para montar o Business Model Canvas para fazer o planejamento estratégico - https://miro.com/welcomeonboard/Z21CWEt4UW9mdG4wbEJHWDFKczB2aVJPRGVIaThxMDBkN2RHZ3Q1dVFON1pyNWowVldGTllTT2xZeDR4M0xaWHwzNDU4NzY0NTE0NjAxOTE3OTI4?share_link_id=787192381582
 
-## Sexta-feira 19/08/22: 
+### Sexta-feira 19/08/22: 
 - Atualização Business Model Canvas;
 
 ## Historia do usuário
@@ -132,8 +139,8 @@ Quem fez não testa!
 ## Banco de Dados do Projeto: 
 
 -- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
+-- Registro da primeira versão do banco de dados
+```sql
 CREATE TABLE `CLIENTES` (
     `CLIENTES_ID` INTEGER  NOT NULL ,
     `CLIENTES_NOME` STRING  NOT NULL ,
@@ -239,28 +246,28 @@ REFERENCES `FORNECEDORES` (`FORNECEDORES_ID`);
 
 ALTER TABLE `ITENSPED` ADD CONSTRAINT `fk_ITENSPED_ITENSPED_ID` FOREIGN KEY(`ITENSPED_ID`)
 REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
-
+```
 ## User story pro formulário:
 - O nosso projeto vai tornar fácil a localização e comercialização de alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
 
-## 22/08/22 - 26/08/22:
+### 22/08/22 - 26/08/22:
 **Estudando banco de dados na nuvem (aws) e o virtual environment**
 
 ## Segunda-feira 29/08/22:
 - Acessando o banco de dados na nuvem com o repositório oficial do projeto;
 
-## Terça-feira 30/08/22:
+### Terça-feira 30/08/22:
 - Últimos ajustes no banco de dados para iniciar a inserção de dados;
 - Criação da tela de login;
 
-## Quinta-feira 01/08/22:
+### Quinta-feira 01/08/22:
 - Término da tela de login;
 - Criação de algumas templates pro projeto;
 
-## Sexta-feira 02/09/22:
+### Sexta-feira 02/09/22:
 - Aula sobre HTML e criação de forms;
 
-## Sábado 03/09/22:
+### Sábado 03/09/22:
 - Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos;
 - Atualização do Trello;
 - O que foi feito:
@@ -269,7 +276,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
  - Jaqueline montou logo e prototipação;
  - Lucas está estudando a conexão do back-end com o front-end;
 
-## Segunda-feira 05/09/22:
+### Segunda-feira 05/09/22:
 - Daily Scrum;
 - Sprint Planning e definições dos Kanbans; 
 - Foi definido as divisões dos Apps:
@@ -280,7 +287,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
   - App5 - Pedidos e Itens dos Pedidos;
   - App6 - Clientes;
 
-## Terça-feira 06/09/22:
+### Terça-feira 06/09/22:
 - Por unanimidade o grupo decidiu remover o I. F. nesta data, conforme a orientação do professor Adriano Machado.
     - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
     - Eu Ana Clara Perosa estou de acordo com a remoção.
