@@ -29,7 +29,7 @@ except ImportError:
     pass
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','ipicles.herokuapp.com']
 
@@ -107,12 +107,12 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 
 try:
     DATABASE_URL = os.getenv('DATABASE_URL')
-    DATABASES = {}
-    DATABASES['default'] = dj_database_url.config(conn_max_age = 600)
 
 except ImportError:
     pass
 
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(conn_max_age = 600)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -148,11 +148,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static'
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
 
 # Default primary key field type
@@ -163,6 +168,22 @@ LOGOUT_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    DBPASSWORD=os.getenv('DBPASSWORD')
+except ImportError:
+    pass
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'pye2122g3',
+        'USER': 'pye2122g3',
+        'PASSWORD': 'pye2122g3@25@ago',
+        'HOST': '3.89.36.150',
+        'PORT': '3306',
+    }
+}
 
 try:
     from . local_settings import *

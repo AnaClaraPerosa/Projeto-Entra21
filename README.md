@@ -1,12 +1,19 @@
-# Projeto-Entra21
-## Esse projeto é um treinamento, realizado em 2022, para demonstar nosso aprendizado no curso online de Python; 
+# Projeto-Entra21  <img widht="50px" height="50px" src= "static/img/entra21.png"></img>
 
-Desenvolvedores:
 
-- Ana Clara Perosa: Front-end;
-- Jaqueline Peres Altismo: DBA;
+## Esse projeto é um treinamento, realizado em 2022, para demonstrar nosso aprendizado no curso online de Python; 
+
+<a href="https://ipicles.herokuapp.com/"><img src="static/img/logogr.png"/></a>
+###### Acesse o nosso site clicando no logo
+
+## Professor:
+- Adriano Machado
+## Desenvolvedores:
+
+- Ana Clara Perosa: Back-end;
+- Jaqueline Peres Altismo: DBA, Front-end, PO;
 - Lucas Dimon: Back-end;
-- Renan Oliveira: Front-end;
+- Renan Oliveira: Back-end;
 
 ## **Nomes pro projeto:**
 - Foodfit;
@@ -30,9 +37,9 @@ Desenvolvedores:
 - 
 
 ## **Nicho:**
-- Pessoas com restrições alimentares?
-- Pequenos produtores?
-- Produtos naturais diversos?
+- Pessoas com restrições alimentares
+- Pequenos produtores
+- Produtos naturais diversos
 - ...
 
 ## **Outros:**
@@ -49,7 +56,7 @@ Desenvolvedores:
 - Cartão fidelidade;
 - Programa de avaliação/feedback dos clientes;
 
-# Guia do professor:
+## Guia do professor:
 
 1.	Scrum - Backlog
     a.	Product Owner
@@ -68,7 +75,7 @@ Desenvolvedores:
 
 Foco em desenvolver apenas o que realmente importa!!!
 
-Deixar a perfumaria para final de setembro quando o projeto/app/dashboard estiver funcional. 
+Deixar os detalhes para o final de setembro quando o projeto/app/dashboard estiver funcional. 
 
 5.	Definir as bibliotecas que serão utilizadas no projeto.  (re-atribuição)
 
@@ -90,7 +97,7 @@ Quem fez não testa!
 ## Guia Scrum:
 - https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf
 
-## Sexta-feira 12/08/22:
+### Sexta-feira 12/08/22:
 - Criação do banco de dados pelo DBeaver;
 - Tabelas criadas:
   - Clientes;
@@ -101,17 +108,17 @@ Quem fez não testa!
   - Pedidos;
   - Itens do pedido;
 
-## Segunda-feira 15/08/22:
+### Segunda-feira 15/08/22:
 - Colocação de um modelo de formulário de cadastro;
 
-## Terça-feira 16/08/22:
+### Terça-feira 16/08/22:
 - Reunião com o professor -> Precisamos pro projeto:
   - Tela de cadastro/login pra cliente e fornecedor;
   - Filtro por nichos no site;
   - Carrinho;
   - Exemplo fictício pra apresentação;
 
-## Quinta-feira 18/08/22 - Ferramentas em utilização:
+### Quinta-feira 18/08/22 - Ferramentas em utilização:
 
 - Jamboard para definições do projeto - https://jamboard.google.com/d/1B0b0sqwBy96kvEd2MNXXUcix2Xc2Doh0HGcqaOC3WjQ/edit?usp=sharing
 
@@ -119,7 +126,7 @@ Quem fez não testa!
 
 - Miro para montar o Business Model Canvas para fazer o planejamento estratégico - https://miro.com/welcomeonboard/Z21CWEt4UW9mdG4wbEJHWDFKczB2aVJPRGVIaThxMDBkN2RHZ3Q1dVFON1pyNWowVldGTllTT2xZeDR4M0xaWHwzNDU4NzY0NTE0NjAxOTE3OTI4?share_link_id=787192381582
 
-## Sexta-feira 19/08/22: 
+### Sexta-feira 19/08/22: 
 - Atualização Business Model Canvas;
 
 ## Historia do usuário
@@ -132,8 +139,8 @@ Quem fez não testa!
 ## Banco de Dados do Projeto: 
 
 -- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
+-- Registro da primeira versão do banco de dados
+```sql
 CREATE TABLE `CLIENTES` (
     `CLIENTES_ID` INTEGER  NOT NULL ,
     `CLIENTES_NOME` STRING  NOT NULL ,
@@ -239,28 +246,28 @@ REFERENCES `FORNECEDORES` (`FORNECEDORES_ID`);
 
 ALTER TABLE `ITENSPED` ADD CONSTRAINT `fk_ITENSPED_ITENSPED_ID` FOREIGN KEY(`ITENSPED_ID`)
 REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
-
+```
 ## User story pro formulário:
 - O nosso projeto vai tornar fácil a localização e comercialização de alimentos saudáveis (incluindo orgânicos) e alimentos para pessoas com restrição alimentar de forma regionalizada.
 
-## 22/08/22 - 26/08/22:
+### 22/08/22 - 26/08/22:
 **Estudando banco de dados na nuvem (aws) e o virtual environment**
 
 ## Segunda-feira 29/08/22:
 - Acessando o banco de dados na nuvem com o repositório oficial do projeto;
 
-## Terça-feira 30/08/22:
+### Terça-feira 30/08/22:
 - Últimos ajustes no banco de dados para iniciar a inserção de dados;
 - Criação da tela de login;
 
-## Quinta-feira 01/08/22:
+### Quinta-feira 01/08/22:
 - Término da tela de login;
 - Criação de algumas templates pro projeto;
 
-## Sexta-feira 02/09/22:
+### Sexta-feira 02/09/22:
 - Aula sobre HTML e criação de forms;
 
-## Sábado 03/09/22:
+### Sábado 03/09/22:
 - Reunião do grupo para atualizações das ações realizadas e definições dos proximos passos;
 - Atualização do Trello;
 - O que foi feito:
@@ -269,7 +276,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
  - Jaqueline montou logo e prototipação;
  - Lucas está estudando a conexão do back-end com o front-end;
 
-## Segunda-feira 05/09/22:
+### Segunda-feira 05/09/22:
 - Daily Scrum;
 - Sprint Planning e definições dos Kanbans; 
 - Foi definido as divisões dos Apps:
@@ -280,7 +287,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
   - App5 - Pedidos e Itens dos Pedidos;
   - App6 - Clientes;
 
-## Terça-feira 06/09/22:
+### Terça-feira 06/09/22:
 - Por unanimidade o grupo decidiu remover o I. F. nesta data, conforme a orientação do professor Adriano Machado.
     - Eu Jaqueline Peres Altismo estou de acordo com a remoção.
     - Eu Ana Clara Perosa estou de acordo com a remoção.
@@ -303,7 +310,9 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 #### Cadastro de Clientes
 
-#### Localização aproximada
+#### Fidelização de consumidor final
+
+#### Localização aproximada geolocalização
 
 #### Cadastro de produtos
 
@@ -320,6 +329,7 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 #### Banco de dados
 
 
+
 ## 1º Sprint 05/09/22 a 10/09/22
 
 
@@ -334,113 +344,144 @@ REFERENCES `PEDIDOS` (`PEDIDOS_ID`);
 
 ## 5º Sprint 02/10/22 a 09/10/22
 
+
+## 6º Sprint 10/10/22 a 17/10/22
+
+
+## 7º Sprint 18/10/22 a 21/10/22
+
+
+## 8º Sprint Futuras
+
 - Definir as categorias
 
-- Criar um front para pagamentos
-
-- Revisar as paginas
-
-- Pedido do Cliente
-
-- Depoimento da nossa pagina iPicles (Sobre)
-
-- Loja fazer o icone do carrinho adicionar o produto ao carrinho
-
 - Loja fazer a filtragem
-
+  
+- Permitir alterar a senha do usuário
+  
+- Upload das medias para o Heroku
+  
+- Georeferenciamento para encontrar o fornecedor mais próximo ao cliente.
+  
+- Avaliação do fornecedor 
+  
+- Ajustar para permitir encomendas dos produtos
+  
+- Area de histórico de pedidos para o consumidor final
+  
+- Controle de fidelidade para o consumidor final
 
 
 ## Em andamento
 
-- Ajustes nos Front dos templates
-
-- Testar inserção de dados
-
 - Área de depoimentos para fornecedores, linkada ao produto
-
-- Separar grupo de fornecedores e clientes
-
-- Ajustar a adição da quantidade de produtos na pagina de compra de produtos
-
-- Carrinho ao finalizar a compra direcionar para o cadastro do cliente se ja tiver cadastrada, ir para a finalização do pedido
+  
+- Pedido do cliente aparecer na área do fornecedor
+  
+- Cadastro de fornecedores
 
 
 ## Feito
 
-- Migrar da base teste para a base oficial
-
-- Atualizar o Readme com o Trello
-
-- Area do Fornecedor fazer a paginação
-
-- Carrossel com link para a compra do produto
-
+- Testar inserção de dados
+  
+- Ajustes nos Front dos templates
+  
+- Depoimento da nossa pagina iPicles (Sobre)
+  
+- Carrinho ao finalizar a compra direcionar para o cadastro do cliente se ja tiver cadastrada, ir para a finalização do pedido
+  
 - Deploy
-
+  
+- Separar grupo de fornecedores e clientes
+  
+- Uma nova release para o Heroku
+  
+- Revisar as paginas
+  
+- Pedido do Cliente ser cadastrado no banco de dados
+  
+- Ajustar os produtos similares da Loja
+  
 - Adicionar arquivos estáticos( css, js)
-
+  
+- Carrossel, intregrado com o banco de dados e o produto esta linkado para a compra na loja
+  
 - Criar aplicativo para visualizações principais e adicionar aos aplicativos instalados - Main - Inicio - Clientes -Fornecedores - Produtos - Projeto iPicles
-
+  
 - Inserção, deleção e update dos produtos pelos fornecedores
-
-- tirar do rodapé o link para a área do cliente  - perguntas do cliente - depoimentos e politicas de segurança
-
+  
+- Loja fazer o icone do carrinho adicionar o produto ao carrinho
+  
+- Ajustar a adição da quantidade de produtos na pagina de compra de produtos
+  
+- Tirar do rodapé o link para a área do cliente  - perguntas do cliente - depoimentos e politicas de segurança
+  
+- Criar um front para pagamentos
+  
 - Loja fazer a contagem dos produtos
-
+  
 - Carrinho (app, banco, integrar com Front)
-
+  
 - Adicionar o Produto na area do fornecedor fazer a formatação
-
+  
 - Formatar a pagina de compra de produtos
-
+  
 - Tirar o cupom de desconto do carrinho de compras
-
+  
 - Loja fazer a paginação
-
+  
 - Formularios cadastro de login e fornecedores
-
+  
 - Ajuste do Front do Carrinho
-
+  
 - Mostrar uma categoria
-
+  
 - Mostrar visualização detalhada de um produto
-
+  
 - Mostrar lista de produtos na área do fornecedor
-
+  
 - Mostrar os produtos mais recentes na página de produtos
-
+  
 - Permitir que os fornecedores adicionem produtos
-
+  
 - Criar área simples para fornecedores( painel com os dados e produtos que ele irá adicionar)
-
+  
 - Criar um pesquisa para os produtos (search)
-
-- pesquisar imagens para o frontend freepik
-
+  
+- Pesquisar imagens para o frontend freepik
+  
+- Area do Fornecedor fazer a paginação
+  
+- Migrar da base teste para a base oficial
+  
 - Tornar possível fazer login e logout
-
+  
+- Atualizar o Readme com o Trello
+  
 - Criar visualização(view), modelo(model) e formulário(form) para login
-
+  
 - Adicionar uma frontpage simples(html - conexão)
-
+  
 - Definir os nomes para os aplicativos comitar da base teste para a base oficial. Primeiro ver como limpar a base oficial
-
+  
 - Criar um aplicativo para fornecedores e adicionar aos aplicativos instalados
-
+  
 - Criar modelo de banco de dados para os fornecedores (models main)
-
+  
 - Criar aplicativo e modelos para produtos e categorias (models e app2)
-
+  
 - Definir os apps e criar os models
-
+  
 - Instalar o Django e iniciar um projeto
-
-- Criar e ativar um ambiente virtual (venv)
+  
+- Criar e ativar um ambiente virtual (venv)  
   
 - Identidade visual e logo
 
-
 --------------------------------------------------
+
+
 
 
 

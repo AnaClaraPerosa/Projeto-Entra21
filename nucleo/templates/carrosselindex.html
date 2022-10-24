@@ -1,21 +1,66 @@
 {% load static %}
 
- <!-- Categories Section Begin - INICIO CARROSSEL -->
-
- <section class="categories">
+  <section class="categories">
     <div class="container">
-      <div class="row">
-        <div class="categories__slider owl-carousel">
-          {% for produto in produto1 %}
-          <div class="col-lg-3">
-            <div class="categories__item set-bg" data-setbg="{{ produto.get_thumbnail }}">
-              <h5><a href="{% url 'produto' produto.categoria.slug produto.slug %}">{{ produto.titulo }}</a></h5>
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="{% static 'img/categories/hamburguer.jpg' %}">
+                        <h5><a href="#">Hambúrguer Vegano</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="{% static 'img/categories/nhoque.jpg' %}">
+                        <h5><a href="#">Nhoque Biomassa</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="{% static 'img/categories/biscoito.jpg' %}">
+                        <h5><a href="#">Biscoito sem Glúten</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="{% static 'img/categories/hortalicas.jpg' %}">
+                        <h5><a href="#">Hortaliças</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="{% static 'img/categories/kombucha.png' %}">
+                        <h5><a href="#">Kombucha</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="categories__item set-bg" data-setbg="{% static 'img/categories/marmita.jpg' %}">
+                      <h5><a href="#">Marmita Fit</a></h5>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="categories__item set-bg" data-setbg="{% static 'img/categories/cestavegetais.png' %}">
+                      <h5><a href="#">Vegetais</a></h5>
+                  </div>
+                </div>              
+                <div class="col-lg-3">
+                  <div class="categories__item set-bg" data-setbg="{% static 'img/categories/chocolatediet.jpg' %}">
+                      <h5><a href="#">Chocolate Diet</a></h5>
+                  </div>
+                </div>                  
+                <div class="col-lg-3">
+                  <div class="categories__item set-bg" data-setbg="{% static 'img/categories/mel.png' %}">
+                      <h5><a href="#">Mel</a></h5>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="categories__item set-bg" data-setbg="{% static 'img/categories/banana.png' %}">
+                      <h5><a href="#">Banana Organica</a></h5>
+                  </div>
+                </div>                
+                <div class="col-lg-3">
+                  <div class="categories__item set-bg" data-setbg="{% static 'img/categories/caixavegetais.png' %}">
+                      <h5><a href="#">Legumes Organicos</a></h5>
+                  </div>
+                </div>                       
             </div>
-          </div>
-          {% endfor %} 
         </div>
-      </div>
     </div>
-  </section>
-    
-  <!-- Categories Section End - FIM CARROSSEL -->
+</section>
+<!-- Categories Section End -->
